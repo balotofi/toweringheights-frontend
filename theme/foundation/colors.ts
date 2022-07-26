@@ -3,6 +3,7 @@ const colors = {
         100: '#A6A8CC', //homepage heading border
         200: '#62AAFA', //sky blue
         300: '#007AFF', //main blue
+        400: '#D9D9D9', //body background
     },
     font : {
         100: '#00000080', //input placeholder
