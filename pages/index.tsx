@@ -7,10 +7,12 @@ import {
     Button,
     Spacer,
     Container,
-  } from '@chakra-ui/react'
-  import LogoNav from '../components/Navbar/LogoNav'
-  import Nav from '../components/Navbar/Nav'
-  import type { NextPage } from 'next'
+} from '@chakra-ui/react'
+import LogoNav from '../components/Navbar/LogoNav'
+import Nav from '../components/Navbar/Nav'
+import Activities from '../components/Activities'
+import type { NextPage } from 'next'
+import Blogs from '../components/Blogs'
   
   const Home: NextPage = () => {
     return (
@@ -73,10 +75,8 @@ import {
             </Box>
           </Flex>
         </Flex>
-        <Container p='1.5rem 2rem'>
-          <Heading as='h3' color='font.300' fontSize='lg' fontWeight='semibold' pb='0.3rem'>Our Activities</Heading>
-          <Box w='74px' h='4px' borderRadius='25px' bg='#747474'/>
-        </Container>
+        <Activities />
+        <Blogs />
       </div>
     )
   }
