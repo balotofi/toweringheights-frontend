@@ -13,6 +13,7 @@ import Nav from '../components/Navbar/Nav'
 import Activities from '../components/Activities'
 import type { NextPage } from 'next'
 import Blogs from '../components/Blogs'
+import TeachersSlider from '../components/TeachersSlider'
   
   const Home: NextPage = () => {
     return (
@@ -22,8 +23,8 @@ import Blogs from '../components/Blogs'
         <Flex bg='brand.400' justify='center' p='18px'>
           <Image
             borderRadius='full'
-            width= '271px'
-            height= '255px'
+            w= '271px'
+            h= '255px'
             src='https://bit.ly/dan-abramov'
             alt='Welcome Page Image'
           />
@@ -76,7 +77,10 @@ import Blogs from '../components/Blogs'
           </Flex>
         </Flex>
         <Activities />
-        <Blogs />
+        <div style={{backgroundColor: '#D9D9D9'}}>
+            <Blogs />
+            <TeachersSlider />
+        </div>
       </div>
     )
   }
