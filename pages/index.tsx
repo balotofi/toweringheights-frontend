@@ -5,8 +5,6 @@ import {
     Text,
     Box,
     Button,
-    Spacer,
-    Container,
 } from '@chakra-ui/react'
 import LogoNav from '../components/Navbar/LogoNav'
 import Nav from '../components/Navbar/Nav'
@@ -55,7 +53,9 @@ import TeachersSlider from '../components/TeachersSlider'
             fontWeight='semibold' 
             size='lg'
             p='0 2rem'
-            borderRadius='3xl'>
+            borderRadius='3xl'
+            position='static'
+          >
             READ MORE
           </Button>
         </Box>
@@ -79,7 +79,7 @@ import TeachersSlider from '../components/TeachersSlider'
         <Activities />
         <div style={{backgroundColor: '#D9D9D9'}}>
             <Blogs />
-            <TeachersSlider />
+              <TeachersSlider />
         </div>
       </div>
     )

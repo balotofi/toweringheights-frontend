@@ -6,7 +6,7 @@ import {
 
 const LogoNav = () => {
     return (
-        <Flex maxH='14.625rem' flexDirection='column' align='center' top='25px' position='relative'>
+        <Flex maxH='14.625rem' flexDirection='column' align='center' mt='25px'>
             <Image
                 borderRadius='full'
                 height='93px'

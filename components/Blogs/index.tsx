@@ -1,28 +1,7 @@
 import { Box, Button, Container, Flex, Heading, Icon } from "@chakra-ui/react"
 import { TiArrowRight } from "react-icons/ti"
 import Blog from "./Blog"
-
-interface BlogProps {
-    id: number,
-    alt: string,
-    summary: string,
-}
-
-const blogs: BlogProps[] = [
-    {
-        id: 1,
-        alt: "Graduating pupils",
-        summary: "Graduating set gives farewell speech,says how happy they are to be moving to the next level..."
-    }, {
-        id: 2,
-        alt: "Visits",
-        summary: "Nestle Milo visit to the school.See what Nestle Nigeria had to discuss with the students amidst other entertainment..."
-    }, {
-        id: 3,
-        alt: "Parent Teacher Association",
-        summary: "Parents suggest ways to enhance optimum development and improved facilities at PTA meeting..."
-    }
-]
+import { blogs } from "../../data"
 
 const Blogs = () => {
     return (
@@ -54,6 +33,7 @@ const Blogs = () => {
                     size='lg'
                     p='1rem 2rem'
                     borderRadius='2xl'
+                    position='static'
                 >
                     More Articles <Icon as={TiArrowRight} mt='0.2rem' fontSize='2xl' />
                 </Button>
