@@ -2,7 +2,7 @@ import { Box, Heading, Image, Text, Flex } from "@chakra-ui/react"
 
 const TeacherSlide = ({...staff}) => {
     return (
-        <Flex direction='column' m='2rem 0' align='center' id={staff.id}>
+        <Flex direction='column' m='2rem 0' align='center' id={staff.id} >
             <Image
                 borderRadius='full'
                 boxSize='120px'

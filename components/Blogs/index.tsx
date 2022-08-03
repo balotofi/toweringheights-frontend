@@ -17,11 +17,11 @@ const Blogs = () => {
                 >
                     Latest Blog
                 </Heading>
-                <Box w='74px' h='4px' borderRadius='25px' bg='#747474' />
+                <Box w='74px' h='4px' borderRadius='3xl' bg='#747474' />
             </Flex>
             <Flex direction='column'>
                 {blogs.map((blog) => (
-                    <Blog key={blog.id} alt={blog.alt} summary={blog.summary} />
+                    <Blog key={blog.id} alt={blog.alt} img={blog.img} summary={blog.summary} />
                 ))}
             </Flex>
             <Flex justify='center'>

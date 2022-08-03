@@ -2,6 +2,7 @@ import React from "react"
 
 export interface ActivityProps {
     id: number,
+    img: string,
     alt: string,
     heading: string,
     summary: string,
@@ -9,6 +10,7 @@ export interface ActivityProps {
 
 export interface BlogProps {
     id: number,
+    img: string,
     alt: string,
     summary: string,
 }

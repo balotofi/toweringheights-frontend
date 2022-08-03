@@ -5,13 +5,18 @@ import {
     Text,
     Box,
     Button,
+    Container,
+    Link as ChakraLink,
 } from '@chakra-ui/react'
+import Link from 'next/link'
+import type { NextPage } from 'next'
 import LogoNav from '../components/Navbar/LogoNav'
 import Nav from '../components/Navbar/Nav'
 import Activities from '../components/Activities'
-import type { NextPage } from 'next'
 import Blogs from '../components/Blogs'
 import TeachersSlider from '../components/TeachersSlider'
+import Footer from '../components/Footer'
+import ScrollTopBtn from '../components/Navbar/ScrollTopBtn'
   
   const Home: NextPage = () => {
     return (
@@ -23,7 +28,7 @@ import TeachersSlider from '../components/TeachersSlider'
             borderRadius='full'
             w= '271px'
             h= '255px'
-            src='https://bit.ly/dan-abramov'
+            src='/assets/uniform/IMG_20200305_103641_6.jpg'
             alt='Welcome Page Image'
           />
         </Flex>
@@ -78,9 +83,64 @@ import TeachersSlider from '../components/TeachersSlider'
         </Flex>
         <Activities />
         <div style={{backgroundColor: '#D9D9D9'}}>
-            <Blogs />
-              <TeachersSlider />
+          <Blogs />
+          <TeachersSlider />
+          <Flex direction='column' p='2rem'>
+            <Flex direction='column' align='center' m='1.5rem 0'>
+              <Heading 
+                as='h3' 
+                color='font.300' 
+                fontSize='lg' 
+                fontWeight='bold' 
+                pb='0.3rem'
+                lineHeight='21.6px'
+              >
+                Our Gallery
+              </Heading>
+              <Box w='74px' h='4px' borderRadius='3xl' bg='#747474' />
+            </Flex>
+            <Flex m='1rem'>
+              <Image
+                borderRadius='xl'
+                src='/assets/class_activities/IMG_20200115_092018_0.jpg'
+                w='182px'
+                h='135px'
+              />
+            </Flex>
+            <Box w='251px' h='4px' borderRadius='xl' bg='brand.300' />
+            <Flex m='1rem' justify='end'>
+              <Image
+                borderRadius='xl'
+                src='/assets/class_activities/IMG_20200204_114106_8.jpg'
+                w='182px'
+                h='135px' 
+              />
+            </Flex>
+            <Box w='251px' h='4px' borderRadius='xl' bg='brand.300' />
+            <Flex m='1rem'>
+              <Image
+                borderRadius='xl'
+                src='/assets/cultural_wear/POP_2079.jpg'
+                w='182px'
+                h='135px' 
+              />
+            </Flex>
+            <Flex justify='center'>
+              <Link href='/' passHref>
+                <ChakraLink 
+                  color='brand.300' 
+                  fontWeight='bold' 
+                  pb='0.2rem' 
+                  borderBottom='1px'
+                >
+                  Click here to see more
+                </ChakraLink>
+              </Link>
+            </Flex>
+          </Flex>
         </div>
+        <Footer />
+        <ScrollTopBtn />
       </div>
     )
   }

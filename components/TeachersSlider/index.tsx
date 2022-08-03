@@ -1,6 +1,5 @@
 import { Container, Heading, Flex, Box, Image, Text } from "@chakra-ui/react"
 import { useState } from "react"
-import Animation from "./Animation"
 import BtnSlider from "./BtnSlider"
 import { staffs } from "../../data"
 
@@ -25,38 +24,51 @@ const TeachersSlider = () => {
     }
 
     return (
-        <Container bg='brand.400' padding='1rem 2rem' h='1050px'>
-            <Animation />
-            <Box position='relative'>
-                <Heading 
-                    as='h3'
-                    fontSize='lg'
-                    fontWeight='bold'
-                    lineHeight='31px'
-                    m='0.5rem'
-                    textAlign='center'
-                    position='relative'
+        <Container bg='brand.400' padding='1rem 2rem' >
+            <Box>
+                <Flex 
+                    bgImage='/assets/blob_shape.svg' 
+                    bgRepeat='no-repeat' 
+                    bgPosition='50px 0'
+                    height='105px'
+                    justify='center'
                 >
-                    Meet Our Team
-                </Heading>
-                <Flex mt='3rem' align='center' position='relative' justify='space-around'>
+                    <Heading
+                        as='h3'
+                        fontSize='lg'
+                        fontWeight='bold'
+                        lineHeight='31px'
+                        m=' 1rem 0.5rem'
+                        textAlign='center'
+                    >
+                        Meet Our Team
+                    </Heading>
+                </Flex>
+                <Flex 
+                    align='center'
+                    justify='space-around'
+                    bgImage='/assets/big_blob_shape.svg'
+                    bgRepeat='no-repeat'
+                    bgPosition='bottom right'
+                    h='350px'
+                >
                     <BtnSlider direction="left" action={prevSlide} />
-                    <Box w='300px' overflow='hidden' >
+                    <Flex w='300px' overflow='hidden' >
                         {staffs.map(((staff, idx) => (
                             <Flex 
-                                position='absolute'
+                                position='relative'
                                 direction='column' 
-                                m='2rem 0' 
                                 align='center' 
                                 key={staff.id}
                                 opacity={slideIdx === idx+1 ? '1' : '0'}
                             >
                                 <Image
+                                    mb='-6.25rem'
+                                    position='absolute'
                                     borderRadius='full'
                                     boxSize='120px'
                                     src='https://bit.ly/dan-abramov'
                                     alt={staff.name}
-                                    position='absolute'
                                     display={slideIdx === idx+1 ? 'block' : 'none'}
                                 />
                                 <Box
@@ -80,7 +92,7 @@ const TeachersSlider = () => {
                                 </Box>
                             </Flex>
                         )))}
-                    </Box>
+                    </Flex>
                     <BtnSlider direction="right" action={nextSlide} />
                 </Flex>
             </Box>

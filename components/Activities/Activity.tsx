@@ -7,7 +7,7 @@ const Activity = ({...activity}) => {
                 borderRadius='2xl'
                 width='225px'
                 height='184px'
-                src='https://bit.ly/dan-abramov'
+                src={activity.img}
                 alt={activity.alt}
             />
             <Box>

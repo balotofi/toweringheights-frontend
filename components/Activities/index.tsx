@@ -13,9 +13,9 @@ const Activities = () => {
     return (
         <Container p='1.5rem 2rem'>
             <Heading as='h3' color='font.300' fontSize='lg' fontWeight='semibold' pb='0.3rem'>Our Activities</Heading>
-            <Box w='74px' h='4px' borderRadius='25px' bg='#747474'/>
+            <Box w='74px' h='4px' borderRadius='3xl' bg='#747474'/>
             {activities.map((activity) => (
-                <Activity key={activity.id} alt={activity.alt} summary={activity.summary} heading={activity.heading} />
+                <Activity key={activity.id} alt={activity.alt} img={activity.img} summary={activity.summary} heading={activity.heading} />
             ))}
             <Link href='/' passHref>
                 <ChakraLink 

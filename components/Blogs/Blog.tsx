@@ -16,7 +16,7 @@ const Blog = ({...blog}) => {
                 borderRadius='lg'
                 w='212px'
                 h='147px'
-                src='https://bit.ly/dan-abramov'
+                src={blog.img}
                 alt={blog.alt}
             />
             <Text fontWeight='medium' fontSize='sm' pt='1rem'>

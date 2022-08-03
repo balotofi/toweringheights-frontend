@@ -19,11 +19,13 @@ export const staffs:StaffProps[] = [
 export const activities: ActivityProps[] =  [
     {
         "id": 1,
+        "img": "/assets/playground/playground1.jpg",
         "alt": "Games and entertainment",
         "heading": "Games & Entertainment",
         "summary": "Sports impact our culture,other sources of entertainment and our economy.They help in physical and mental growth and also contribute to the formation of character generally."
     }, {
         "id": 2,
+        "img": "/assets/cultural/cultural.jpg",
         "alt": "Art and creativity",
         "heading": "Art & Creativity",
         "summary": "Art is the expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, producing works to be appreciated primarily for their beauty or emotional power."
@@ -33,14 +35,17 @@ export const activities: ActivityProps[] =  [
 export const blogs: BlogProps[] = [
     {
         id: 1,
+        img: "/assets/grads/POP_19551.jpg",
         alt: "Graduating pupils",
         summary: "Graduating set gives farewell speech,says how happy they are to be moving to the next level..."
     }, {
         id: 2,
+        img: "/assets/milo/IMG-20220606-WA00051.jpg",
         alt: "Visits",
         summary: "Nestle Milo visit to the school.See what Nestle Nigeria had to discuss with the students amidst other entertainment..."
     }, {
         id: 3,
+        img: "/assets/parents/POP_19901.jpg",
         alt: "Parent Teacher Association",
         summary: "Parents suggest ways to enhance optimum development and improved facilities at PTA meeting..."
     }
