@@ -2,7 +2,6 @@ import {
     Box,
     Flex,
     Text,
-    Icon,
     useDisclosure,
     IconButton,
     Collapse
@@ -17,15 +16,13 @@ const Nav = () => {
     const { isOpen, onToggle } = useDisclosure()
 
     return (
-        <Box>
+        <Box position='sticky' top='0' zIndex='9999' mt='2.5rem'>
             <Box 
-                maxH='3rem' 
-                mt='2.5rem' 
-                position='sticky' 
-                top='0' 
-                zIndex='9999' 
+                h={{ base: '2.8rem', md: '4rem', xl: '4.5rem'}} 
+                display={'flex'}
+                alignItems='center' 
                 bg='brand.300' 
-                boxShadow={'0 3px rgb(11 99 221 / 54%)'} >
+                boxShadow={'0 5px 5px rgb(8 33 68 / 54%)'} >
                 <Flex align='center' display={{ base: 'flex', md: 'none'}}>
                     <IconButton
                         onClick={onToggle} 
@@ -36,7 +33,7 @@ const Nav = () => {
                     <Text fontSize='lg' color='white' lineHeight={5}>MENU</Text>
                 </Flex>
 
-                <Flex display={{base: 'none', md: 'flex'}}>
+                <Flex display={{base: 'none', md: 'flex'}} align={'center'} w={'100%'} justify={'center'}>
                     <DesktopNav />
                 </Flex>
 
