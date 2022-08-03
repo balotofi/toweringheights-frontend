@@ -1,4 +1,4 @@
-import { StaffProps, ActivityProps, BlogProps } from "../types"
+import { StaffProps, ActivityProps, BlogProps, NavProps } from "../types"
 
 export const staffs:StaffProps[] = [
     {
@@ -48,6 +48,41 @@ export const blogs: BlogProps[] = [
         img: "/assets/parents/POP_19901.jpg",
         alt: "Parent Teacher Association",
         summary: "Parents suggest ways to enhance optimum development and improved facilities at PTA meeting..."
+    }
+]
+
+export const navItems: NavProps[] = [
+    {
+        label: "Home",
+        href: "/" 
+    }, {
+        label: "About Us",
+        children: [
+            {
+                label: "About Us",
+                href: "/about"
+            }, {
+                label: "Our Blog",
+                href: "/about/blog"
+            }
+        ] 
+    }, {
+        label: "Gallery",
+        href: "/gallery"
+    }, {
+        label: "Join Us",
+        children: [
+            {
+                label: "Admissions",
+                href: "/join/admissions"
+            }, {
+                label: "Vacancies",
+                href: "/join/vacancies"
+            }
+        ] 
+    }, {
+        label: "Contact Us",
+        href: "/contact"
     }
 ]
 

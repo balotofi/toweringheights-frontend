@@ -71,22 +71,22 @@ const Footer = () => {
                         <Link href='/' passHref>
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>Home</ChakraLink>
                         </Link>
-                        <Link href='/' passHref>
+                        <Link href='/about' passHref>
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>About us</ChakraLink>
                         </Link>
-                        <Link href='/' passHref>
+                        <Link href='/gallery' passHref>
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>Gallery</ChakraLink>
                         </Link>
-                        <Link href='/' passHref>
+                        <Link href='/teachers' passHref>
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>Teachers</ChakraLink>
                         </Link>
-                        <Link href='/' passHref>
+                        <Link href='/parents' passHref>
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>Parents</ChakraLink>
                         </Link>
-                        <Link href='/' passHref>
+                        <Link href='/join' passHref>
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>Join us</ChakraLink>
                         </Link>
-                        <Link href='/' passHref>
+                        <Link href='/contact' passHref>
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>Contact us</ChakraLink>
                         </Link>
                     </Flex>

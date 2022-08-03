@@ -30,8 +30,8 @@ export type BtnSliderProps = {
     action: () => void
 }
 
-// export type ISliderProps = {
-//     slideIdx: number,
-//     nextSlide?: () => void,
-//     prevSlide?: () => void,
-// }
+export interface NavProps {
+    label: string,
+    href?: string,
+    children?: NavProps[]
+}

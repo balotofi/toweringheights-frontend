@@ -126,7 +126,7 @@ import ScrollTopBtn from '../components/Navbar/ScrollTopBtn'
               />
             </Flex>
             <Flex justify='center'>
-              <Link href='/' passHref>
+              <Link href='#' passHref>
                 <ChakraLink 
                   color='brand.300' 
                   fontWeight='bold' 
