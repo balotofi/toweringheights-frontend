@@ -35,3 +35,8 @@ export interface NavProps {
     href?: string,
     children?: NavProps[]
 }
+
+export interface SlideShowProps {
+    img: string, 
+    alt: string
+}

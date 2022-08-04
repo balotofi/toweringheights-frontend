@@ -1,4 +1,4 @@
-import { StaffProps, ActivityProps, BlogProps, NavProps } from "../types"
+import { StaffProps, ActivityProps, BlogProps, NavProps, SlideShowProps } from "../types"
 
 export const staffs:StaffProps[] = [
     {
@@ -83,6 +83,25 @@ export const navItems: NavProps[] = [
     }, {
         label: "Contact Us",
         href: "/contact"
+    }
+]
+
+export const slideShowItems : SlideShowProps[] = [
+    {
+        img: '/assets/group_img/InShot_20220728_104357649.jpg',
+        alt: 'Image1'
+    }, {
+        img: '/assets/uniform/IMG_20200305_103641_6.jpg',
+        alt: 'Image2'
+    }, {
+        img: '/assets/class_activities/IMG_20200204_114106_8.jpg',
+        alt: 'Image3'
+    }, {
+        img: '/assets/group_img/InShot_20220728_104256447.jpg',
+        alt: 'Image4'
+    }, {
+        img: '/assets/class_activities/IMG_20210222_103517_3201_1920.jpg',
+        alt: 'Image5'
     }
 ]
 
