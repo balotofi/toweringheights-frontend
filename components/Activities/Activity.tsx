@@ -2,7 +2,7 @@ import { Flex, Heading, Image, Text, Box } from '@chakra-ui/react'
 
 const Activity = ({...activity}) => {
     return (
-        <Flex id={activity.id} direction='column' margin='1.5rem 0'>
+        <Flex id={activity.id} direction={{base: 'column', md: 'row'}} align={{base: 'start', md: 'center'}} mx={6} gap={{md: '10px'}}>
             <Image
                 borderRadius='2xl'
                 width='225px'
@@ -13,13 +13,13 @@ const Activity = ({...activity}) => {
             <Box>
                 <Heading as='h4' 
                     lineHeight={7} 
-                    fontSize='xl' 
+                    fontSize={{base: 'xl', md: 'md'}} 
                     fontWeight='bold' 
                     margin='1.8rem 0 1.5rem'
                 >
                     {activity.heading}
                 </Heading>
-                <Text lineHeight={7} fontWeight='normal'>{activity.summary}</Text>
+                <Text lineHeight={7} fontSize={{md: 'sm'}} fontWeight='normal'>{activity.summary}</Text>
             </Box>
         </Flex>
     )

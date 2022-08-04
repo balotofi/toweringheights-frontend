@@ -37,7 +37,7 @@ const ScrollTopBtn = () => {
             p='0.2rem 0.3rem'
             right='10%'
             position='fixed'
-            bottom='30px'
+            bottom={{base: '30px', md: '50px'}}
             cursor='pointer'
             display={visible ? 'inline' : 'none'}
         >

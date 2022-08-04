@@ -28,15 +28,16 @@ const ImageSlideShow = () => {
             position='relative' 
             align='center' 
             overflow='hidden'
-            justify='space-arround'
+            justify='center'
+            w={{xl: '50%'}}
         >
             {slideShowItems.map((item, id) => (
                 <Image
                     key={item.alt}
                     src={item.img}
                     display={slideId === id + 1 ? 'block' : 'none'}
-                    h={{ base: '255px', md: '400px' }}
-                    w={{ base: '271px', md: '2000px'}}
+                    h={{ base: '255px', md: '400px', xl: '500px' }}
+                    w={{ base: '271px', md: '2000px', xl: '1200px'}}
                     borderRadius='50%'
                     border={4}
                     borderStyle={'solid'}

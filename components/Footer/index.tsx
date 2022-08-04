@@ -24,50 +24,65 @@ const Footer = () => {
             bottom='0'
         >
             <Box
-                bg="url(/assets/group_img/mobile_footer.jpg) no-repeat"
-                h='177px'
-                //position='absolute'
+                bg="url(/assets/group_img/footer.jpg) no-repeat"
+                backgroundSize={'cover'}
+                backgroundPosition='center'
+                h={{base: '177px', md: '200px', lg: '250px'}}
             >
                 <Flex
-                    bgColor='rgba(0, 0, 0, 0.7)'
+                    bgColor='rgba(0, 0, 0, 0.6)'
                     overflow='hidden'
                     h='100%'
-                    direction='column'
                     justify='center'
                 >
-                    <Text color='#ffffffa3' fontWeight='medium' textAlign='center' mb='1.2rem' lineHeight='28px'>
-                        A wonderful <span style={{color: '#007AFF', fontWeight: '600'}}>  
-                            FIRST
-                        </span> out of home learning <span style={{color: '#007AFF', fontWeight: '600'}}>
-                            EXPERIENCE
-                        </span> for your child.
-                    </Text>
-                    <InputGroup bg='rgba(0, 0, 0, 0.2)' borderRadius='md'>
-                        <Input 
-                            m='0 0.2rem'
-                            border='2px solid'
-                            pl='2rem'
-                            placeholder="Enter e-mail to recieve news letter"
-                            _placeholder={{ color: '#ffffffa3', fontSize: '14px'}}
-                        />
-                        <InputRightElement w='42px' bgColor='brand.300'>
-                            <Button position='static' bg='brand.300'>
-                                <SendPlaneIcon /> 
-                            </Button>
-                        </InputRightElement>
-                    </InputGroup>
+                    <Flex
+                        direction='column'
+                        justify='center'
+                        w={{lg: '40%'}}
+                    >
+                        <Text 
+                            color='#ffffffa3' 
+                            fontWeight='medium'
+                            fontSize={{lg: 'xl'}} 
+                            textAlign='center' 
+                            mb='1.2rem' 
+                            lineHeight='28px'>
+                            A wonderful <span style={{color: '#007AFF', fontWeight: '600'}}>  
+                                FIRST
+                            </span> out of home learning <span style={{color: '#007AFF', fontWeight: '600'}}>
+                                EXPERIENCE
+                            </span> for your child.
+                        </Text>
+                        <InputGroup bg='rgba(0, 0, 0, 0.2)' borderRadius='md'>
+                            <Input 
+                                size={{base: 'md', md: 'lg'}}
+                                border='2px solid'
+                                fontWeight='semibold'
+                                fontSize='lg'
+                                pl='2rem'
+                                focusBorderColor='brand.400'
+                                placeholder="Enter e-mail to recieve news letter"
+                                _placeholder={{ color: '#ffffffa3', fontSize: '14px', fontWeight:'normal'}}
+                            />
+                            <InputRightElement w='42px' h={'90%'} top='2px' right='2px' bgColor='brand.300'>
+                                <Button bg='brand.300'>
+                                    <SendPlaneIcon /> 
+                                </Button>
+                            </InputRightElement>
+                        </InputGroup>
+                    </Flex>
                 </Flex>
             </Box>
             <Flex p='2rem' bgColor='font.300' direction='column'>
-                <Flex direction='column'>
-                    <Box>
+                <Flex direction={{base: 'column', md: 'row'}} gap={{base: '6'}} align={{md: 'start'}}>
+                    <Box w={{md: '25%'}} mx={{md: '4'}}>
                         <Image w='70px' h='65px' src='/assets/logo_ths.jpg' borderRadius='full' />
                         <Text color='white' mt='1.5rem' lineHeight='27px'>
                             Towering Heights Schools is a centre of education that prides itself on creating leaders of tomorrow.We pride ourselves in the quality of children we raise.
                         </Text>
                     </Box>
-                    <Flex direction='column' mt='2rem'>
-                        <Heading as='h4' fontSize='xl' color='brand.300' fontWeight='bold' m='1rem 0'>Links</Heading>
+                    <Flex direction='column' w={{md: '15%'}}>
+                        <Heading as='h4' fontSize='xl' color='brand.300' fontWeight='bold' mb='1rem'>Links</Heading>
                         <Link href='/' passHref>
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>Home</ChakraLink>
                         </Link>
@@ -90,7 +105,7 @@ const Footer = () => {
                             <ChakraLink fontSize='sm' color='white' mb='1rem'>Contact us</ChakraLink>
                         </Link>
                     </Flex>
-                    <Flex direction='column' mt='1rem'>
+                    <Flex direction='column' w={{md: '25%'}}>
                         <Heading as='h4' fontSize='xl' color='brand.300' fontWeight='bold' mb='1rem'>Find Us</Heading>
                         <Flex color='white' mb='1rem' gap='10px'>
                             <Icon as={MdLocationOn} w={6} h={6} />
@@ -104,7 +119,7 @@ const Footer = () => {
                             </Flex>
                         </Flex>
                     </Flex>
-                    <Flex direction='column' mt='1rem'>
+                    <Flex direction='column' w={{md: '25%'}}>
                         <Heading as='h4' fontSize='xl' color='brand.300' fontWeight='bold' mb='1rem'>Social Links</Heading>
                         <Flex color='white' mb='1rem' gap='10px'>
                             <Icon as={MdEmail} w={6} h={6} />

@@ -1,5 +1,3 @@
-import React from "react"
-
 export interface ActivityProps {
     id: number,
     img: string,
@@ -16,9 +14,11 @@ export interface BlogProps {
 }
 
 export interface StaffProps {
-    id: number,
     name: string,
     role: string,
+}
+export interface StaffsArray {
+    child: StaffProps[]
 }
 
 export interface SliderDirProps {

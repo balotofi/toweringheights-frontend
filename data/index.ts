@@ -1,18 +1,45 @@
-import { StaffProps, ActivityProps, BlogProps, NavProps, SlideShowProps } from "../types"
+import { StaffProps, ActivityProps, BlogProps, NavProps, SlideShowProps, StaffsArray } from "../types"
 
-export const staffs:StaffProps[] = [
+export const staffs:StaffProps [] = [
     {
-        id: 1,
         name: 'Mrs Balogun',
         role: 'Headmistress/ Proprietress'
     }, {
-        id: 2,
         name: 'Miss Famulegun',
         role: 'Teacher'
     }, {
-        id: 3,
         name: 'Miss Suberu',
         role: 'Teacher'
+    }
+]
+
+export const staffsArray: StaffsArray[] = [
+    {
+        child: [
+            {
+                name: 'Mrs Balogun',
+                role: 'Headmistress/ Proprietress'
+            }, {
+                name: 'Miss Famulegun',
+                role: 'Teacher'
+            }, {
+                name: 'Miss Suberu',
+                role: 'Teacher'
+            }
+        ]
+    }, {
+        child: [
+            {
+                name: 'Miss Famulegun',
+                role: 'Headmistress/ Proprietress'
+            }, {
+                name: 'Miss Famulegun',
+                role: 'Teacher'
+            }, {
+                name: 'Miss Suberu',
+                role: 'Teacher'
+            }
+        ]
     }
 ]
 
