@@ -57,7 +57,8 @@ const Footer = () => {
                             <Input 
                                 size={{base: 'md', md: 'lg'}}
                                 border='2px solid'
-                                fontWeight='semibold'
+                                fontWeight='medium'
+                                color='white'
                                 fontSize='lg'
                                 pl='2rem'
                                 focusBorderColor='brand.400'
@@ -65,7 +66,7 @@ const Footer = () => {
                                 _placeholder={{ color: '#ffffffa3', fontSize: '14px', fontWeight:'normal'}}
                             />
                             <InputRightElement w='42px' h={'90%'} top='2px' right='2px' bgColor='brand.300'>
-                                <Button bg='brand.300'>
+                                <Button bg='brand.300' transition='0.2s all ease-in-out' _hover={{bg: '#1768c1'}}>
                                     <SendPlaneIcon /> 
                                 </Button>
                             </InputRightElement>
@@ -84,34 +85,93 @@ const Footer = () => {
                     <Flex direction='column' w={{md: '15%'}}>
                         <Heading as='h4' fontSize='xl' color='brand.300' fontWeight='bold' mb='1rem'>Links</Heading>
                         <Link href='/' passHref>
-                            <ChakraLink fontSize='sm' color='white' mb='1rem'>Home</ChakraLink>
+                            <ChakraLink fontSize='sm' color='white' textDecoration='none' mb='1rem'
+                                transition='all 0.15s ease-in-out'
+                                _hover={{
+                                    color: 'font.200'
+                                }} 
+                            >
+                                Home
+                            </ChakraLink>
                         </Link>
                         <Link href='/about' passHref>
-                            <ChakraLink fontSize='sm' color='white' mb='1rem'>About us</ChakraLink>
+                            <ChakraLink fontSize='sm' color='white' mb='1rem'
+                                transition='all 0.15s ease-in-out'
+                                _hover={{
+                                    color: 'font.200'
+                                }} 
+                            >
+                                About us
+                            </ChakraLink>
                         </Link>
                         <Link href='/gallery' passHref>
-                            <ChakraLink fontSize='sm' color='white' mb='1rem'>Gallery</ChakraLink>
+                            <ChakraLink fontSize='sm' color='white' mb='1rem'
+                                transition='all 0.15s ease-in-out'
+                                _hover={{
+                                    color: 'font.200'
+                                }} 
+                            >
+                                Gallery
+                            </ChakraLink>
                         </Link>
                         <Link href='/teachers' passHref>
-                            <ChakraLink fontSize='sm' color='white' mb='1rem'>Teachers</ChakraLink>
+                                <ChakraLink fontSize='sm' color='white' mb='1rem'
+                                transition='all 0.15s ease-in-out'
+                                _hover={{
+                                    color: 'font.200'
+                                }} 
+                            >
+                                Teachers
+                            </ChakraLink>
                         </Link>
                         <Link href='/parents' passHref>
-                            <ChakraLink fontSize='sm' color='white' mb='1rem'>Parents</ChakraLink>
+                            <ChakraLink fontSize='sm' color='white' mb='1rem'
+                                transition='all 0.15s ease-in-out'
+                                _hover={{
+                                    color: 'font.200'
+                                }} 
+                            >
+                                Parents
+                            </ChakraLink>
                         </Link>
                         <Link href='/join' passHref>
-                            <ChakraLink fontSize='sm' color='white' mb='1rem'>Join us</ChakraLink>
+                            <ChakraLink fontSize='sm' color='white' mb='1rem'
+                                transition='all 0.15s ease-in-out'
+                                _hover={{
+                                    color: 'font.200'
+                                }} 
+                            >
+                                Join us
+                            </ChakraLink>
                         </Link>
                         <Link href='/contact' passHref>
-                            <ChakraLink fontSize='sm' color='white' mb='1rem'>Contact us</ChakraLink>
+                            <ChakraLink fontSize='sm' color='white' mb='1rem'
+                                transition='all 0.15s ease-in-out'
+                                _hover={{
+                                    color: 'font.200'
+                                }} 
+                            >
+                                Contact us
+                            </ChakraLink>
                         </Link>
                     </Flex>
                     <Flex direction='column' w={{md: '25%'}}>
                         <Heading as='h4' fontSize='xl' color='brand.300' fontWeight='bold' mb='1rem'>Find Us</Heading>
-                        <Flex color='white' mb='1rem' gap='10px'>
+                        <Flex color='white' mb='1rem' gap='10px'
+                            transition='all 0.15s ease-in-out'
+                            _hover={{
+                                color: 'font.200'
+                            }}
+                        >
                             <Icon as={MdLocationOn} w={6} h={6} />
                             <Text fontSize='sm'>Afrostuff Estate,Alagbaka Extension, off Igbatoro road. Adjacent NIMC, Alagbaka, Akure.</Text>
                         </Flex>
-                        <Flex color='white' mb='1rem' gap='10px'>
+                        <Flex color='white' mb='1rem' gap='10px'
+                            transition='all 0.15s ease-in-out'
+                            _hover={{
+                                color: 'font.200'
+                            }}
+                        >
                             <Icon as={ImPhone} w={6} h={6} />
                             <Flex direction='column'>
                                 <Text fontSize='sm'>0814 266 5965</Text>
@@ -121,37 +181,49 @@ const Footer = () => {
                     </Flex>
                     <Flex direction='column' w={{md: '25%'}}>
                         <Heading as='h4' fontSize='xl' color='brand.300' fontWeight='bold' mb='1rem'>Social Links</Heading>
-                        <Flex color='white' mb='1rem' gap='10px'>
+                        <Flex color='white' mb='1rem' gap='10px'
+                            transition='all 0.15s ease-in-out'
+                            _hover={{
+                                color: 'font.200'
+                            }}
+                        >
                             <Icon as={MdEmail} w={6} h={6} />
                             <ChakraLink 
                                 href='www.github.com/Meekunn/'
                                 isExternal 
                                 fontSize='sm' 
-                                color='white' 
                                 mb='1rem'
                             >
                                 Gmail
                             </ChakraLink>
                         </Flex>
-                        <Flex color='white' mb='1rem' gap='10px'>
+                        <Flex color='white' mb='1rem' gap='10px'
+                            transition='all 0.15s ease-in-out'
+                            _hover={{
+                                color: 'font.200'
+                            }}
+                        >
                             <Icon as={MdFacebook} w={6} h={6} />
                             <ChakraLink 
                                 href='www.github.com/Meekunn/'
                                 isExternal 
                                 fontSize='sm' 
-                                color='white' 
                                 mb='1rem'
                             >
                                 Facebook
                             </ChakraLink>
                         </Flex>
-                        <Flex color='white' mb='1rem' gap='10px'>
+                        <Flex color='white' mb='1rem' gap='10px'
+                            transition='all 0.15s ease-in-out'
+                            _hover={{
+                                color: 'font.200'
+                            }}
+                        >
                             <Icon as={IoLogoWhatsapp} w={6} h={6} />
                             <ChakraLink 
                                 href='www.github.com/Meekunn/'
                                 isExternal 
-                                fontSize='sm' 
-                                color='white' 
+                                fontSize='sm'  
                                 mb='1rem'
                             >
                                 Whatsapp

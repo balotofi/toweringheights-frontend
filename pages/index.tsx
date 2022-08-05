@@ -24,7 +24,7 @@ import ImageSlideShow from '../components/ImageSlideShow'
     const router = useRouter()
 
     return (
-      <div>
+      <>
         <LogoNav />
         <Nav />
         <Flex justify='center' p={4} direction={{base: 'column', md: 'row-reverse'}} gap={8}>
@@ -46,7 +46,7 @@ import ImageSlideShow from '../components/ImageSlideShow'
               Towering Heights Schools is a centre of education that prides itself on creating leaders of tomorrow. We provide not only educated, but morally sound students.
             </Text>
             <Text p='1rem 0 2rem'>
-              Our <span style={{'fontWeight': '700'}}>mission statement</span> is building individuals and empowering them with skills and confidence to challenge themselves in every aspect of their lives and also enrichment of character and sense of identity. We are determined to build them into becoming well-balanced, productive, and happy individuals.
+              Our <span style={{'fontWeight': '700'}}>mission statement</span> is building iduals and empowering them with skills and confidence to challenge themselves in every aspect of their lives and also enrichment of character and sense of identity. We are determined to build them into becoming well-balanced, productive, and happy iduals.
             </Text>
             <Button 
               onClick={() => router.push('/about')}
@@ -147,7 +147,7 @@ import ImageSlideShow from '../components/ImageSlideShow'
         </div>
         <Footer />
         <ScrollTopBtn />
-      </div>
+      </>
     )
   }
   

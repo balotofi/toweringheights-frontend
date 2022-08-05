@@ -23,7 +23,7 @@ const DesktopNav = () => {
                                 p={6}
                                 py={{xl: '1.5rem'}}
                                 px={{xl: '2rem'}}
-                                fontSize={{md: 'md', xl: 'lg' }}
+                                fontSize={{md: 'md' }}
                                 fontWeight='medium'
                                 textTransform={'uppercase'}
                                 transition={'all 0.25s ease-in'}
