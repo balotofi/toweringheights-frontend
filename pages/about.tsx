@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import type { NextPage } from 'next'
 import LogoNav from '../components/Navbar/LogoNav'
 import Nav from '../components/Navbar/Nav'
@@ -8,8 +7,6 @@ import BreadCrumbNav from '../components/BreadCrumb'
 import ScrollTopBtn from '../components/Navbar/ScrollTopBtn'
 
 const About: NextPage = () => {
-
-    const router = useRouter()
 
     return (
         <>

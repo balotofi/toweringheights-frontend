@@ -132,6 +132,82 @@ export const slideShowItems : SlideShowProps[] = [
     }
 ]
 
+export const gallery: SlideShowProps[] = [
+    {
+        img: '/assets/class_activities/IMG_20200115_092018_0.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/buhari-balogun.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21421.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/uniform/IMG_20200305_103641_6.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/non_uniform/POP_2024.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/non_uniform/POP_1932.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/milo/IMG-20220606-WA00051.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/milo/IMG-20220606-WA0006.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/milo/IMG-20220606-WA0004.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/staff3.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21561.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21431.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/playground/playground1.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/cultural/POP_2079.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/parents/POP_1900.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_2125.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_19551.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/class_activities/IMG_20200305_104255_5.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/cultural/cultural.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_1981.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/parents/POP_19901.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/IMG-20220421-WA0007.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/IMG_20210226_092604.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/DSC_0310.jpg',
+        alt: 'Gallery'
+    }
+]
+
 // import path from 'path'
 // import { promises as fs } from 'fs'
 
