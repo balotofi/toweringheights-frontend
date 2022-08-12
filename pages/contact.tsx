@@ -19,7 +19,6 @@ const Contact:NextPage = () => {
                 </Flex>
                 <Flex w={'100%'} justify={'center'}>
                     <Stack 
-                        //direction={{base: 'column', md: 'row'}}
                         direction='row' 
                         flexWrap={'wrap'}
                         w={{md: '75%'}}
