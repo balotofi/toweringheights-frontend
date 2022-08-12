@@ -1,3 +1,5 @@
+import React, { SetStateAction } from "react"
+
 export interface ActivityProps {
     id: number,
     img: string,
@@ -21,10 +23,6 @@ export interface StaffsArray {
     child: StaffProps[]
 }
 
-export interface SliderDirProps {
-    direction: 'left' | 'right'
-}
-
 export type BtnSliderProps = {
     direction: 'left' | 'right',
     action: () => void
@@ -39,4 +37,13 @@ export interface NavProps {
 export interface SlideShowProps {
     img: string, 
     alt: string
+}
+
+export interface PaginationProps {
+    totalImages: number,
+    imagesPerPage: number,
+    currentPage: number,
+    changePage: (pageNumber: number) => void,
+    prevPage: () => void,
+    nextPage: () => void
 }
