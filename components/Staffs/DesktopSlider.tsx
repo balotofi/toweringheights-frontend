@@ -49,7 +49,7 @@ const DesktopSlider = () => {
                                 position='absolute'
                                 borderRadius='full'
                                 boxSize='120px'
-                                src='https://bit.ly/dan-abramov'
+                                src={staff.img}
                                 alt={staff.name}
                             />
                             <Box

@@ -1,5 +1,3 @@
-import React, { SetStateAction } from "react"
-
 export interface ActivityProps {
     id: number,
     img: string,
@@ -18,6 +16,7 @@ export interface BlogProps {
 export interface StaffProps {
     name: string,
     role: string,
+    img: string
 }
 export interface StaffsArray {
     child: StaffProps[]
@@ -46,4 +45,12 @@ export interface PaginationProps {
     changePage: (pageNumber: number) => void,
     prevPage: () => void,
     nextPage: () => void
+}
+
+export interface VacancyProps {
+    title: string,
+    subtitle: string,
+    level: string,
+    date: string,
+    location: string
 }

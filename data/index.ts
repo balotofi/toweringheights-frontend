@@ -3,13 +3,28 @@ import { StaffProps, ActivityProps, BlogProps, NavProps, SlideShowProps, StaffsA
 export const staffs:StaffProps [] = [
     {
         name: 'Mrs Balogun',
-        role: 'Headmistress/ Proprietress'
+        role: 'Headmistress/ Proprietress',
+        img: '/assets/teachers/POP_21561.jpg'
     }, {
-        name: 'Miss Famulegun',
-        role: 'Teacher'
+        name: 'Mrs Bose',
+        role: 'Teacher',
+        img: '/assets/teachers/Mrs_Bose3.jpg'
     }, {
-        name: 'Miss Suberu',
-        role: 'Teacher'
+        name: 'Miss Taiwo',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Taiwo_2.jpg'
+    }, {
+        name: 'Miss Kehinde',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Kehinde_2.jpg'
+    }, {
+        name: 'Miss Yinka',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Yinka_2.jpg'
+    }, {
+        name: 'Others',
+        role: 'Teacher',
+        img: '/assets/teachers/staff3.jpg'
     }
 ]
 
@@ -18,26 +33,32 @@ export const staffsArray: StaffsArray[] = [
         child: [
             {
                 name: 'Mrs Balogun',
-                role: 'Headmistress/ Proprietress'
+                role: 'Headmistress/ Proprietress',
+                img: '/assets/teachers/POP_21561.jpg'
             }, {
-                name: 'Miss Famulegun',
-                role: 'Teacher'
+                name: 'Mrs Bose',
+                role: 'Teacher',
+                img: '/assets/teachers/Mrs_Bose3.jpg'
             }, {
-                name: 'Miss Suberu',
-                role: 'Teacher'
+                name: 'Miss Taiwo',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Taiwo_2.jpg'
             }
         ]
     }, {
         child: [
             {
-                name: 'Miss Famulegun',
-                role: 'Headmistress/ Proprietress'
+                name: 'Miss Kehinde',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Kehinde_2.jpg'
             }, {
-                name: 'Miss Famulegun',
-                role: 'Teacher'
+                name: 'Miss Yinka',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Yinka_2.jpg'
             }, {
-                name: 'Miss Suberu',
-                role: 'Teacher'
+                name: 'Others',
+                role: 'Teacher',
+                img: '/assets/teachers/staff3.jpg'
             }
         ]
     }
@@ -101,10 +122,10 @@ export const navItems: NavProps[] = [
         children: [
             {
                 label: "Admissions",
-                href: "/join/admissions"
+                href: "/joinus/admissions"
             }, {
                 label: "Vacancies",
-                href: "/join/vacancies"
+                href: "/joinus/vacancies"
             }
         ] 
     }, {
