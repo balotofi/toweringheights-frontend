@@ -126,7 +126,7 @@ import ImageSlideShow from '../components/ImageSlideShow'
             <Flex m='1rem' justify={{base: 'start', md: 'end'}}>
               <Image
                 borderRadius='xl'
-                src='/assets/cultural_wear/POP_2079.jpg'
+                src='/assets/cultural/POP_2079.jpg'
                 w={{base: '182px', md: '250px'}}
                 h={{base: '135px', md: '180px'}}
               />

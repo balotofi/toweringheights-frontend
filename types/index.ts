@@ -16,13 +16,10 @@ export interface BlogProps {
 export interface StaffProps {
     name: string,
     role: string,
+    img: string
 }
 export interface StaffsArray {
     child: StaffProps[]
-}
-
-export interface SliderDirProps {
-    direction: 'left' | 'right'
 }
 
 export type BtnSliderProps = {
@@ -39,4 +36,21 @@ export interface NavProps {
 export interface SlideShowProps {
     img: string, 
     alt: string
+}
+
+export interface PaginationProps {
+    totalImages: number,
+    imagesPerPage: number,
+    currentPage: number,
+    changePage: (pageNumber: number) => void,
+    prevPage: () => void,
+    nextPage: () => void
+}
+
+export interface VacancyProps {
+    title: string,
+    subtitle: string,
+    level: string,
+    date: string,
+    location: string
 }

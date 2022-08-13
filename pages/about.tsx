@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import type { NextPage } from 'next'
 import LogoNav from '../components/Navbar/LogoNav'
 import Nav from '../components/Navbar/Nav'
@@ -9,8 +8,6 @@ import ScrollTopBtn from '../components/Navbar/ScrollTopBtn'
 
 const About: NextPage = () => {
 
-    const router = useRouter()
-
     return (
         <>
             <LogoNav />
@@ -18,7 +15,7 @@ const About: NextPage = () => {
             <Stack px={2} py={4} p={{md: '0'}}>
                 <Flex justify='center'>
                     <Image
-                        src={'/assets/class_group/About.jpg'} 
+                        src={'/assets/class_img/InShot_20220728_100338428.jpg'} 
                         w={{base: '100%', md: '90%'}}
                         h={{base: '239px', md: '500px', lg: '650px'}}
                     />

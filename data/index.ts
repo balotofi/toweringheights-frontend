@@ -3,13 +3,28 @@ import { StaffProps, ActivityProps, BlogProps, NavProps, SlideShowProps, StaffsA
 export const staffs:StaffProps [] = [
     {
         name: 'Mrs Balogun',
-        role: 'Headmistress/ Proprietress'
+        role: 'Headmistress/ Proprietress',
+        img: '/assets/teachers/POP_21561.jpg'
     }, {
-        name: 'Miss Famulegun',
-        role: 'Teacher'
+        name: 'Mrs Bose',
+        role: 'Teacher',
+        img: '/assets/teachers/Mrs_Bose3.jpg'
     }, {
-        name: 'Miss Suberu',
-        role: 'Teacher'
+        name: 'Miss Taiwo',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Taiwo_2.jpg'
+    }, {
+        name: 'Miss Kehinde',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Kehinde_2.jpg'
+    }, {
+        name: 'Miss Yinka',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Yinka_2.jpg'
+    }, {
+        name: 'Others',
+        role: 'Teacher',
+        img: '/assets/teachers/staff3.jpg'
     }
 ]
 
@@ -18,26 +33,32 @@ export const staffsArray: StaffsArray[] = [
         child: [
             {
                 name: 'Mrs Balogun',
-                role: 'Headmistress/ Proprietress'
+                role: 'Headmistress/ Proprietress',
+                img: '/assets/teachers/POP_21561.jpg'
             }, {
-                name: 'Miss Famulegun',
-                role: 'Teacher'
+                name: 'Mrs Bose',
+                role: 'Teacher',
+                img: '/assets/teachers/Mrs_Bose3.jpg'
             }, {
-                name: 'Miss Suberu',
-                role: 'Teacher'
+                name: 'Miss Taiwo',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Taiwo_2.jpg'
             }
         ]
     }, {
         child: [
             {
-                name: 'Miss Famulegun',
-                role: 'Headmistress/ Proprietress'
+                name: 'Miss Kehinde',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Kehinde_2.jpg'
             }, {
-                name: 'Miss Famulegun',
-                role: 'Teacher'
+                name: 'Miss Yinka',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Yinka_2.jpg'
             }, {
-                name: 'Miss Suberu',
-                role: 'Teacher'
+                name: 'Others',
+                role: 'Teacher',
+                img: '/assets/teachers/staff3.jpg'
             }
         ]
     }
@@ -101,10 +122,10 @@ export const navItems: NavProps[] = [
         children: [
             {
                 label: "Admissions",
-                href: "/join/admissions"
+                href: "/joinus/admissions"
             }, {
                 label: "Vacancies",
-                href: "/join/vacancies"
+                href: "/joinus/vacancies"
             }
         ] 
     }, {
@@ -129,6 +150,82 @@ export const slideShowItems : SlideShowProps[] = [
     }, {
         img: '/assets/class_activities/IMG_20210222_103517_3201_1920.jpg',
         alt: 'Image5'
+    }
+]
+
+export const gallery: SlideShowProps[] = [
+    {
+        img: '/assets/class_activities/IMG_20200115_092018_0.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/buhari-balogun.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21421.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/uniform/IMG_20200305_103641_6.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/non_uniform/POP_2024.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/non_uniform/POP_1932.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/milo/IMG-20220606-WA00051.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/milo/IMG-20220606-WA0006.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/milo/IMG-20220606-WA0004.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/staff3.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21561.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21431.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/playground/playground1.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/cultural/POP_2079.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/parents/POP_1900.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_2125.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_19551.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/class_activities/IMG_20200305_104255_5.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/cultural/cultural.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_1981.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/parents/POP_19901.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/IMG-20220421-WA0007.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/IMG_20210226_092604.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/DSC_0310.jpg',
+        alt: 'Gallery'
     }
 ]
 
