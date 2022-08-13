@@ -1,0 +1,242 @@
+import { StaffProps, ActivityProps, BlogProps, NavProps, SlideShowProps, StaffsArray } from "../types"
+
+export const staffs:StaffProps [] = [
+    {
+        name: 'Mrs Balogun',
+        role: 'Headmistress/ Proprietress',
+        img: '/assets/teachers/POP_21561.jpg'
+    }, {
+        name: 'Mrs Bose',
+        role: 'Teacher',
+        img: '/assets/teachers/Mrs_Bose3.jpg'
+    }, {
+        name: 'Miss Taiwo',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Taiwo_2.jpg'
+    }, {
+        name: 'Miss Kehinde',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Kehinde_2.jpg'
+    }, {
+        name: 'Miss Yinka',
+        role: 'Teacher',
+        img: '/assets/teachers/Miss_Yinka_2.jpg'
+    }, {
+        name: 'Others',
+        role: 'Teacher',
+        img: '/assets/teachers/staff3.jpg'
+    }
+]
+
+export const staffsArray: StaffsArray[] = [
+    {
+        child: [
+            {
+                name: 'Mrs Balogun',
+                role: 'Headmistress/ Proprietress',
+                img: '/assets/teachers/POP_21561.jpg'
+            }, {
+                name: 'Mrs Bose',
+                role: 'Teacher',
+                img: '/assets/teachers/Mrs_Bose3.jpg'
+            }, {
+                name: 'Miss Taiwo',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Taiwo_2.jpg'
+            }
+        ]
+    }, {
+        child: [
+            {
+                name: 'Miss Kehinde',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Kehinde_2.jpg'
+            }, {
+                name: 'Miss Yinka',
+                role: 'Teacher',
+                img: '/assets/teachers/Miss_Yinka_2.jpg'
+            }, {
+                name: 'Others',
+                role: 'Teacher',
+                img: '/assets/teachers/staff3.jpg'
+            }
+        ]
+    }
+]
+
+export const activities: ActivityProps[] =  [
+    {
+        "id": 1,
+        "img": "/assets/playground/playground1.jpg",
+        "alt": "Games and entertainment",
+        "heading": "Games & Entertainment",
+        "summary": "Sports impact our culture,other sources of entertainment and our economy.They help in physical and mental growth and also contribute to the formation of character generally."
+    }, {
+        "id": 2,
+        "img": "/assets/cultural/cultural.jpg",
+        "alt": "Art and creativity",
+        "heading": "Art & Creativity",
+        "summary": "Art is the expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, producing works to be appreciated primarily for their beauty or emotional power."
+    } 
+]
+
+export const blogs: BlogProps[] = [
+    {
+        id: 1,
+        img: "/assets/grads/POP_19551.jpg",
+        alt: "Graduating pupils",
+        summary: "Graduating set gives farewell speech,says how happy they are to be moving to the next level..."
+    }, {
+        id: 2,
+        img: "/assets/milo/IMG-20220606-WA00051.jpg",
+        alt: "Visits",
+        summary: "Nestle Milo visit to the school.See what Nestle Nigeria had to discuss with the students amidst other entertainment..."
+    }, {
+        id: 3,
+        img: "/assets/parents/POP_19901.jpg",
+        alt: "Parent Teacher Association",
+        summary: "Parents suggest ways to enhance optimum development and improved facilities at PTA meeting..."
+    }
+]
+
+export const navItems: NavProps[] = [
+    {
+        label: "Home",
+        href: "/" 
+    }, {
+        label: "About Us",
+        children: [
+            {
+                label: "About Us",
+                href: "/about"
+            }, {
+                label: "Our Blog",
+                href: "/about/blog"
+            }
+        ] 
+    }, {
+        label: "Gallery",
+        href: "/gallery"
+    }, {
+        label: "Join Us",
+        children: [
+            {
+                label: "Admissions",
+                href: "/joinus/admissions"
+            }, {
+                label: "Vacancies",
+                href: "/joinus/vacancies"
+            }
+        ] 
+    }, {
+        label: "Contact Us",
+        href: "/contact"
+    }
+]
+
+export const slideShowItems : SlideShowProps[] = [
+    {
+        img: '/assets/group_img/InShot_20220728_104357649.jpg',
+        alt: 'Image1'
+    }, {
+        img: '/assets/uniform/IMG_20200305_103641_6.jpg',
+        alt: 'Image2'
+    }, {
+        img: '/assets/class_activities/IMG_20200204_114106_8.jpg',
+        alt: 'Image3'
+    }, {
+        img: '/assets/group_img/InShot_20220728_104256447.jpg',
+        alt: 'Image4'
+    }, {
+        img: '/assets/class_activities/IMG_20210222_103517_3201_1920.jpg',
+        alt: 'Image5'
+    }
+]
+
+export const gallery: SlideShowProps[] = [
+    {
+        img: '/assets/class_activities/IMG_20200115_092018_0.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/buhari-balogun.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21421.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/uniform/IMG_20200305_103641_6.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/non_uniform/POP_2024.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/non_uniform/POP_1932.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/milo/IMG-20220606-WA00051.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/milo/IMG-20220606-WA0006.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/milo/IMG-20220606-WA0004.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/staff3.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21561.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/teachers/POP_21431.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/playground/playground1.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/cultural/POP_2079.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/parents/POP_1900.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_2125.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_19551.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/class_activities/IMG_20200305_104255_5.jpg',
+        alt: 'Gallery' 
+    }, {
+        img: '/assets/cultural/cultural.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/grads/POP_1981.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/parents/POP_19901.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/IMG-20220421-WA0007.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/IMG_20210226_092604.jpg',
+        alt: 'Gallery'
+    }, {
+        img: '/assets/group_img/DSC_0310.jpg',
+        alt: 'Gallery'
+    }
+]
+
+// import path from 'path'
+// import { promises as fs } from 'fs'
+
+// export default async function handler(req: any, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: string): void; new(): any; }; }; }) {
+//   //Find the absolute path of the json directory
+//   const jsonDirectory = path.join(process.cwd(), 'json')
+//   //Read the json data file data.json
+//   const fileContents = await fs.readFile(jsonDirectory + '/activities.json', 'utf8')
+//   //Return the content of the data file in json format
+//   res.status(200).json(fileContents)
+// }
