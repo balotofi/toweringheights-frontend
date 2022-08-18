@@ -1,4 +1,4 @@
-export interface ActivityProps {
+interface ActivityProps {
     id: number,
     img: string,
     alt: string,
@@ -6,39 +6,39 @@ export interface ActivityProps {
     summary: string,
 }
 
-export interface BlogProps {
+interface BlogProps {
     id: number,
     img: string,
     alt: string,
     summary: string,
 }
 
-export interface StaffProps {
+interface StaffProps {
     name: string,
     role: string,
     img: string
 }
-export interface StaffsArray {
+interface StaffsArray {
     child: StaffProps[]
 }
 
-export type BtnSliderProps = {
+type BtnSliderProps = {
     direction: 'left' | 'right',
     action: () => void
 }
 
-export interface NavProps {
+interface NavProps {
     label: string,
     href?: string,
     children?: NavProps[]
 }
 
-export interface SlideShowProps {
+interface SlideShowProps {
     img: string, 
     alt: string
 }
 
-export interface PaginationProps {
+interface PaginationProps {
     totalImages: number,
     imagesPerPage: number,
     currentPage: number,
@@ -47,7 +47,7 @@ export interface PaginationProps {
     nextPage: () => void
 }
 
-export interface VacancyProps {
+interface VacancyProps {
     title: string,
     subtitle: string,
     level: string,

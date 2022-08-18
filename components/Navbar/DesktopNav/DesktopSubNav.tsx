@@ -1,5 +1,4 @@
 import { Box, Link, Stack, Text } from "@chakra-ui/react"
-import { NavProps } from "../../../types"
 
 const DesktopSubNav = ({label, href }: NavProps) => {
     return (

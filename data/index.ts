@@ -1,5 +1,3 @@
-import { StaffProps, ActivityProps, BlogProps, NavProps, SlideShowProps, StaffsArray } from "../types"
-
 export const staffs:StaffProps [] = [
     {
         name: 'Mrs Balogun',

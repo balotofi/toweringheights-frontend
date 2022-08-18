@@ -1,5 +1,4 @@
 import { Collapse, Flex, Icon, Stack, Text, Link as ChakraLink, useDisclosure } from "@chakra-ui/react"
-import { NavProps } from "../../../types"
 import { IoMdArrowDropdown } from "react-icons/io"
 
 const MobileNavItem = ({label, children, href}: NavProps) => {

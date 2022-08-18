@@ -1,6 +1,5 @@
 import { Flex, Link, Box, Button } from "@chakra-ui/react"
 import { BiCaretRight, BiCaretLeft } from "react-icons/bi"
-import { PaginationProps } from "../../types"
 
 const Pagination = ({totalImages, imagesPerPage, currentPage, nextPage, prevPage, changePage}:PaginationProps) => {
 
