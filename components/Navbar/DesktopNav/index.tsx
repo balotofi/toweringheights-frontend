@@ -8,7 +8,8 @@ import {
     Stack 
 } from "@chakra-ui/react"
 import { navItems } from "../../../data"
-import DesktopSubNav from "./DesktopSubNav"
+import DesktopSubNav from "./DesktopSubNav" 
+import { popOverContent } from './style'
 
 const DesktopNav = () => {
     return (
@@ -17,35 +18,12 @@ const DesktopNav = () => {
                 <Box key={navItem.label}>
                     <Popover trigger="hover">
                         <PopoverTrigger>
-                            <Link
-                                href={navItem.href ?? '#'}
-                                color='white'
-                                p={6}
-                                py={{xl: '1.5rem'}}
-                                px={{xl: '2rem'}}
-                                fontSize={{md: 'md' }}
-                                fontWeight='medium'
-                                textTransform={'uppercase'}
-                                transition={'all 0.25s ease-in'}
-                                _hover={{
-                                    textDecoration: 'none',
-                                    bgColor: 'rgba(217, 217, 217, 0.3)',
-                                    fontWeight: '500'
-                                }}
-                            >
+                            <Link href={navItem.href ?? '#'} variant='big-nav-links' py={6} px={8} textTransform='uppercase'>
                                 {navItem.label}
                             </Link>
                         </PopoverTrigger>
                         {navItem.children && (
-                            <PopoverContent
-                                border={1}
-                                minW='3xs'
-                                boxShadow='xl'
-                                bgColor='brand.300'
-                                py={1}
-                                borderRadius='md'
-                                //rounded='small'
-                            >
+                            <PopoverContent sx={popOverContent}>
                                 <PopoverArrow bg={'brand.300'} />
                                 <Stack>
                                     {navItem.children.map((child) => (

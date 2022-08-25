@@ -1,7 +1,8 @@
 import { Flex, Link, Box, Button } from "@chakra-ui/react"
 import { BiCaretRight, BiCaretLeft } from "react-icons/bi"
+import { pagenumber } from "./style"
 
-const Pagination = ({totalImages, imagesPerPage, currentPage, nextPage, prevPage, changePage}:PaginationProps) => {
+const Pagination = ({totalImages, imagesPerPage, currentPage, nextPage, prevPage, changePage}: PaginationProps) => {
 
     const pageNumbers = []
 
@@ -13,22 +14,10 @@ const Pagination = ({totalImages, imagesPerPage, currentPage, nextPage, prevPage
         <Flex m={'1rem 0.5rem !important'} justify='space-between' align='center' >
             <Flex justify='space-around' gap={3}>
                 {pageNumbers.map((number: number) => (
-                    <Flex 
-                        key={number} 
-                        borderRadius='md'
-                        border={1}
-                        borderStyle='solid'
-                        borderColor={'brand.300'}
-                        w='35px'
-                        h='40px'
-                        align='center'
-                        justify='center'
-                        bg={ currentPage === number ? 'brand.300' : 'white'}
-                    >
+                    <Flex key={number} sx={pagenumber} bg={ currentPage === number ? 'brand.300' : 'white'}>
                         <Link
                             onClick={() => changePage(number)}
                             color= {currentPage === number ? 'white' : 'brand.300'}
-                            textDecoration='none !important'
                         >
                             {number}
                         </Link>
@@ -38,21 +27,21 @@ const Pagination = ({totalImages, imagesPerPage, currentPage, nextPage, prevPage
 
             <Box color={'white'} fontWeight='normal'>
                 <Button 
-                    size='sm'
-                    bg={'brand.300'}
-                    colorScheme='blue'
-                    leftIcon={<BiCaretLeft />} 
                     onClick={prevPage} 
+                    size='sm'
+                    variant='solid'
+                    _hover= {{border: '1px solid'}}
+                    leftIcon={<BiCaretLeft />} 
                     isDisabled={currentPage === pageNumbers[0] ? true : false}
                 >
                     Prev
                 </Button>
                 <Button 
-                    size='sm'
-                    bg={'brand.300'}
-                    colorScheme='blue'
-                    rightIcon={<BiCaretRight />} 
                     onClick={nextPage}
+                    size='sm'
+                    variant='solid'
+                    _hover= {{border: '1px solid'}}
+                    rightIcon={<BiCaretRight />} 
                     isDisabled={currentPage === pageNumbers.length ? true : false}
                 >
                     Next

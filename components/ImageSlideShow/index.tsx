@@ -1,6 +1,8 @@
-import { Box, Flex, Image } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
+import Image from "next/image"
 import { useEffect, useState } from "react"
-import { slideShowItems } from "../../data"
+import { slideShowImages } from "../../data/slideShowData"
+import { dotArrayBox, dotArrayFlex, imageBox, imageFlex } from "./style"
 
 const dotArray: number[] = [ 0, 1, 2, 3, 4 ]
 
@@ -10,7 +12,7 @@ const ImageSlideShow = () => {
 
     useEffect(() => {
         const slide = setInterval(() => {
-            if ( slideId === slideShowItems.length ){
+            if ( slideId === slideShowImages.length ){
                 setSlideId(1)
             } else {
                 setSlideId(id => id + 1)
@@ -19,52 +21,28 @@ const ImageSlideShow = () => {
         return () => clearInterval(slide)
     }, [slideId])
 
-    const dotPosition = (idx: number) => {
+    const dotPosition = (idx: number) => { 
         setSlideId(idx)
     }
 
     return (
-        <Flex 
-            position='relative' 
-            align='center' 
-            overflow='hidden'
-            justify='center'
-            w={{xl: '50%'}}
-        >
-            {slideShowItems.map((item, id) => (
-                <Image
-                    key={item.alt}
-                    src={item.img}
-                    display={slideId === id + 1 ? 'block' : 'none'}
-                    h={{ base: '255px', md: '400px', xl: '500px' }}
-                    w={{ base: '271px', md: '2000px', xl: '1200px'}}
-                    borderRadius='50%'
-                    border={4}
-                    borderStyle={'solid'}
-                    borderColor='brand.300'
-                    transition='all 0.3s ease-in'
-                />
+        <Flex sx={imageFlex}>
+            {slideShowImages.map((item, id) => ( 
+                <Box key={item.alt} sx={imageBox} display={slideId === id + 1 ? 'block' : 'none'} >
+                    <Image
+                        src={item.img}
+                        alt={item.alt}
+                        layout='fill'
+                        quality='100'
+                        loading='eager'
+                    />
+                </Box>
             ))}
-
-            <Flex 
-                justify='space-around' 
-                position='absolute' 
-                bottom='30px'
-                gap='5px' 
-                transform='translateX(-50%)' 
-                left='50%'>
+            <Flex sx={dotArrayFlex}>
                 {dotArray.map((idx) => (
-                    <Box
-                        onClick={() => dotPosition( idx+1 )}
-                        key={idx} 
-                        w='20px'
-                        h='5px'
-                        borderRadius={'md'}
-                        border={1}
-                        borderStyle={'solid'}
-                        borderColor='gray.100'
-                        transition='all 0.3s ease-in-out'
+                    <Box key={idx} sx={dotArrayBox}  
                         bg={slideId === idx + 1 ? 'gray.200' : 'transparent'}
+                        onClick={() => dotPosition( idx+1 )}
                     />
                 ))}
             </Flex>

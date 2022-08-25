@@ -1,6 +1,5 @@
 import {
     Flex,
-    Image,
     Heading,
     Input,
     InputGroup,
@@ -8,25 +7,21 @@ import {
     Stack,
 } from "@chakra-ui/react"
 import { BiSearchAlt } from "react-icons/bi"
+import Image from "next/image"
+import SchoolLogo from "../../assets/logo_ths.jpg"
 
-const LogoNav = () => {
+const LogoNavbar = () => {
     return (
-        <Flex maxH='14.625rem' align='center' mt='25px' justify='space-around' mx={'3'}>
-            <Stack direction={{base: 'column', md: 'row'}} align='center' gap={{md: '15px'}}>
+        <Flex maxH='14.625rem' align='center' my={4} justify='space-around' mx={3}>
+            <Stack direction={{base: 'column', md: 'row'}} align='center' gap={{md: 3.5}}>
                 <Image
-                    borderRadius='full'
-                    height={'93px'}
-                    width={'105px'}
-                    src='/assets/logo_ths.jpg'
+                    height={93}
+                    width={105}
+                    src={SchoolLogo}
                     alt='School Logo'
+                    loading="eager"
                 />
-                <Heading 
-                    as='h1' 
-                    color='brand.300' 
-                    fontSize={{base: '2xl', md: '2xl'}}
-                    fontWeight='bold'
-                    lineHeight={10}
-                >
+                <Heading variant='logo-heading' fontSize= {{base: '1.4rem', md: '1.6rem'}}>
                     Towering Heights School
                 </Heading>
             </Stack>
@@ -34,7 +29,7 @@ const LogoNav = () => {
             <InputGroup display={{base: 'none', md: 'flex'}} width={'35%'}>
                 <InputLeftElement 
                     color= 'brand.400'
-                    m={{lg: '0.3rem'}}
+                    m={{lg: 1}}
                     children={<BiSearchAlt />}
                 />
                 <Input 
@@ -55,4 +50,4 @@ const LogoNav = () => {
     )
 }
 
-export default LogoNav
+export default LogoNavbar

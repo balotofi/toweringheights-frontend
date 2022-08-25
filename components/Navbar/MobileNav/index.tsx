@@ -4,11 +4,7 @@ import MobileNavItem from "./MobileNavItem"
 
 const MobileNav = () => {
     return (
-        <Stack
-            bg='brand.300'
-            p={4}
-            display={{ md: 'none'}}
-        >
+        <Stack bg='brand.300' p={4} display={{ md: 'none'}}>
             {navItems.map((navItem) => (
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))}
