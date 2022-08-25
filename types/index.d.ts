@@ -1,27 +1,3 @@
-interface ActivityProps {
-    id: number,
-    img: string,
-    alt: string,
-    heading: string,
-    summary: string,
-}
-
-interface BlogProps {
-    id: number,
-    img: string,
-    alt: string,
-    summary: string,
-}
-
-interface StaffProps {
-    name: string,
-    role: string,
-    img: string
-}
-interface StaffsArray {
-    child: StaffProps[]
-}
-
 type BtnSliderProps = {
     direction: 'left' | 'right',
     action: () => void
@@ -31,11 +7,6 @@ interface NavProps {
     label: string,
     href?: string,
     children?: NavProps[]
-}
-
-interface SlideShowProps {
-    img: string, 
-    alt: string
 }
 
 interface PaginationProps {
@@ -53,4 +24,15 @@ interface VacancyProps {
     level: string,
     date: string,
     location: string
+}
+
+interface IFooterLink {
+    href: string,
+    text: string,
+}
+
+interface IFooterSocial {
+    icon: IconType,
+    href: string,
+    text: string,
 }
