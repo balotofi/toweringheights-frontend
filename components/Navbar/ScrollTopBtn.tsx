@@ -1,6 +1,7 @@
 import { Button, Icon } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
 import { MdOutlineKeyboardArrowUp } from "react-icons/md"
+import { scrollButton } from "./style"
 
 const ScrollTopBtn = () => {
 
@@ -12,9 +13,9 @@ const ScrollTopBtn = () => {
 
     const toggleVisible = () => {
         const scrolled = document.documentElement.scrollTop
-        if (scrolled > 1200) {
+        if (scrolled > 1000) {
             setVisible(true)
-        } else if ( scrolled <= 1200) {
+        } else if ( scrolled <= 1000) {
             setVisible(false)
         }
     }
@@ -31,14 +32,8 @@ const ScrollTopBtn = () => {
         <Button
             onClick={scrollToTop}
             colorScheme='blue'
-            variant='solid' 
-            color='white'
-            borderRadius='full' 
-            p='0.2rem 0.3rem'
-            right='10%'
-            position='fixed'
-            bottom={{base: '30px', md: '50px'}}
-            cursor='pointer'
+            variant='solid'
+            sx={scrollButton}
             display={visible ? 'inline' : 'none'}
         >
             <Icon as={MdOutlineKeyboardArrowUp} w={8} h={8} />

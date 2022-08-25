@@ -5,8 +5,6 @@ const styles = {
             color: '#333333',
             fontFamily: `'Lato', sans-serif`,
             fontSize: 'md',
-            lineHeight: '1.2rem',
-            fontWeight: 'normal',
         }
     })
 }
