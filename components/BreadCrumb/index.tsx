@@ -26,8 +26,7 @@ const BreadCrumbNav = () => {
     return (
         <HStack 
             align='center' 
-            m={'1rem 0.5rem !important'} 
-            // px={{base: '0', md: '3rem'}} 
+            m={'2 !important'}  
             w={{base: '100%', md: '85%'}}
         >
             {breadcrumbs.map((crumb, id:number) => (
