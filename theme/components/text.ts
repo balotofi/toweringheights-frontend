@@ -4,7 +4,7 @@ const Text: ComponentStyleConfig = {
     baseStyle: {
         color: 'font.300',
         lineHeight: 6,
-        fontWeigh: 'medium',
+        fontWeight: 'medium',
     },
     variants: {
         'footer': {
