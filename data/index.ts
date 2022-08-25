@@ -60,6 +60,7 @@ export const navItems: NavProps[] = [
         href: "/gallery"
     }, {
         label: "Join Us",
+        href: "/joinus",
         children: [
             {
                 label: "Admissions",
