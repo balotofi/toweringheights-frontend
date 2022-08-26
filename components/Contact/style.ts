@@ -1,3 +1,5 @@
+import { CSSProperties } from "react"
+
 export const flexStyle = {
     align: 'center',
     gap: 4,
@@ -26,4 +28,12 @@ export const inputStyle = {
         border: '2px solid',
         borderColor: 'font.300'
     }
+}
+
+export const formStyle: CSSProperties = {
+    width: '95%', 
+    display:'flex', 
+    flexDirection:'column', 
+    gap: '1rem', 
+    alignItems: 'center',
 }
