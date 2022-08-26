@@ -48,7 +48,7 @@ const Button: ComponentStyleConfig = {
             colorScheme: 'blue',
             _hover: {
               bg: 'white',
-              color: 'brand.300'
+              color: 'font.300'
             }
         },
         solid: {
