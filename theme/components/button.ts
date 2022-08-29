@@ -57,11 +57,21 @@ const Button: ComponentStyleConfig = {
           fontWeight: 'semibold',
           colorScheme: 'blue',
           _hover: {
-              bg: 'brand.400',
+              bg: 'transparent',
               color: 'brand.300',
-              border: '2px solid',
+              border: '1px solid',
               borderColor: 'brand.300',
           }
+        },
+        ghost: {
+          border: 'none',
+          bg: 'transparent',
+          fontSize: '3xl',
+          color: 'font.300',
+          _hover: {
+            bg: 'brand.200',
+            color: 'white'
+          },
         },
     },
     defaultProps: {

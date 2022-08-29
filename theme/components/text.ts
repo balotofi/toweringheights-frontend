@@ -22,6 +22,11 @@ const Text: ComponentStyleConfig = {
             color: 'brand.300',
             mb: 4,
             textAlign: 'center',
+        },
+        'vacancy-detail': {
+            color: 'font.300',
+            lineHeight: 6,
+            fontSize: 'sm'
         }
     },
 }
