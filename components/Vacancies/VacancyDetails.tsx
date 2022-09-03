@@ -1,8 +1,11 @@
 import { Flex, Box, Heading, Button, IconButton, Text, Collapse, useDisclosure } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 import { IoIosArrowDown } from "react-icons/io"
 import { detailBox } from "./style"
 
 const VacancyDetails = () => {
+
+    const router = useRouter()
     const { isOpen, onToggle } = useDisclosure()
 
     return (
@@ -13,6 +16,7 @@ const VacancyDetails = () => {
                     <IconButton 
                         onClick={onToggle} 
                         variant='ghost' 
+                        fontSize= '3xl'
                         aria-label='Toggle Collapse' 
                         icon={<IoIosArrowDown />} 
                     />
@@ -24,7 +28,7 @@ const VacancyDetails = () => {
                         <Text variant='vacancy-detail'>Start Date: August 2022</Text>
                         <Text variant='vacancy-detail'>Locations: Boston and Lawrence, MA...</Text>
                     </Flex>
-                    <Button>Apply</Button>
+                    <Button onClick={() => router.push('/joinus/vacancies/apply')}>Apply</Button>
                 </Flex>
             </Flex>  
             <Collapse in={isOpen} animateOpacity>
