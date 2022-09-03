@@ -36,3 +36,18 @@ interface IFooterSocial {
     href: string,
     text: string,
 }
+
+interface IFormikValues {
+    email: string,
+    name: string,
+    message: string
+}
+
+interface IFormValues {
+    role: string,
+    fullName: string,
+    email: string,
+    phone: string,
+    location: string,
+    file_: FileList,
+}
