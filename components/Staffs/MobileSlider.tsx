@@ -50,12 +50,12 @@ const MobileSlider = () => {
                                 <Heading as='h5' sx={staffName}>
                                     {staff.name}
                                 </Heading>
-                                <Text variant='staff-label'>{staff.role}</Text>
+                                <Text variant='staffLabel'>{staff.role}</Text>
                                 <Flex mb={4} justify='center' gap={2}>
-                                    <Button size='md' variant={'staff-card-btn'}>
+                                    <Button size='md' variant={'staffCardBtn'}>
                                         <Icon as={RiWhatsappLine} w={5} h={5} />
                                     </Button>
-                                    <Button size='md' variant={'staff-card-btn'}>
+                                    <Button size='md' variant={'staffCardBtn'}>
                                         <Icon as={MdMailOutline} w={5} h={5} />
                                     </Button>
                                 </Flex>

@@ -36,3 +36,23 @@ interface IFooterSocial {
     href: string,
     text: string,
 }
+
+interface IContactFormVal {
+    email: string,
+    name: string,
+    message: string
+}
+
+interface IVacancyFormVal {
+    role: string,
+    fullName: string,
+    email: string,
+    phone: string,
+    location: string,
+    file_: FileList,
+}
+
+interface IStateResData {
+    name: string
+    capital: string
+}

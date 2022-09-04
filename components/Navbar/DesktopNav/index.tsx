@@ -18,7 +18,7 @@ const DesktopNav = () => {
                 <Box key={navItem.label}>
                     <Popover trigger="hover">
                         <PopoverTrigger>
-                            <Link href={navItem.href ?? '#'} variant='big-nav-links' py={6} px={8} textTransform='uppercase'>
+                            <Link href={navItem.href ?? '#'} variant='bigNavLinks' py={6} px={8} textTransform='uppercase'>
                                 {navItem.label}
                             </Link>
                         </PopoverTrigger>

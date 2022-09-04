@@ -13,7 +13,7 @@ const Link:ComponentStyleConfig = {
         }
     },
     variants: {
-        'big-nav-links': {
+        'bigNavLinks': {
             p: 6,
             _hover: {
                 textDecoration: 'none',
@@ -27,7 +27,7 @@ const Link:ComponentStyleConfig = {
                 textDecoration: 'none',
             }
         }, 
-        'view-more': {
+        'viewMore': {
             color:'brand.300', 
             fontWeight:'bold', 
             pb:'0.2rem', 

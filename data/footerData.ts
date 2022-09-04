@@ -18,7 +18,7 @@ export const footerLinks: IFooterLink[] = [
         href: '/parents',
         text: 'Parents'
     }, {
-        href: '/join',
+        href: '/joinus',
         text: 'Join us'
     }, {
         href: '/contact',

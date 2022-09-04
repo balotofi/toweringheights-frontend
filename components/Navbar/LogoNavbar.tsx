@@ -21,7 +21,7 @@ const LogoNavbar = () => {
                     alt='School Logo'
                     loading="eager"
                 />
-                <Heading variant='logo-heading' fontSize= {{base: '1.4rem', md: '1.6rem'}}>
+                <Heading variant='logoHeading' fontSize= {{base: '1.4rem', md: '1.6rem'}}>
                     Towering Heights School
                 </Heading>
             </Stack>

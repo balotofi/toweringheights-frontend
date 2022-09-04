@@ -50,12 +50,12 @@ const DesktopSlider = () => {
                                 <Heading as='h5' sx={staffName}>
                                     {staff.name}
                                 </Heading>
-                                <Text variant='staff-label' mx={1}>{staff.role}</Text>
+                                <Text variant='staffLabel' mx={1}>{staff.role}</Text>
                                 <Flex mb={4} justify='center' gap={2}>
-                                    <Button size='md' variant={'staff-card-btn'}>
+                                    <Button size='md' variant={'staffCardBtn'}>
                                         <Icon as={RiWhatsappLine} w={{md: '7'}} h={{md: '7'}} />
                                     </Button>
-                                    <Button size='md' variant={'staff-card-btn'}>
+                                    <Button size='md' variant={'staffCardBtn'}>
                                         <Icon as={MdMailOutline} w={{md: '7'}} h={{md: '7'}} />
                                     </Button>
                                 </Flex>

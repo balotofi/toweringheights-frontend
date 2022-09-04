@@ -16,7 +16,7 @@ const FooterImage = () => {
                     justify='center'
                     w={{lg: '40%'}}
                 >
-                    <Text fontSize={{lg: 'lg'}} variant='footer-image-text'>
+                    <Text fontSize={{lg: 'lg'}} variant='footerImageText'>
                         A wonderful <span style={{color: '#007AFF', fontWeight: '600'}}>  
                             FIRST
                         </span> out of home learning <span style={{color: '#007AFF', fontWeight: '600'}}>
@@ -39,7 +39,7 @@ const FooterImage = () => {
                             <IconButton
                                 aria-label='Subscribe to Newsletter'
                                 icon={<SendPlaneIcon />}
-                                variant='sub-newsletter'
+                                variant='subNewsletter'
                             /> 
                         </InputRightElement>
                     </InputGroup>
