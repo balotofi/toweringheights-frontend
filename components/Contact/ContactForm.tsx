@@ -1,87 +1,108 @@
-import { Formik, Form, Field, FormikProps, FormikErrors } from 'formik'
-import { VStack, FormControl, FormLabel, Input, Button, Textarea, Flex, FormErrorMessage } from '@chakra-ui/react'
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { 
+    VStack, 
+    FormControl, 
+    FormLabel,
+    Input, 
+    Button, 
+    Textarea, 
+    Flex, 
+    FormErrorMessage,
+    useToast,
+} from '@chakra-ui/react'
 import { formStyle, inputStyle, vStackStyle } from './style'
 
-interface IValues {
-    email: string,
-    name: string,
-    message: string
-}
+const EMAIL_REGEX = /^[A-Za-z0-9_\-\.]{4,}[@][a-z]+[\.][a-z]{2,3}$/
+//const EMAIL_REGEX = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
 
 const ContactForm = () => {
 
-    const initialValues: IValues = {email: '', name: '', message: ''}
+    const toast = useToast()
+    const { register, handleSubmit, formState: { errors }, reset} = useForm<IContactFormVal>()
 
-    function validateInput (values: IValues) {
-        const errors: FormikErrors<IValues> = {}
-        if(!values.name) {
-            errors.name = 'Name is Required'
-        } else if (!values.email) {
-            errors.email = 'Email is Required'
-        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-            errors.email = 'Enter a Valid Email address'
-        } else if (!values.message) {
-            errors.message = 'Type in Your Message'
-        }
-        return errors
-    }
+    const [loading, setLoading] = useState(false)
+
+    const onSubmit = handleSubmit((data) => {
+        setLoading(true)
+        setTimeout(()=> {
+            console.log('On Submit: ', data)
+            setLoading(false)
+            toast({
+                title: 'Message Sent',
+                description: "Thank You For Contacting Us",
+                status: 'success',
+                duration: 5000,
+                isClosable: true,
+                position: 'bottom-right',
+            })
+        }, 1500)
+        reset()
+    })
 
     return (
         <>
             <VStack sx={vStackStyle}>
-                <Formik
-                    initialValues={initialValues}
-                    validate={validateInput}
-                    onSubmit={(values, action) => {
-                        setTimeout(() => {
-                            console.log(JSON.stringify(values, null, 2))
-                            action.setSubmitting(false)
-                        }, 500)
-                    }}
-                >
-                {(props: FormikProps<IValues>) => (
-                    <Form style={formStyle}>
-                        <Field name='name' type='text'>
-                            {({field, form}: any) => (
-                                <FormControl isInvalid={form.errors.name && form.touched.name}>
-                                    <FormLabel>Your Name</FormLabel> 
-                                    <Input {...field} variant='filled' sx={inputStyle} placeholder='John Doe' />
-                                    <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-                                </FormControl>
-                            )}
-                        </Field>
-                        <Field name='email' type='email'>
-                            {({field, form}: any) => (
-                                <FormControl isInvalid={form.errors.email && form.touched.email}>
-                                    <FormLabel>Your Email</FormLabel>
-                                    <Input {...field} variant='filled' sx={inputStyle} placeholder='johndoe@gmail.com' />
-                                    <FormErrorMessage>{form.errors.email}</FormErrorMessage>
-                                </FormControl>
-                            )}
-                        </Field>
-                        <Field name='message' type='text'>
-                            {({field, form}: any) => (
-                                <FormControl isInvalid={form.errors.message && form.touched.message}>
-                                    <FormLabel>Your Message</FormLabel>
-                                    <Textarea {...field} variant='filled' sx={inputStyle} placeholder='Type your message here ...' />
-                                    <FormErrorMessage>{form.errors.message}</FormErrorMessage>
-                                </FormControl>
-                            )}
-                        </Field>
-                        <Flex>
-                            <Button
-                                variant='outline'
-                                size= 'lg'
-                                isLoading={props.isSubmitting}
-                                loadingText='Submitting'
-                                type='submit'
-                            >
-                                Send Message
-                            </Button>
-                        </Flex>
-                    </Form>
-                )}
-                </Formik>
+                <form onSubmit={onSubmit} style={formStyle}>
+                    <FormControl isInvalid={!!errors.name}>
+                        <FormLabel>Your Name</FormLabel>
+                        <Input
+                            {...register('name', {
+                                required: 'Your Name is Required',
+                                minLength: 5,
+                                maxLength: 35,
+                            })} 
+                            size='lg' variant='filled' sx={inputStyle} placeholder='Your Name' type='text' />
+                            <FormErrorMessage>
+                                {errors.name && errors?.name.type === "minLength" && "MinLength is 5 characters"}
+                            </FormErrorMessage>
+                            <FormErrorMessage>
+                                {errors.name && errors?.name.type === "maxLength" && "MaxLength is 35 characters"}
+                            </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={!!errors.email}>
+                        <FormLabel>Your Email</FormLabel>
+                        <Input 
+                            {...register('email', {
+                                required: 'Email is Required',
+                                pattern: {
+                                    value: EMAIL_REGEX,
+                                    message: 'Invalid Email'
+                                }
+                            })}
+                            variant='filled' size='lg' type='email' sx={inputStyle} placeholder='Email Address' 
+                        />
+                        <FormErrorMessage>{errors.email && errors?.email.message}</FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={!!errors.message}>
+                        <FormLabel>Your Message</FormLabel>
+                        <Textarea 
+                            {...register('message', {
+                                required: 'Message is Required',
+                                minLength: 25,
+                                maxLength: 200,
+                            })}
+                            variant='filled' sx={inputStyle} size='lg' placeholder='Type your message here ...'
+                        />
+                        <FormErrorMessage>
+                            {errors.message && errors?.message.type === "minLength" && "MinLength is 25 characters"}
+                        </FormErrorMessage>
+                        <FormErrorMessage>
+                            {errors.message && errors?.message.type === "maxLength" && "MaxLength is 200 characters"}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <Flex>
+                        <Button
+                            variant='outline'
+                            size= 'lg'
+                            isLoading={loading}
+                            loadingText='Sending'
+                            type='submit'
+                        >
+                            Send Message
+                        </Button>
+                    </Flex>
+                </form>
             </VStack>
         </>
     )

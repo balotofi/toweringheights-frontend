@@ -66,12 +66,21 @@ const Button: ComponentStyleConfig = {
         ghost: {
           border: 'none',
           bg: 'transparent',
-          fontSize: '3xl',
           color: 'font.300',
           _hover: {
             bg: 'brand.200',
             color: 'white'
           },
+        },
+        'input-file': {
+          px: 2,
+          background: 'white',
+          borderRadius: 'xl',
+          color: 'font.300',
+          fontWeight: 'normal',
+          fontSize: 'xs',
+          border: '2px solid',
+          borderColor: 'white',
         },
     },
     defaultProps: {

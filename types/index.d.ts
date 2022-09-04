@@ -37,17 +37,22 @@ interface IFooterSocial {
     text: string,
 }
 
-interface IFormikValues {
+interface IContactFormVal {
     email: string,
     name: string,
     message: string
 }
 
-interface IFormValues {
+interface IVacancyFormVal {
     role: string,
     fullName: string,
     email: string,
     phone: string,
     location: string,
     file_: FileList,
+}
+
+interface IStateResData {
+    name: string
+    capital: string
 }

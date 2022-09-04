@@ -23,23 +23,18 @@ const NAME_REGEX = /^[A-Za-z\-]+\s[A-Za-z\-]*$/
 const PHONE_REGEX = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
 const EMAIL_REGEX = /^[A-Za-z0-9_\-\.]{4,}[@][a-z]+[\.][a-z]{2,3}$/
 
-interface IData {
-    name: string
-    capital: string
-}
-
 const VacancyForm = () => {
 
     const [loading, setLoading] = useState(false)
     const [changePlaceholder, setChangePlaceholder] = useState('no file selected')
-    const [states, setStates] = useState<IData[]>([])
+    const [states, setStates] = useState<IStateResData[]>([])
     const toast = useToast()
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<IFormValues>()
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<IVacancyFormVal>()
 
     useEffect(() => {
         const fetcher = async() => {
             await axios.get('http://locationsng-api.herokuapp.com/api/v1/states')
-            .then((response: AxiosResponse<IData[]>)=> {
+            .then((response: AxiosResponse<IStateResData[]>)=> {
                 setStates(response.data)
             })
             .catch((error) => {
