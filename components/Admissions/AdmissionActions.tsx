@@ -1,4 +1,5 @@
 import { Box, Flex, Heading } from "@chakra-ui/react"
+import { FaArrowRight } from "react-icons/fa"
 import { smallHeadingBorder } from "../../theme/components/boxStyles"
 import { actionsHeading, roundBtn } from "./style"
 
@@ -13,9 +14,18 @@ const AdmissionActions = () => {
             </Flex>
 
             <Flex flexWrap='wrap' justify='center' gap={{base: 6, lg: 10}} my={4}>
-                <Box as='button' sx={roundBtn}>Admission policies</Box>
-                <Box as='button' sx={roundBtn}>Apply now</Box>
-                <Box as='button' sx={roundBtn}>Visit THS</Box>
+                <Box as='button' sx={roundBtn}>
+                    Admission policies
+                    <FaArrowRight />
+                </Box>
+                <Box as='button' sx={roundBtn}>
+                    Apply now
+                    <FaArrowRight />
+                </Box>
+                <Box as='button' sx={roundBtn}>
+                    Visit THS
+                    <FaArrowRight />
+                </Box>
             </Flex>
         </Flex>
     )
