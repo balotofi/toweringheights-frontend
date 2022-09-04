@@ -88,3 +88,8 @@ export const submitBtnStyle = {
         border: '1px solid',
     }
 }
+
+export const listStyle = {
+    fontSize: 'sm',
+    my: 2,
+}

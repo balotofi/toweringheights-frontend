@@ -12,18 +12,18 @@ const Text: ComponentStyleConfig = {
             lineHeight: 7,
             fontSize: 'sm'
         },
-        'footer-image-text': {
+        'footerImageText': {
             lineHeight: 7,
             color: '#ffffffa3',
             textAlign: 'center', 
             mb: '1.2rem' 
         }, 
-        'staff-label': {
+        'staffLabel': {
             color: 'brand.300',
             mb: 4,
             textAlign: 'center',
         },
-        'vacancy-detail': {
+        'vacancyDetail': {
             color: 'font.300',
             lineHeight: 6,
             fontSize: 'sm'

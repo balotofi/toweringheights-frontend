@@ -9,6 +9,7 @@ import {
     Textarea, 
     Flex, 
     FormErrorMessage,
+    FormHelperText,
     useToast,
 } from '@chakra-ui/react'
 import { formStyle, inputStyle, vStackStyle } from './style'
@@ -52,13 +53,20 @@ const ContactForm = () => {
                                 minLength: 5,
                                 maxLength: 35,
                             })} 
-                            size='lg' variant='filled' sx={inputStyle} placeholder='Your Name' type='text' />
-                            <FormErrorMessage>
-                                {errors.name && errors?.name.type === "minLength" && "MinLength is 5 characters"}
-                            </FormErrorMessage>
-                            <FormErrorMessage>
-                                {errors.name && errors?.name.type === "maxLength" && "MaxLength is 35 characters"}
-                            </FormErrorMessage>
+                            size='lg' variant='filled' sx={inputStyle} placeholder='Towering Heights' type='text' />
+                            
+                            {!!errors.name ? 
+                                <>
+                                    <FormErrorMessage>
+                                        {errors.name && errors?.name.type === "minLength" && "MinLength is 5 characters"}
+                                    </FormErrorMessage>
+                                    <FormErrorMessage>
+                                        {errors.name && errors?.name.type === "maxLength" && "MaxLength is 35 characters"}
+                                    </FormErrorMessage>
+                                </>
+                                :
+                                <FormHelperText visibility={'hidden'}>Towering Heights</FormHelperText>
+                            }
                     </FormControl>
                     <FormControl isInvalid={!!errors.email}>
                         <FormLabel>Your Email</FormLabel>
@@ -72,7 +80,11 @@ const ContactForm = () => {
                             })}
                             variant='filled' size='lg' type='email' sx={inputStyle} placeholder='Email Address' 
                         />
-                        <FormErrorMessage>{errors.email && errors?.email.message}</FormErrorMessage>
+                        {!!errors.email ? 
+                            <FormErrorMessage>{errors.email && errors?.email.message}</FormErrorMessage>
+                            :
+                            <FormHelperText visibility={'hidden'}>toweringheights@mail.com</FormHelperText>
+                        }                        
                     </FormControl>
                     <FormControl isInvalid={!!errors.message}>
                         <FormLabel>Your Message</FormLabel>
@@ -84,12 +96,18 @@ const ContactForm = () => {
                             })}
                             variant='filled' sx={inputStyle} size='lg' placeholder='Type your message here ...'
                         />
-                        <FormErrorMessage>
-                            {errors.message && errors?.message.type === "minLength" && "MinLength is 25 characters"}
-                        </FormErrorMessage>
-                        <FormErrorMessage>
-                            {errors.message && errors?.message.type === "maxLength" && "MaxLength is 200 characters"}
-                        </FormErrorMessage>
+                        {!!errors.message ? 
+                            <>
+                                <FormErrorMessage>
+                                    {errors.message && errors?.message.type === "minLength" && "MinLength is 25 characters"}
+                                </FormErrorMessage>
+                                <FormErrorMessage>
+                                    {errors.message && errors?.message.type === "maxLength" && "MaxLength is 200 characters"}
+                                </FormErrorMessage>
+                            </>
+                            :
+                            <FormHelperText visibility={'hidden'}>Your Message</FormHelperText>
+                        }
                     </FormControl>
                     <Flex>
                         <Button

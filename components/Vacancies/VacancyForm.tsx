@@ -16,8 +16,7 @@ import {
 } from "@chakra-ui/react"
 import axios, { AxiosResponse } from "axios"
 import FileUpload from "../FileUpload"
-import { MdInfo } from "react-icons/md"
-import { fileInputStyle, formStyle, helperTextStyle, inputStyle, submitBtnStyle, vStackStyle } from "./style"
+import { fileInputStyle, formStyle, inputStyle, submitBtnStyle, vStackStyle } from "./style"
 
 const NAME_REGEX = /^[A-Za-z\-]+\s[A-Za-z\-]*$/
 const PHONE_REGEX = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
@@ -76,7 +75,7 @@ const VacancyForm = () => {
         return true
     }
 
-    const handleChange =(e:React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange =(e:React.ChangeEvent<HTMLInputElement>): any => {
         if (e.target.files){
             setChangePlaceholder(e.target.files[0].name)
             toast({
@@ -116,7 +115,11 @@ const VacancyForm = () => {
                         <option value='option2'>Option 2</option>
                         <option value='option3'>Option 3</option>
                     </Select>
-                    <FormErrorMessage>{errors.role && errors?.role.message}</FormErrorMessage>
+                    {!!errors.role ? 
+                        <FormErrorMessage>{errors.role && errors?.role.message}</FormErrorMessage>
+                        :
+                        <FormHelperText visibility={'hidden'}>Hi</FormHelperText>
+                    }
                 </FormControl>
                 <FormControl isInvalid={!!errors.fullName}>
                     <FormLabel>Full Name</FormLabel>
@@ -125,11 +128,14 @@ const VacancyForm = () => {
                             required: 'Full Name is Required',
                             pattern: {
                                 value: NAME_REGEX,
-                                message: 'Invalid Format, Follow the Helper Text'
+                                message: 'Invalid Format! Try this Format: Towering Heights'
                             }
-                        })} size='lg' variant='filled' sx={inputStyle} placeholder='Full Name' type='text' />
-                        <FormHelperText sx={helperTextStyle}> <MdInfo /> Towering Heights </FormHelperText> 
-                        <FormErrorMessage>{errors.fullName && errors?.fullName.message}</FormErrorMessage>
+                        })} size='lg' variant='filled' sx={inputStyle} placeholder='Towering Heights' type='text' /> 
+                        {!!errors.fullName ? 
+                            <FormErrorMessage>{errors.fullName && errors?.fullName.message}</FormErrorMessage>
+                            :
+                            <FormHelperText visibility={'hidden'}>Towering Heights</FormHelperText>
+                        }
                 </FormControl>
                 <FormControl isInvalid={!!errors.email}>
                     <FormLabel>Email Address</FormLabel>
@@ -138,12 +144,16 @@ const VacancyForm = () => {
                             required: 'Email is Required',
                             pattern: {
                                 value: EMAIL_REGEX,
-                                message: 'Invalid Email'
+                                message: 'Invalid Email!'
                             }
                         })}
-                        variant='filled' size='lg' type='email' sx={inputStyle} placeholder='Email Address' 
+                        variant='filled' size='lg' type='email' sx={inputStyle} placeholder='toweringheights@mail.com' 
                     />
-                    <FormErrorMessage>{errors.email && errors?.email.message}</FormErrorMessage>
+                    {!!errors.email ? 
+                        <FormErrorMessage>{errors.email && errors?.email.message}</FormErrorMessage>
+                        :
+                        <FormHelperText visibility={'hidden'}>toweringheights@mail.com</FormHelperText>
+                    }
                 </FormControl>
                 <FormControl isInvalid={!!errors.phone}>
                     <FormLabel>Phone Number</FormLabel>
@@ -152,18 +162,21 @@ const VacancyForm = () => {
                             required: 'Phone Number is Required',
                             pattern: {
                                 value: PHONE_REGEX,
-                                message: 'Invalid Format'
+                                message: 'Invalid Phone Number! Try this Format +2349876543201'
                             }
                         })}
-                        variant='filled' sx={inputStyle} size='lg' placeholder='Phone Number' 
+                        variant='filled' sx={inputStyle} size='lg' placeholder='+2349876543201' 
                     />
-                    <FormHelperText sx={helperTextStyle}> <MdInfo /> +2340000000000</FormHelperText>
-                    <FormErrorMessage>{errors.phone && errors?.phone.message}</FormErrorMessage>
+                    {!!errors.phone ? 
+                        <FormErrorMessage>{errors.phone && errors?.phone.message}</FormErrorMessage>
+                        :
+                        <FormHelperText visibility={'hidden'}>Phone Number</FormHelperText>
+                    }
                 </FormControl>
                 <FormControl isInvalid={!!errors.location}>
                     <FormLabel>State of Residence</FormLabel> 
                     <Select {...register('location', { required: 'Select a Location'})} 
-                        placeholder='Select' 
+                        placeholder='Select a location' 
                         variant='filled' 
                         color='font.300' 
                         size='lg' 
@@ -173,7 +186,11 @@ const VacancyForm = () => {
                             <option key={idx} value={state.name}>{state.name}</option>
                         ))}
                     </Select>
-                    <FormErrorMessage>{errors.location && errors?.location.message}</FormErrorMessage>
+                    {!!errors.location ? 
+                        <FormErrorMessage>{errors.location && errors?.location.message}</FormErrorMessage>
+                        :
+                        <FormHelperText visibility={'hidden'}>Pick a Location</FormHelperText>
+                    }
                 </FormControl>
                 <FormControl isInvalid={!!errors.file_}>
                     <FormLabel>Upload CV</FormLabel>
@@ -184,16 +201,18 @@ const VacancyForm = () => {
                                 register={register('file_', { validate: validateFiles })}
                                 handleChange={handleChange}
                             >
-                                <Button variant='input-file' size='sm' h='2.2rem' mx={4} fontWeight='semibold'>
+                                <Button variant='inputFile' size='sm' h='2.2rem' mx={4} fontWeight='semibold'>
                                     Choose File
                                 </Button>
                             </FileUpload>
                         </InputLeftElement>
                         <Input placeholder={changePlaceholder} sx={fileInputStyle} size='lg' disabled />
                     </InputGroup> 
-                    <FormErrorMessage>
-                        {errors.file_ && errors?.file_.message}
-                    </FormErrorMessage>
+                    {!!errors.file_ ? 
+                        <FormErrorMessage>{errors.file_ && errors?.file_.message}</FormErrorMessage>
+                        :
+                        <FormHelperText visibility={'hidden'}>Upload CV</FormHelperText>
+                    }
                 </FormControl>
                 <Button variant='filled'
                     sx={submitBtnStyle}

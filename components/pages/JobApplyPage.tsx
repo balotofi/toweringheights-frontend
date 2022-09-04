@@ -1,4 +1,4 @@
-import { Stack, Flex, VStack, Heading, Box, Text } from "@chakra-ui/react"
+import { Stack, Flex, VStack, Heading } from "@chakra-ui/react"
 import BreadCrumbNav from "../BreadCrumb"
 import VacancyForm from "../Vacancies/VacancyForm"
 

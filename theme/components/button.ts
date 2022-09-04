@@ -21,7 +21,7 @@ const Button: ComponentStyleConfig = {
         },
     },
     variants: {
-        'sub-newsletter': {
+        'subNewsletter': {
             borderRadius: 0,
             border: 'none',
             w: '100%',
@@ -31,13 +31,13 @@ const Button: ComponentStyleConfig = {
               bg: 'brand.200',
             }
         },
-        'icon-button': {
+        'iconButton': {
             border: '2px solid',
             boderColor: 'brand.300',
             bg: 'transparent',
             colorScheme: 'blue',
         },
-        'staff-card-btn': {
+        'staffCardBtn': {
             border: 'none',
             bg: 'transparent',
         },
@@ -67,15 +67,11 @@ const Button: ComponentStyleConfig = {
           border: 'none',
           bg: 'transparent',
           color: 'font.300',
-          _hover: {
-            bg: 'brand.200',
-            color: 'white'
-          },
         },
-        'input-file': {
+        'inputFile': {
           px: 2,
           background: 'white',
-          borderRadius: 'xl',
+          borderRadius: 'md',
           color: 'font.300',
           fontWeight: 'normal',
           fontSize: 'xs',

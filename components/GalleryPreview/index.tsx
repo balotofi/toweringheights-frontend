@@ -36,7 +36,7 @@ const GalleryPreview = () => {
             </Flex>
             <Flex justify='center'>
               <Link href='/gallery' passHref>
-                <ChakraLink variant='view-more'>
+                <ChakraLink variant='viewMore'>
                   Click here to see more
                 </ChakraLink>
               </Link>

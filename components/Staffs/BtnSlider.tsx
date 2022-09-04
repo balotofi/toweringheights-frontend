@@ -6,7 +6,7 @@ const BtnSlider = ({direction, action}: BtnSliderProps) => {
     return (
         <Button 
             onClick={action}
-            variant='icon-button'
+            variant='iconButton'
             size={{base: 'sm', md: 'md'}}
             borderRadius={{base: 'xl', md: '2xl'}} 
             m={ direction === 'right' ? '0 0 0 0.2rem' : '0 0.4rem 0 0'}

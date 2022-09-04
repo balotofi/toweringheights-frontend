@@ -7,7 +7,7 @@ import { flexStyle } from "./style"
 const FooterContactDetails = () => {
     return (
         <Flex direction='column' w={{md: '25%'}}>
-            <Heading as='h4' variant='footer-heading'> Find Us </Heading>
+            <Heading as='h4' variant='footerHeading'> Find Us </Heading>
             <Flex sx={flexStyle} >
                 <Icon as={MdLocationOn} sx={whiteIcon} />
                 <Text variant='footer'>
