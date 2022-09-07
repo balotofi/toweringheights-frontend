@@ -49,10 +49,10 @@ export const navItems: NavProps[] = [
         children: [
             {
                 label: "About Us",
-                href: "/about"
+                href: "/about_us"
             }, {
                 label: "Our Blog",
-                href: "/about/blog"
+                href: "/about_us/blog"
             }
         ] 
     }, {
@@ -60,18 +60,19 @@ export const navItems: NavProps[] = [
         href: "/gallery"
     }, {
         label: "Join Us",
+        href: "/join_us",
         children: [
             {
                 label: "Admissions",
-                href: "/joinus/admissions"
+                href: "/join_us/admissions"
             }, {
                 label: "Vacancies",
-                href: "/joinus/vacancies"
+                href: "/join_us/vacancies"
             }
         ] 
     }, {
         label: "Contact Us",
-        href: "/contact"
+        href: "/contact_us"
     }
 ]
 

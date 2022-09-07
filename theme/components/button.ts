@@ -21,7 +21,7 @@ const Button: ComponentStyleConfig = {
         },
     },
     variants: {
-        'sub-newsletter': {
+        'subNewsletter': {
             borderRadius: 0,
             border: 'none',
             w: '100%',
@@ -31,13 +31,13 @@ const Button: ComponentStyleConfig = {
               bg: 'brand.200',
             }
         },
-        'icon-button': {
+        'iconButton': {
             border: '2px solid',
             boderColor: 'brand.300',
             bg: 'transparent',
             colorScheme: 'blue',
         },
-        'staff-card-btn': {
+        'staffCardBtn': {
             border: 'none',
             bg: 'transparent',
         },
@@ -48,7 +48,7 @@ const Button: ComponentStyleConfig = {
             colorScheme: 'blue',
             _hover: {
               bg: 'white',
-              color: 'brand.300'
+              color: 'font.300'
             }
         },
         solid: {
@@ -57,11 +57,26 @@ const Button: ComponentStyleConfig = {
           fontWeight: 'semibold',
           colorScheme: 'blue',
           _hover: {
-              bg: 'brand.400',
+              bg: 'transparent',
               color: 'brand.300',
-              border: '2px solid',
+              border: '1px solid',
               borderColor: 'brand.300',
           }
+        },
+        ghost: {
+          border: 'none',
+          bg: 'transparent',
+          color: 'font.300',
+        },
+        'inputFile': {
+          px: 2,
+          background: 'white',
+          borderRadius: 'md',
+          color: 'font.300',
+          fontWeight: 'normal',
+          fontSize: 'xs',
+          border: '2px solid',
+          borderColor: 'white',
         },
     },
     defaultProps: {

@@ -6,7 +6,7 @@ const Heading: ComponentStyleConfig = {
     },
 
     variants: {
-        'logo-heading': {
+        'logoHeading': {
             lineHeight: 10,
             textTransform: 'uppercase',
             color: 'brand.300',
@@ -32,7 +32,12 @@ const Heading: ComponentStyleConfig = {
             lineHeight: 7,
             mb: 8,
         },
-        'footer-heading': {
+        'h5': {
+            fontSize: 'lg',
+            color: 'brand.300',
+            fontWeight: 'semibold',
+        },
+        'footerHeading': {
             fontSize: 'xl',
             color: 'brand.300',
             fontWeight: 'bold',

@@ -6,9 +6,9 @@ import {
     InputLeftElement,
     Stack,
 } from "@chakra-ui/react"
-import { BiSearchAlt } from "react-icons/bi"
 import Image from "next/image"
 import SchoolLogo from "../../assets/logo_ths.jpg"
+import SearchBar from "../SearchBar"
 
 const LogoNavbar = () => {
     return (
@@ -21,12 +21,14 @@ const LogoNavbar = () => {
                     alt='School Logo'
                     loading="eager"
                 />
-                <Heading variant='logo-heading' fontSize= {{base: '1.4rem', md: '1.6rem'}}>
+                <Heading variant='logoHeading' fontSize= {{base: '1.4rem', md: '1.6rem'}}>
                     Towering Heights School
                 </Heading>
             </Stack>
 
-            <InputGroup display={{base: 'none', md: 'flex'}} width={'35%'}>
+            <SearchBar />
+
+            {/* <InputGroup display={{base: 'none', md: 'flex'}} width={'35%'}>
                 <InputLeftElement 
                     color= 'brand.400'
                     m={{lg: 1}}
@@ -45,7 +47,7 @@ const LogoNavbar = () => {
                         fontSize: 'sm'
                     }}
                 />
-            </InputGroup>
+            </InputGroup> */}
         </Flex>
     )
 }

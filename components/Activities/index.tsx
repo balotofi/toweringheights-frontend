@@ -24,7 +24,7 @@ const Activities = () => {
                 ))}
             </Flex>
             <Link href='/blog' passHref>
-                <ChakraLink variant='view-more'>
+                <ChakraLink variant='viewMore'>
                     View More
                 </ChakraLink>
             </Link>

@@ -18,7 +18,7 @@ const Activity = ({...activity}) => {
                 <Heading as='h4' variant='h2' mt='1.8rem' mb='1.5rem' fontSize={{base: 'xl', md: 'md'}} >
                     {activity.heading}
                 </Heading>
-                <Text lineHeight={7}>{activity.summary}</Text>
+                <Text lineHeight={7} className='paragraph'>{activity.summary}</Text>
             </Box>
         </Flex>
     )

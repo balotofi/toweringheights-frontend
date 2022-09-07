@@ -17,3 +17,17 @@ export const flexStyle = {
         color: 'font.200' 
     }
 }
+
+export const newsLetterInputStyle = {
+    border: '2px solid',
+    fontWeight: 'medium',
+    color: 'white',
+    fontSize: 'lg',
+    pl: 8,
+    focusBorderColor: 'brand.400',
+    _placeholder: {
+        color: '#ffffffa3', 
+        fontSize: '14px', 
+        fontWeight:'normal'
+    }
+}

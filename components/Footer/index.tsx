@@ -26,20 +26,20 @@ const Footer = () => {
                         }}
                     >
                         <Image width={100} height={85} src={SchoolLogo} loading='eager' />
-                        <Text variant='footer' fontSize='md' mt='1.5rem'>
+                        <Text variant='footer' fontSize='md' mt='1.5rem' className='paragraph'>
                             Towering Heights Schools is a centre of education that prides itself on creating leaders of tomorrow. 
                             We pride ourselves in the quality of children we raise.
                         </Text>
                     </Box>
                     <Flex direction='column' w={{md: '15%'}}>
-                        <Heading as='h4' variant='footer-heading'>Links</Heading>
+                        <Heading as='h4' variant='footerHeading'>Links</Heading>
                         {footerLinks.map((link,idx) => (
                             <FooterLink key={idx} href={link.href} text={link.text} />
                         ))}
                     </Flex>
                     <FooterContactDetails />
                     <Flex direction='column' w={{md: '25%'}}>
-                        <Heading as='h4' variant='footer-heading'>Social Links</Heading>
+                        <Heading as='h4' variant='footerHeading'>Social Links</Heading>
                         {footerSocials.map((social,idx) => (
                             <FooterSocial key={idx} href={social.href} text={social.text} icon={social.icon} />
                         ))}

@@ -1,7 +1,7 @@
 import type { NextPage } from "next"
 import VacancyPage from "../../../components/pages/VacancyPage"
 
-const VacancyList:NextPage = () => {
+const Vacancies: NextPage = () => {
     return (
         <>
             <VacancyPage />
@@ -9,4 +9,4 @@ const VacancyList:NextPage = () => {
     )
 }
 
-export default VacancyList
+export default Vacancies
