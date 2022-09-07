@@ -9,39 +9,18 @@ import Link from 'next/link'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { crumbIcon } from '../../theme/components/iconStyles'
 
-interface crumbProps {
-    text: string,
+interface ICrumbProps {
+    text: string | undefined,
     last: boolean,
     href: string,
-    newPath?: string,
-    lastPath?: string,
-    transformPath: (text: string) => string
 }
 
-// const transformPath= (str: string) => {
-//     let arr: string[] = str.toLowerCase().split(' ')
-//     for (let i = 0; i < arr.length; i++) {
-//          arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
-//     }
-//     return arr.join(' ')
-// }
 
-const Crumb = ({text, href, last = false, newPath, transformPath, lastPath}: crumbProps) => {
+const Crumb = ({text, href, last = false}: ICrumbProps) => {
     
-    const transformLabel = (str: string, newText: string) => {
-        const label = str.replace(str, newText)
-        return transformPath(label)
-    }
-
-    if(last && newPath) {
-        const replacedTitlePath = transformLabel(text, newPath)
+    if(last) {
         return (
-            <Text color="font.200"  m={'0 !important'}> {replacedTitlePath} </Text>
-        )
-    } else if (last) {
-        const titlePath = transformPath(text)
-        return (
-            <Text color="font.200"  m={'0 !important'}> {titlePath} </Text>
+            <Text color="font.200"  m={'0 !important'}> {text} </Text>
         )
     }
 
@@ -59,3 +38,16 @@ const Crumb = ({text, href, last = false, newPath, transformPath, lastPath}: cru
 }
 
 export default Crumb
+
+// const transformPath= (str: string) => {
+//     let arr: string[] = str.toLowerCase().split(' ')
+//     for (let i = 0; i < arr.length; i++) {
+//          arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
+//     }
+//     return arr.join(' ')
+// }
+
+// const transformLabel = (str: string, newText: string) => {
+//     const label = str.replace(str, newText)
+//     return transformPath(label)
+// }

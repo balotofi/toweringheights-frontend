@@ -8,7 +8,7 @@ const VacancyPage = () => {
         <>
             <Stack px={{base:'6', md: '8', lg: '16'}} py={{base: '2'}} gap={6}>
                 <Flex justify='start'>
-                    <BreadCrumbNav newPath='career opportunties'/>
+                    <BreadCrumbNav />
                 </Flex>
                 <VStack align={{base: 'flex-start', lg: 'center'}}>
                     <Flex direction='column' gap={3} w={{md: '80%'}}>
