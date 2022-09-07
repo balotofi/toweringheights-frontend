@@ -1,9 +1,6 @@
 import {
     Flex,
     Heading,
-    Input,
-    InputGroup,
-    InputLeftElement,
     Stack,
 } from "@chakra-ui/react"
 import Image from "next/image"
@@ -27,27 +24,6 @@ const LogoNavbar = () => {
             </Stack>
 
             <SearchBar />
-
-            {/* <InputGroup display={{base: 'none', md: 'flex'}} width={'35%'}>
-                <InputLeftElement 
-                    color= 'brand.400'
-                    m={{lg: 1}}
-                    children={<BiSearchAlt />}
-                />
-                <Input 
-                    variant='filled'
-                    size='md'
-                    borderRadius={'2xl'}
-                    color='font.300'
-                    fontSize='sm'
-                    type='text' 
-                    placeholder='Search' 
-                    _placeholder={{
-                        color: 'brand.400',
-                        fontSize: 'sm'
-                    }}
-                />
-            </InputGroup> */}
         </Flex>
     )
 }
