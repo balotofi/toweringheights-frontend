@@ -57,7 +57,7 @@ const VacancyForm = () => {
                 isClosable: true,
                 position: 'bottom-right',
             })
-        }, 1500)
+        }, 1000)
         reset()
     })
 

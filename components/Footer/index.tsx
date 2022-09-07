@@ -26,7 +26,7 @@ const Footer = () => {
                         }}
                     >
                         <Image width={100} height={85} src={SchoolLogo} loading='eager' />
-                        <Text variant='footer' fontSize='md' mt='1.5rem'>
+                        <Text variant='footer' fontSize='md' mt='1.5rem' className='paragraph'>
                             Towering Heights Schools is a centre of education that prides itself on creating leaders of tomorrow. 
                             We pride ourselves in the quality of children we raise.
                         </Text>

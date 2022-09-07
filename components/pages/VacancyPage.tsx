@@ -8,13 +8,13 @@ const VacancyPage = () => {
         <>
             <Stack px={{base:'6', md: '8', lg: '16'}} py={{base: '2'}} gap={6}>
                 <Flex justify='start'>
-                    <BreadCrumbNav />
+                    <BreadCrumbNav newPath='career opportunties'/>
                 </Flex>
                 <VStack align={{base: 'flex-start', lg: 'center'}}>
                     <Flex direction='column' gap={3} w={{md: '80%'}}>
                         <Heading as='h2' variant='h2' mb={4} >Career Opportunities</Heading>
                         <Heading as='h3' variant='h3' fontWeight='semibold' fontSize='1.55rem'>Join our team and help  build the Leaders of Tomorrow</Heading>
-                        <Text mb={4} mt={2}>
+                        <Text mb={4} mt={2} className='paragraph'>
                             We encourage applicants from diverse backgrounds to apply for any open position for which they are qualified. 
                             Our students must be exposed on a daily basis to a diverse group of powerful role models. 
                             Therefore, we have a responsibility to recruit, retain, develop, and reward a diverse and talented staff from a wide range of backgrounds to join our creative, mission-driven team.

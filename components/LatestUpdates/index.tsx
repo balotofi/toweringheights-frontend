@@ -8,16 +8,16 @@ const LatestUpdates = () => {
           <Flex direction='row' flexWrap={'wrap'} justify='center' gap={8}>
             <Box sx={boxStyle}>
               <Heading variant='h4'>Admissions</Heading>
-              <Text >Choosing the right school marks a new beginning in the life of your child. 
+              <Text className='paragraph'>Choosing the right school marks a new beginning in the life of your child. 
                 Contact us as early as possible to have your child assessed and ready for school.</Text>
             </Box>
             <Box sx={boxStyle}>
               <Heading variant='h4'>Calendar</Heading>
-              <Text>Terms, exams, holidays, keep up to date on what's hapenning when so you don't fall behind.</Text>
+              <Text className='paragraph'>Terms, exams, holidays, keep up to date on what's hapenning when so you don't fall behind.</Text>
             </Box>
             <Box sx={boxStyle}>
               <Heading variant='h4'>Latest News</Heading>
-              <Text>See firsthand news,updates and details about upcoming events and information.</Text>
+              <Text className='paragraph'>See firsthand news,updates and details about upcoming events and information.</Text>
             </Box>
           </Flex>
         </Flex>

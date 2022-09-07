@@ -7,7 +7,7 @@ const JobApplyPage = () => {
         <>
             <Stack px={{base:'6', md: '8', lg: '16'}} py={2} mb={8} gap={6}>
                 <Flex justify='start'>
-                    <BreadCrumbNav />
+                    <BreadCrumbNav newPath='newbie inp' />
                 </Flex>
                 <VStack align={{base: 'flex-start', lg: 'center'}} gap={8}>
                     <Flex direction='column' gap={2} w={{md: '80%'}}>

@@ -6,7 +6,7 @@ export const footerLinks: IFooterLink[] = [
         href: '/',
         text: 'Home'
     }, {
-        href: '/about',
+        href: '/about_us',
         text: 'About us'
     }, {
         href: '/gallery',
@@ -18,10 +18,10 @@ export const footerLinks: IFooterLink[] = [
         href: '/parents',
         text: 'Parents'
     }, {
-        href: '/joinus',
+        href: '/join_us',
         text: 'Join us'
     }, {
-        href: '/contact',
+        href: '/contact_us',
         text: 'Contact'
     }
 ]

@@ -24,10 +24,10 @@ const AboutPage = () => {
                     Welcome to the Towering Heights Schools website
                 </Heading>
                 <Box>
-                    <Text mb={2}>
+                    <Text mb={2} className='paragraph'>
                         Towering Heights schools is a centre of education that prides itself on creating leaders of tomorrow. We produce not only educated, but morally sound students.
                     </Text>
-                    <Text mb={2}>
+                    <Text mb={2} className='paragraph'>
                         We make sure to carry our parents along every step of the way and give them a comfortable atmosphere in which they can converse with the school to ensure the best results from their children.
                     </Text>
                 </Box>
@@ -35,7 +35,7 @@ const AboutPage = () => {
                     Our Values
                 </Heading>
                 <Box>
-                    <Text mb={2}>
+                    <Text mb={2} className='paragraph'>
                         We pride ourselves in the quality of children we raise.
                     </Text>
                 </Box>
@@ -43,7 +43,7 @@ const AboutPage = () => {
                     Vision and Mission
                 </Heading>
                 <Box>
-                    <Text mb={2}>
+                    <Text mb={2} className='paragraph'>
                         Values and ethics are the key foundations of any civilised society. Hillside's nurturing environment provides the vital support each boy needs to learn and mature. Our community's extraordinary patience guides our boys to develop a solid foundation of compassion
                         and self-esteem throughout their lives. Through our comprehensive yet flexible structure, as well as the experience that enables us to
                         work with every boy at his own level of personal development, Hillside helps students to navigate the uncertain world of early
@@ -56,7 +56,7 @@ const AboutPage = () => {
                     Background
                 </Heading>
                 <Box>
-                    <Text mb={2}>
+                    <Text mb={2} className='paragraph'>
                         BECKY PARKER COLLEGE (PC) is a private co-educational boarding school situated some four kilometer on Oba-lle road, East of
                         Akure, the Ondo State capital, Nigeria. The college offers courses leading to General Certificate of Basic Education (GCBE), West
                         African Senior Secondary Certificate Examinations(WASSCE), Senior Secondary Certificate Examination(SSCE) NECO,General
@@ -68,12 +68,12 @@ const AboutPage = () => {
                     For prospective parents
                 </Heading>
                 <Box>
-                    <Text mb={2}>
+                    <Text mb={2} className='paragraph'>
                         If you want your child to achieve the peak in life then Towering Heights is for you
                         With the highest calibre of staff a tranquil environment and unique teaching techniques without a doubt your ward will accomplish
                         their potentials.
                     </Text>
-                    <Text mb={2}>
+                    <Text mb={2} className='paragraph'>
                         Bring your wards today, excellence is inevitable!
                     </Text>
                 </Box>

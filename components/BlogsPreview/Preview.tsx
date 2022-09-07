@@ -12,7 +12,7 @@ const Preview = ({...blog}) => {
                 alt={blog.alt}
                 priority={true}
             />
-            <Text fontSize='sm' pt='1rem'>
+            <Text fontSize='sm' pt='1rem' className='paragraph'>
                 {blog.summary}
                 <Link color='brand.300'>Read More</Link>
             </Text>

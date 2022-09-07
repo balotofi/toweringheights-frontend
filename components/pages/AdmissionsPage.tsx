@@ -16,11 +16,11 @@ const AdmissionsPage = () => {
                         <Heading as='h2' variant='h2' >Admissions</Heading>
                         <Box bg='brand.200' w={'80%'} sx={headingBorder} />
                         <Box bg='brand.200' w={'60%'}  sx={headingBorder} />
-                        <Text mb={4} mt={2} textAlign={{md: 'center'}}>
+                        <Text mb={4} mt={2} textAlign={{md: 'center'}} className='paragraph'>
                             Welcome to Towering Heights school admissions page. 
                             This page has all that is required details if you’re looking for a place to apply for our Nursery or other reception classes for the session.
                         </Text>
-                        <Text mb={4} mt={2} textAlign={{md: 'center'}}>
+                        <Text mb={4} mt={2} textAlign={{md: 'center'}} className='paragraph'>
                             THS seeks to enroll students who are prepared to be successful academically and contribute positively to our community as leaders of tomorrow.
                             Admission guidelines vary by sections and categories.
                         </Text>
