@@ -41,9 +41,8 @@ const VacancyForm = () => {
         fetcher()
     }, [])
 
-    const onSubmit = handleSubmit((data) => {
+    const onSubmit = handleSubmit(() => {
         setLoading(true)
-        console.log('On Submit: ', data)
         if (form.current == null) return
         setLoading(false)
         setChangePlaceholder("no file selected")
