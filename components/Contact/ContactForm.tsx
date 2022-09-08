@@ -29,10 +29,10 @@ const ContactForm = () => {
         const currentForm = form.current
         if (currentForm == null) return
         emailjs.sendForm(
-            process.env.NEXT_PUBLIC_SERVICE_ID_CONTACT_FORM!,
+            process.env.NEXT_PUBLIC_SERVICE_ID!,
             process.env.NEXT_PUBLIC_TEMPLATE_ID_CONTACT_FORM!,
             currentForm,
-            process.env.NEXT_PUBLIC_USER_ID_CONTACT_FORM!
+            process.env.NEXT_PUBLIC_USER_ID!
         )
         .then(() => {
             setLoading(false),

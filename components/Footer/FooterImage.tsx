@@ -14,7 +14,8 @@ import {
 import { SendPlaneIcon } from "../Icons"
 import { footerImageBox } from "./style"
 import { useForm } from "react-hook-form"
-import { useState } from "react"
+import { useState, useRef } from "react"
+import emailjs from "@emailjs/browser"
 import { newsLetterInputStyle } from "./style"
 import { EMAIL_REGEX } from "../../data/regex"
 
@@ -23,22 +24,43 @@ const FooterImage = () => {
     const { register, handleSubmit, formState: {errors}, reset} = useForm<INewsLetter>()
     const [loading, setLoading] = useState(false)
     const toast = useToast()
+    const form = useRef<HTMLFormElement>(null)
 
-    const onSubmit = handleSubmit((data) => {
+    const onSubmit = handleSubmit(() => {
         setLoading(true)
-        setTimeout(()=>{
-            console.log(data)
-            setLoading(false)
+        const currentForm = form.current
+        if (currentForm == null) return
+        emailjs.sendForm(
+            process.env.NEXT_PUBLIC_SERVICE_ID!,
+            process.env.NEXT_PUBLIC_TEMPLATE_ID_NEWSLETTER!,
+            currentForm,
+            process.env.NEXT_PUBLIC_USER_ID!
+        )
+        .then((res) => {
+            setLoading(false),
+            console.log(res),
             toast({
-                title: 'Success',
-                description: 'Thank You for Subscribing',
-                status: 'success',
-                position: 'bottom-right',
-                isClosable: true,
+                title: "Message Sent",
+                description: "Thank You For Contacting Us",
+                status: "success",
                 duration: 5000,
+                isClosable: true,
+                position: "bottom-right",
             })
-            reset()
-        }, 500)
+        })
+        .catch((error) => {
+            setLoading(false),
+            toast({
+                title: "Oops, Message Not Sent",
+                description: "Something went wrong",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+                position: "bottom-right",
+            }),
+            console.log(error)
+        })
+        reset()
     })
 
     return (
@@ -61,7 +83,7 @@ const FooterImage = () => {
                             EXPERIENCE
                         </span> for your child.
                     </Text>
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={onSubmit} ref={form}>
                         <FormControl isInvalid={!!errors.email}>
                             <InputGroup bg='rgba(0, 0, 0, 0.2)' borderRadius='md'>
                                 <Input 
@@ -73,7 +95,7 @@ const FooterImage = () => {
                                         }
                                     })}
                                     type='email'
-                                    size={{base: 'md', md: 'lg'}}
+                                    size={{base: 'md', md: 'lg'}}   
                                     placeholder="Enter e-mail to recieve news letter"
                                     sx={newsLetterInputStyle}
                                 />

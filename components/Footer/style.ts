@@ -22,7 +22,7 @@ export const newsLetterInputStyle = {
     border: '2px solid',
     fontWeight: 'medium',
     color: 'white',
-    fontSize: 'lg',
+    fontSize: 'md',
     pl: 8,
     focusBorderColor: 'brand.400',
     _placeholder: {

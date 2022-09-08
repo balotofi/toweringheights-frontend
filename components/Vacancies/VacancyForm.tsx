@@ -15,7 +15,6 @@ import {
     Flex,
 } from "@chakra-ui/react"
 import axios, { AxiosResponse } from "axios"
-import emailjs from "@emailjs/browser"
 import FileUpload from "../FileUpload"
 import { fileInputStyle, formStyle, inputStyle, submitBtnStyle, vStackStyle } from "./style"
 import { NAME_REGEX, PHONE_REGEX, EMAIL_REGEX } from "../../data/regex"
@@ -43,41 +42,20 @@ const VacancyForm = () => {
     }, [])
 
     const onSubmit = handleSubmit((data) => {
-        //setLoading(true)
+        setLoading(true)
         console.log('On Submit: ', data)
         if (form.current == null) return
-        emailjs.sendForm(
-            process.env.NEXT_PUBLIC_SERVICE_ID_VACANCY_FORM!,
-            process.env.NEXT_PUBLIC_TEMPLATE_ID_VACANCY_FORM!,
-            form.current,
-            process.env.NEXT_PUBLIC_USER_ID_VACANCY_FORM!
-        )
-        .then(() => {
-            setLoading(false)
-            setChangePlaceholder("no file selected")
-            toast({
-                title: "Application Sent",
-                description: "Thank You For Applying",
-                status: "success",
-                duration: 5000,
-                isClosable: true,
-                position: "bottom-right",
-            })
+        setLoading(false)
+        setChangePlaceholder("no file selected")
+        toast({
+            title: "Notice",
+            description: "Kindly Contact the School to Apply",
+            status: "info",
+            duration: 5000,
+            isClosable: true,
+            position: "bottom-right",
         })
-        .catch((error) => {
-            setLoading(false)
-            setChangePlaceholder("no file selected")
-            toast({
-                title: "Oops!",
-                description: "Sorry, Something Went Wrong",
-                status: "error",
-                duration: 5000,
-                isClosable: true,
-                position: "bottom-right",
-            })
-            console.log(error)
-        })
-        //reset()
+        reset()
     })
 
     const validateFiles = (value: FileList) => {
