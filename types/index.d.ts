@@ -56,3 +56,7 @@ interface IStateResData {
     name: string
     capital: string
 }
+
+interface INewsLetter {
+    email: string
+}

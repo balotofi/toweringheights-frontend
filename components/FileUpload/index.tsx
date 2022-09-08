@@ -20,6 +20,7 @@ const FileUpload = (props: FileUploadProps) => {
   return (
       <InputGroup onClick={handleClick} variant='filled'>
         <input type={'file'} multiple={multiple || false} hidden accept={accept}
+          name="resume"
           {...rest}
           ref={(e) => {
             ref(e)

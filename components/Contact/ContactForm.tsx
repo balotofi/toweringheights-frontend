@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { useForm } from "react-hook-form"
 import { 
     VStack, 
@@ -12,39 +12,57 @@ import {
     FormHelperText,
     useToast,
 } from '@chakra-ui/react'
+import emailjs from "@emailjs/browser"
 import { formStyle, inputStyle, vStackStyle } from './style'
-
-const EMAIL_REGEX = /^[A-Za-z0-9_\-\.]{4,}[@][a-z]+[\.][a-z]{2,3}$/
-//const EMAIL_REGEX = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+import { EMAIL_REGEX } from "../../data/regex"
 
 const ContactForm = () => {
 
     const toast = useToast()
+    const form = useRef<HTMLFormElement>(null)
     const { register, handleSubmit, formState: { errors }, reset} = useForm<IContactFormVal>()
 
     const [loading, setLoading] = useState(false)
 
-    const onSubmit = handleSubmit((data) => {
+    const onSubmit = handleSubmit(() => {
         setLoading(true)
-        setTimeout(()=> {
-            console.log('On Submit: ', data)
-            setLoading(false)
+        const currentForm = form.current
+        if (currentForm == null) return
+        emailjs.sendForm(
+            process.env.NEXT_PUBLIC_SERVICE_ID_CONTACT_FORM!,
+            process.env.NEXT_PUBLIC_TEMPLATE_ID_CONTACT_FORM!,
+            currentForm,
+            process.env.NEXT_PUBLIC_USER_ID_CONTACT_FORM!
+        )
+        .then(() => {
+            setLoading(false),
             toast({
-                title: 'Message Sent',
+                title: "Message Sent",
                 description: "Thank You For Contacting Us",
-                status: 'success',
+                status: "success",
                 duration: 5000,
                 isClosable: true,
-                position: 'bottom-right',
+                position: "bottom-right",
             })
-        }, 1500)
+        })
+        .catch(() => {
+            setLoading(false),
+            toast({
+                title: "Oops, Message Not Sent",
+                description: "Something went wrong",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+                position: "bottom-right",
+            })
+        })
         reset()
     })
 
     return (
         <>
             <VStack sx={vStackStyle}>
-                <form onSubmit={onSubmit} style={formStyle}>
+                <form onSubmit={onSubmit} style={formStyle} ref={form}>
                     <FormControl isInvalid={!!errors.name}>
                         <FormLabel>Your Name</FormLabel>
                         <Input
@@ -53,6 +71,7 @@ const ContactForm = () => {
                                 minLength: 5,
                                 maxLength: 35,
                             })} 
+                            name='name'
                             size='lg' variant='filled' sx={inputStyle} placeholder='Towering Heights' type='text' />
                             
                             {!!errors.name ? 
@@ -78,6 +97,7 @@ const ContactForm = () => {
                                     message: 'Invalid Email'
                                 }
                             })}
+                            name='email'
                             variant='filled' size='lg' type='email' sx={inputStyle} placeholder='Email Address' 
                         />
                         {!!errors.email ? 
@@ -91,16 +111,17 @@ const ContactForm = () => {
                         <Textarea 
                             {...register('message', {
                                 required: 'Message is Required',
-                                minLength: 25,
+                                //minLength: 20,
                                 maxLength: 200,
                             })}
+                            name='message'
                             variant='filled' sx={inputStyle} size='lg' placeholder='Type your message here ...'
                         />
                         {!!errors.message ? 
                             <>
-                                <FormErrorMessage>
+                                {/* <FormErrorMessage>
                                     {errors.message && errors?.message.type === "minLength" && "MinLength is 25 characters"}
-                                </FormErrorMessage>
+                                </FormErrorMessage> */}
                                 <FormErrorMessage>
                                     {errors.message && errors?.message.type === "maxLength" && "MaxLength is 200 characters"}
                                 </FormErrorMessage>

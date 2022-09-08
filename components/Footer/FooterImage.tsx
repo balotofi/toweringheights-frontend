@@ -16,12 +16,7 @@ import { footerImageBox } from "./style"
 import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { newsLetterInputStyle } from "./style"
-
-interface INewsLetter {
-    email: string
-}
-
-const EMAIL_REGEX = /^[A-Za-z0-9_\-\.]{4,}[@][a-z]+[\.][a-z]{2,3}$/
+import { EMAIL_REGEX } from "../../data/regex"
 
 const FooterImage = () => {
 

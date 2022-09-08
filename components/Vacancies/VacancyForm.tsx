@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { 
     FormControl, 
     FormLabel, 
@@ -15,12 +15,10 @@ import {
     Flex,
 } from "@chakra-ui/react"
 import axios, { AxiosResponse } from "axios"
+import emailjs from "@emailjs/browser"
 import FileUpload from "../FileUpload"
 import { fileInputStyle, formStyle, inputStyle, submitBtnStyle, vStackStyle } from "./style"
-
-const NAME_REGEX = /^[A-Za-z\-]+\s[A-Za-z\-]*$/
-const PHONE_REGEX = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
-const EMAIL_REGEX = /^[A-Za-z0-9_\-\.]{4,}[@][a-z]+[\.][a-z]{2,3}$/
+import { NAME_REGEX, PHONE_REGEX, EMAIL_REGEX } from "../../data/regex"
 
 const VacancyForm = () => {
 
@@ -28,6 +26,7 @@ const VacancyForm = () => {
     const [changePlaceholder, setChangePlaceholder] = useState('no file selected')
     const [states, setStates] = useState<IStateResData[]>([])
     const toast = useToast()
+    const form = useRef<HTMLFormElement>(null);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<IVacancyFormVal>()
 
     useEffect(() => {
@@ -44,21 +43,41 @@ const VacancyForm = () => {
     }, [])
 
     const onSubmit = handleSubmit((data) => {
-        setLoading(true)
-        setTimeout(()=> {
-            console.log('On Submit: ', data)
+        //setLoading(true)
+        console.log('On Submit: ', data)
+        if (form.current == null) return
+        emailjs.sendForm(
+            process.env.NEXT_PUBLIC_SERVICE_ID_VACANCY_FORM!,
+            process.env.NEXT_PUBLIC_TEMPLATE_ID_VACANCY_FORM!,
+            form.current,
+            process.env.NEXT_PUBLIC_USER_ID_VACANCY_FORM!
+        )
+        .then(() => {
             setLoading(false)
-            setChangePlaceholder('no file selected')
+            setChangePlaceholder("no file selected")
             toast({
-                title: 'Application Sent',
+                title: "Application Sent",
                 description: "Thank You For Applying",
-                status: 'success',
+                status: "success",
                 duration: 5000,
                 isClosable: true,
-                position: 'bottom-right',
+                position: "bottom-right",
             })
-        }, 1000)
-        reset()
+        })
+        .catch((error) => {
+            setLoading(false)
+            setChangePlaceholder("no file selected")
+            toast({
+                title: "Oops!",
+                description: "Sorry, Something Went Wrong",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+                position: "bottom-right",
+            })
+            console.log(error)
+        })
+        //reset()
     })
 
     const validateFiles = (value: FileList) => {
@@ -101,7 +120,7 @@ const VacancyForm = () => {
     return (
         <Flex justify='center' w='100%' >
           <VStack sx={vStackStyle}>
-            <form onSubmit={onSubmit} style={formStyle}>
+            <form onSubmit={onSubmit} style={formStyle} ref={form}>
                 <FormControl isInvalid={!!errors.role}>
                     <FormLabel>Available Role</FormLabel> 
                     <Select {...register('role', { required: 'Select a Role'})} 
@@ -110,6 +129,7 @@ const VacancyForm = () => {
                         color='font.300' 
                         size='lg' 
                         fontSize='sm'
+                        name="role"
                     >
                         <option value='option1'>Option 1</option>
                         <option value='option2'>Option 2</option>
@@ -130,7 +150,9 @@ const VacancyForm = () => {
                                 value: NAME_REGEX,
                                 message: 'Invalid Format! Try this Format: Towering Heights'
                             }
-                        })} size='lg' variant='filled' sx={inputStyle} placeholder='Towering Heights' type='text' /> 
+                        })} 
+                        name="fullName"
+                        size='lg' variant='filled' sx={inputStyle} placeholder='Towering Heights' type='text' /> 
                         {!!errors.fullName ? 
                             <FormErrorMessage>{errors.fullName && errors?.fullName.message}</FormErrorMessage>
                             :
@@ -147,6 +169,7 @@ const VacancyForm = () => {
                                 message: 'Invalid Email!'
                             }
                         })}
+                        name="email"
                         variant='filled' size='lg' type='email' sx={inputStyle} placeholder='toweringheights@mail.com' 
                     />
                     {!!errors.email ? 
@@ -165,6 +188,7 @@ const VacancyForm = () => {
                                 message: 'Invalid Phone Number! Try this Format +2349876543201'
                             }
                         })}
+                        name="phone"
                         variant='filled' sx={inputStyle} size='lg' placeholder='+2349876543201' 
                     />
                     {!!errors.phone ? 
@@ -181,6 +205,7 @@ const VacancyForm = () => {
                         color='font.300' 
                         size='lg' 
                         fontSize='sm'
+                        name="location"
                     >
                         {states.map((state, idx) => (
                             <option key={idx} value={state.name}>{state.name}</option>
