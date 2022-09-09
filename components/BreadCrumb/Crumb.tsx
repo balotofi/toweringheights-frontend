@@ -18,7 +18,7 @@ const Crumb = ({href, last = false, newText}: ICrumbProps) => {
     }
 
     return (
-        <HStack align='center'> 
+        <Flex align='center'> 
             <Link href={href} passHref>
                 <ChakraLink  variant='crumb'> {newText} </ChakraLink>
             </Link>
@@ -26,7 +26,7 @@ const Crumb = ({href, last = false, newText}: ICrumbProps) => {
                 as={MdOutlineKeyboardArrowRight} 
                 sx={crumbIcon}
             />
-        </HStack>
+        </Flex>
     )
 }
 

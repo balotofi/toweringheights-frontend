@@ -26,7 +26,6 @@ const BreadCrumbNav = () => {
             const text= subpath
             const href= '/' + asPathNestedRoutes.slice(0, idx + 1).join('/')
             const newText: string= navObj[`${text}`]
-            console.log(newText)
             return {href, text, newText}
         })
 
@@ -40,6 +39,7 @@ const BreadCrumbNav = () => {
             align='center' 
             m={'2 !important'}   
             w={{base: '100%', md: '85%'}}
+            flexWrap={'wrap'}
         >
             {breadcrumbs.map((crumb, id:number) => (
                 <Crumb {...crumb} 
