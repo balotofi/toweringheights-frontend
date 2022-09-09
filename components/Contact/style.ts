@@ -37,3 +37,10 @@ export const formStyle: CSSProperties = {
     gap: '1rem', 
     alignItems: 'center',
 }
+
+export const findUsHeading = {
+    color: 'font.300',
+    fontSize: '2xl',
+    fontWeight: 'bold',
+    lineHeight: 7,
+}
