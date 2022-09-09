@@ -5,7 +5,7 @@ import Crumb from "./Crumb"
 
 interface IBreadCrumb {
     href: string,
-    text: string | undefined
+    text: string
 }
 
 const navDict = new Map<string, string>(
@@ -40,8 +40,9 @@ const BreadCrumbNav = () => {
 
     for(let i = 0; i < breadcrumbs.length; i++) {
         breadcrumbs[i].text = navDict.get(
-            breadcrumbs[i].text!.toString()
-        );
+            breadcrumbs[i].text
+        )!
+        breadcrumbs[i].text.toString()
     }
 
     return (
