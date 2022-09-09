@@ -2,10 +2,8 @@ import {
     Stack,
     Heading,
     Box,
-    Link as ChakraLink,
     Flex,
 } from '@chakra-ui/react'
-import Link from 'next/link'
 import Activity from './Activity'
 import { activities } from '../../data'
 import { smallHeadingBorder } from '../../theme/components/boxStyles'
@@ -23,11 +21,6 @@ const Activities = () => {
                     <Activity key={activity.id} alt={activity.alt} img={activity.img} summary={activity.summary} heading={activity.heading} />
                 ))}
             </Flex>
-            <Link href='/blog' passHref>
-                <ChakraLink variant='viewMore'>
-                    View More
-                </ChakraLink>
-            </Link>
         </Stack>
     )
 }

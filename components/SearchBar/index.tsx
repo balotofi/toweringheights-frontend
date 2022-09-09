@@ -38,7 +38,7 @@ const SearchBar = () => {
                         type='text' 
                         value={search}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(trimText(e.target.value))}
-                        placeholder='Search'
+                        placeholder='Search or Crtl + F'
                         sx={searchInputStyle}
                     />
                 </InputGroup>

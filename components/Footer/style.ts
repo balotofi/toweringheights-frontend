@@ -1,3 +1,5 @@
+import { CSSProperties } from "react"
+
 export const footerImageBox = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -30,4 +32,9 @@ export const newsLetterInputStyle = {
         fontSize: '14px', 
         fontWeight:'normal'
     }
+}
+
+export const footerLinkStyle: CSSProperties = {
+    marginBottom:'1rem',
+    fontSize:'0.875rem'
 }

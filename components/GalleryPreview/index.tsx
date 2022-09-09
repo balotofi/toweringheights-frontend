@@ -41,7 +41,7 @@ const GalleryPreview = () => {
                 </ChakraLink>
               </Link>
             </Flex>
-          </Flex>
+        </Flex>
     )
 }
 

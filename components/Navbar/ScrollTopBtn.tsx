@@ -15,7 +15,7 @@ const ScrollTopBtn = () => {
         const scrolled = document.documentElement.scrollTop
         if (scrolled > 1000) {
             setVisible(true)
-        } else if ( scrolled <= 1000) {
+        } else if ( scrolled <= 700) {
             setVisible(false)
         }
     }

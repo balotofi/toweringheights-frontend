@@ -1,6 +1,5 @@
 import {
     Flex,
-    HStack,
     Icon,
     Link as ChakraLink, 
     Text
