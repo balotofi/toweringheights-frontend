@@ -74,3 +74,15 @@ interface IVacantRole {
 interface IVacancyPage {
     details: IVacantRole[]
 }
+
+interface IBreadCrumb {
+    href: string,
+    text: string,
+    newText: string
+}
+
+interface ICrumbProps {
+    last: boolean,
+    href: string,
+    newText: string
+}

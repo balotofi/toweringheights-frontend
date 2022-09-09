@@ -3,23 +3,16 @@ import { useRouter } from "next/router"
 import { useMemo } from "react"
 import Crumb from "./Crumb"
 
-interface IBreadCrumb {
-    href: string,
-    text: string
+const navObj: any = {
+    "home": "Home",
+    "join_us": "Join Us",
+    "vacancies": "Career Opportunities",
+    "apply": "Apply Now",
+    "about_us": "About Us",
+    "admissions": "Admissions",
+    "contact_us": "Contact Us",
+    "gallery": "Gallery"
 }
-
-const navDict = new Map<string, string>(
-    [
-        ["Home", "Home"], 
-        ["join_us", "Join Us"], 
-        ["vacancies", "Career Opportunities"], 
-        ["apply", "Apply Now"],
-        ["about_us", "About Us"],
-        ["admissions", "Admissions"],
-        ["contact_us", "Contact Us"],
-        ["gallery", "Gallery"],
-    ],
-)
 
 const BreadCrumbNav = () => {
 
@@ -32,18 +25,15 @@ const BreadCrumbNav = () => {
         const crumbList = asPathNestedRoutes.map((subpath:string, idx:number) => {
             const text= subpath
             const href= '/' + asPathNestedRoutes.slice(0, idx + 1).join('/')
-            return {href, text}
+            const newText: string= navObj[`${text}`]
+            console.log(newText)
+            return {href, text, newText}
         })
 
-        return [{ href: "/", text: "Home"}, ...crumbList]
-    }, [router.asPath])
 
-    for(let i = 0; i < breadcrumbs.length; i++) {
-        breadcrumbs[i].text = navDict.get(
-            breadcrumbs[i].text
-        )!
-        breadcrumbs[i].text.toString()
-    }
+
+        return [{ href: "/", text: "Home", newText: "Home"}, ...crumbList]
+    }, [router.asPath])
 
     return (
         <HStack 

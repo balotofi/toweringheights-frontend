@@ -9,25 +9,18 @@ import Link from 'next/link'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { crumbIcon } from '../../theme/components/iconStyles'
 
-interface ICrumbProps {
-    text: string | undefined,
-    last: boolean,
-    href: string,
-}
-
-
-const Crumb = ({text, href, last = false}: ICrumbProps) => {
+const Crumb = ({href, last = false, newText}: ICrumbProps) => {
     
     if(last) {
         return (
-            <Text color="font.200"  m={'0 !important'}> {text} </Text>
+            <Text color="font.200"  m={'0 !important'}> {newText} </Text>
         )
     }
 
     return (
         <HStack align='center'> 
             <Link href={href} passHref>
-                <ChakraLink  variant='crumb'> {text} </ChakraLink>
+                <ChakraLink  variant='crumb'> {newText} </ChakraLink>
             </Link>
             <Icon 
                 as={MdOutlineKeyboardArrowRight} 
