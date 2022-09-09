@@ -1,26 +1,32 @@
 import { 
     Box, 
-    Link, 
     Popover, 
     PopoverArrow, 
     PopoverContent, 
     PopoverTrigger, 
     Stack 
-} from "@chakra-ui/react"
+} from "@chakra-ui/react" 
+import { useRouter } from "next/router"
 import { navItems } from "../../../data"
+import ChakraNextLink from "../ChakraNextLink"
 import DesktopSubNav from "./DesktopSubNav" 
-import { popOverContent } from './style'
+import { activeLinkStyle, linkStyle, popOverContent } from './style'
 
 const DesktopNav = () => {
+
+    const router = useRouter()
+
     return (
         <Stack direction='row'>
             {navItems.map((navItem) => (
                 <Box key={navItem.label}>
                     <Popover trigger="hover">
                         <PopoverTrigger>
-                            <Link href={navItem.href ?? '#'} variant='bigNavLinks' py={6} px={8} textTransform='uppercase'>
+                            <ChakraNextLink href={navItem.href ?? '#'}
+                                style={router.pathname == navItem.href ? activeLinkStyle : linkStyle}
+                            >
                                 {navItem.label}
-                            </Link>
+                            </ChakraNextLink>
                         </PopoverTrigger>
                         {navItem.children && (
                             <PopoverContent sx={popOverContent}>

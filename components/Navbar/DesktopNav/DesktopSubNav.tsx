@@ -1,14 +1,11 @@
-import { Box, Link, Stack, Text } from "@chakra-ui/react"
+import ChakraNextLink from "../ChakraNextLink"
+import { subLinkStyle } from "./style"
 
 const DesktopSubNav = ({label, href }: NavProps) => {
     return (
-        <Link href={href} role={'group'} variant='bigNavLinks' display={'block'} px={6} py={3}>
-            <Stack direction={'row'}>
-                <Box>
-                    <Text color={'gray.100'}>{label}</Text>
-                </Box>
-            </Stack>
-        </Link>
+        <ChakraNextLink href={href!} style={subLinkStyle}>
+            {label}
+        </ChakraNextLink>
     )
 }
 

@@ -13,13 +13,6 @@ const Link:ComponentStyleConfig = {
         }
     },
     variants: {
-        'bigNavLinks': {
-            p: 6,
-            _hover: {
-                textDecoration: 'none',
-                bgColor: 'rgba(217, 217, 217, 0.3)',
-            },
-        },
         'crumb': {
             color: 'brand.300',
             _hover: {

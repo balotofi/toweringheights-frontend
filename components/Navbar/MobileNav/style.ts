@@ -1,3 +1,5 @@
+import { CSSProperties } from "react"
+
 export const flexStyle = {
     py: 2,
     px: 1,
@@ -17,4 +19,10 @@ export const dropDownIcon = {
     transition: 'all .3s ease-in-out', 
     w: 5,
     h: 5,
+}
+
+export const subLinkStyle: CSSProperties = {
+    fontSize: "0.875rem",
+    color: "white",
+    padding: "0.5rem 0",
 }
