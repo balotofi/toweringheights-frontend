@@ -60,3 +60,17 @@ interface IStateResData {
 interface INewsLetter {
     email: string
 }
+interface IVacantRole {
+    id?: number
+    title: string
+    grade: string
+    date: string
+    summary: string
+    descriptions: string[]
+    requirements: string[]
+    physicalRequirements: string
+}
+
+interface IVacancyPage {
+    details: IVacantRole[]
+}

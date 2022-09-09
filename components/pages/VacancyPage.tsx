@@ -3,7 +3,7 @@ import BreadCrumbNav from "../BreadCrumb"
 import VacancyDetails from "../Vacancies/VacancyDetails"
 import { smallHeadingBorder } from "../../theme/components/boxStyles"
 
-const VacancyPage = () => {
+const VacancyPage = ({details}: IVacancyPage) => {
     return (
         <>
             <Stack px={{base:'6', md: '8', lg: '16'}} py={{base: '2'}} gap={6}>
@@ -26,10 +26,19 @@ const VacancyPage = () => {
                         <Heading as='h3' variant='h3'>See open roles at THS</Heading>
                         <Box bg='brand.300' sx={smallHeadingBorder} />
                     </Flex>
-                    <VacancyDetails />
-                    <VacancyDetails />
-                    <VacancyDetails />
-                    <VacancyDetails />
+                    <>
+                        {details.map((detail) => (
+                            <VacancyDetails 
+                                key={detail.id}
+                                title={detail.title}
+                                date={detail.date}
+                                grade={detail.grade}
+                                summary={detail.summary}
+                                descriptions={detail.descriptions}
+                                requirements={detail.requirements}
+                                physicalRequirements={detail.physicalRequirements}                            />
+                        ))}
+                    </>
                 </VStack>
             </Stack>
         </>

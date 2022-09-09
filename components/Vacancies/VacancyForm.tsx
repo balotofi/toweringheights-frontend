@@ -19,7 +19,7 @@ import FileUpload from "../FileUpload"
 import { fileInputStyle, formStyle, inputStyle, submitBtnStyle, vStackStyle } from "./style"
 import { NAME_REGEX, PHONE_REGEX, EMAIL_REGEX } from "../../data/regex"
 
-const VacancyForm = () => {
+const VacancyForm = ({details}: IVacancyPage) => {
 
     const [loading, setLoading] = useState(false)
     const [changePlaceholder, setChangePlaceholder] = useState('no file selected')
@@ -108,9 +108,9 @@ const VacancyForm = () => {
                         fontSize='sm'
                         name="role"
                     >
-                        <option value='option1'>Option 1</option>
-                        <option value='option2'>Option 2</option>
-                        <option value='option3'>Option 3</option>
+                        {details.map((detail) => (
+                            <option value={detail.title} key={detail.id}>{detail.title}</option>
+                        ))}
                     </Select>
                     {!!errors.role ? 
                         <FormErrorMessage>{errors.role && errors?.role.message}</FormErrorMessage>
