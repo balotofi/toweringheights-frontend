@@ -36,3 +36,4 @@ yarn-error.log*
 
 #sensitive info
 /components/Vacancies/fetchData.ts
+/data

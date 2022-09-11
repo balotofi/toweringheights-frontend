@@ -1,3 +1,12 @@
 {
-    "workbench.sideBar.location": "right"
+	"workbench.sideBar.location": "right",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.format": true
+	},
+	"files.eol": "auto",
+	"prettier.tabWidth": 4
 }
