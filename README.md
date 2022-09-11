@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Towering Heights Schools 🏫
 
-## Getting Started
+Towering Heights Schools is a top educational institution that aims to provide a warm,safe and caring learning environment for all our pupils. A place where each boy and girl can feel empowered to explore ,grow and realise their full potential, nurtured and helped by expert practitioners who are passionate about their craft and committed to meeting the needs of the children in their care.
 
-First, run the development server:
+## About Project 🚀
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+THS website was developed with the following libaries and frameworks
+<ul>
+  <li>Next.js</li>
+  <li>React.js</li>
+  <li>TypeScript</li>
+  <li>Chakra-UI</li>
+</ul>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Website Roadmap 🔍
+Here are some of the links you should look out for easy navigation. 
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Top links 🔗
+<ul>
+  <li>Home</li>
+  <li>About Us</li>
+  <li>Gallery</li>
+  <li>Join Us</li>
+    <ul>
+      <li>Admissions</li>
+      <li>Vacancies</li>
+    </ul>
+  <li>Contact Us</li>
+</ul>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Upcoming Links🔗
+<ul>
+  <li>About Us</li>
+  <ul>
+      <li>Blog</li>
+    </ul>
+  <li>Parent</li>
+  <li>Teacher</li>
+</ul>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contributing 👨‍💻
 
-## Learn More
+Contributions will be **greatly appreciated**.
 
-To learn more about Next.js, take a look at the following resources:
+### How to Contribute
+1. Fork the Project
+2. Create your branch (`git checkout -b newbranch`)
+3. Commit your Changes (`git commit -m 'Add some Something Cool'`)
+4. Push to the Remote Branch (`git push origin newbranch`)
+5. Open a Pull Request
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can also open an issue with a tag.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Don't forget to give the project a star.⭐ Thanks.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
