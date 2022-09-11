@@ -1,59 +1,61 @@
-import { 
-    HStack,
-} from "@chakra-ui/react"
+import { HStack } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useMemo } from "react"
 import Crumb from "./Crumb"
 
-interface IPath {
-    newPath?: string
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const navObj: any = {
+	home: "Home",
+	join_us: "Join Us",
+	vacancies: "Career Opportunities",
+	apply: "Apply Now",
+	about_us: "About Us",
+	admissions: "Admissions",
+	contact_us: "Contact Us",
+	gallery: "Gallery",
 }
 
-const BreadCrumbNav = ({newPath}: IPath) => {
+const BreadCrumbNav = () => {
+	const router = useRouter()
 
-    const router = useRouter()
+	const breadcrumbs: IBreadCrumb[] = useMemo(
+		function generateCrumbs() {
+			const asPathWithoutQuery = router.asPath.split("?")[0]
+			const asPathNestedRoutes = asPathWithoutQuery
+				.split("/")
+				.filter((v) => v.length > 0)
 
-    const transformPath= (text: string) => {
-        let arr: string[] = text.replace(/_/,' ').toLowerCase().split(' ')
-        for (let i = 0; i < arr.length; i++) {
-                arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
-        }
-        return arr.join(' ')
-    }
+			const crumbList = asPathNestedRoutes.map(
+				(subpath: string, idx: number) => {
+					const text = subpath
+					const href =
+						"/" + asPathNestedRoutes.slice(0, idx + 1).join("/")
+					const newText: string = navObj[`${text}`]
+					return { href, text, newText }
+				}
+			)
 
-    const breadcrumbs = useMemo(function generateCrumbs() {
-        const asPathWithoutQuery = router.asPath.split('?')[0]
-        const asPathNestedRoutes = asPathWithoutQuery.split('/').filter(v => v.length > 0)
+			return [{ href: "/", text: "Home", newText: "Home" }, ...crumbList]
+		},
+		[router.asPath]
+	)
 
-        const crumbList = asPathNestedRoutes.map((subpath:string, idx:number) => {
-            const href:string = '/' + asPathNestedRoutes.slice(0, idx + 1).join('/')
-            const text: string = transformPath(subpath)
-            return {href, text}
-        })
-
-        console.log(crumbList)
-        return [{ href: "/", text: "Home"}, ...crumbList]
-    }, [router.asPath])
-
-    const lastPath = breadcrumbs[breadcrumbs.length -1].text
-
-    return (
-        <HStack 
-            align='center' 
-            m={'2 !important'}   
-            w={{base: '100%', md: '85%'}}
-        >
-            {breadcrumbs.map((crumb, id:number) => (
-                <Crumb {...crumb} 
-                    key={id} 
-                    last={id === breadcrumbs.length -1} 
-                    newPath={newPath} 
-                    transformPath={transformPath}
-                    lastPath={lastPath}
-                />
-            ))}
-        </HStack>
-    )
+	return (
+		<HStack
+			align="center"
+			m={"2 !important"}
+			w={{ base: "100%", md: "85%" }}
+			flexWrap={"wrap"}
+		>
+			{breadcrumbs.map((crumb, id: number) => (
+				<Crumb
+					{...crumb}
+					key={id}
+					last={id === breadcrumbs.length - 1}
+				/>
+			))}
+		</HStack>
+	)
 }
 
 export default BreadCrumbNav

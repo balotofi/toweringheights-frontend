@@ -43,14 +43,13 @@ Here are some of the links you should look out for easy navigation.
 Contributions will be **greatly appreciated**.
 
 ### How to Contribute
-
 1. Fork the Project
 2. Create your branch (`git checkout -b newbranch`)
 3. Commit your Changes (`git commit -m 'Add some Something Cool'`)
 4. Push to the Remote Branch (`git push origin newbranch`)
 5. Open a Pull Request
 
-You can also simply open an issue with a tag.
+You can also open an issue with a tag.
 
 Don't forget to give the project a star.⭐ Thanks.
 
