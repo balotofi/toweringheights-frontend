@@ -4,7 +4,7 @@ import colors from "./foundation/colors"
 import components from "./components"
 
 export const overrides = extendTheme({
-    styles,
-    colors,
-    components,
+	styles,
+	colors,
+	components,
 })
