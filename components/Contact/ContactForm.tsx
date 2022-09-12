@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react"
 import emailjs from "@emailjs/browser"
 import { formStyle, inputStyle, vStackStyle } from "./style"
-import { EMAIL_REGEX } from "../../data/regex"
+import { EMAIL_REGEX, NAME_REGEX } from "../../data/regex"
 
 const ContactForm = () => {
 	const toast = useToast()
@@ -76,7 +76,10 @@ const ContactForm = () => {
 							{...register("name", {
 								required: "Your Name is Required",
 								minLength: 5,
-								maxLength: 35,
+								pattern: {
+									value: NAME_REGEX,
+									message: "Invalid Email",
+								},
 							})}
 							name="name"
 							size="lg"
@@ -94,9 +97,7 @@ const ContactForm = () => {
 										"MinLength is 5 characters"}
 								</FormErrorMessage>
 								<FormErrorMessage>
-									{errors.name &&
-										errors?.name.type === "maxLength" &&
-										"MaxLength is 35 characters"}
+									{errors.email && errors?.email.message}
 								</FormErrorMessage>
 							</>
 						) : (
@@ -137,7 +138,7 @@ const ContactForm = () => {
 						<Textarea
 							{...register("message", {
 								required: "Message is Required",
-								// minLength: 20,
+								minLength: 20,
 								maxLength: 200,
 							})}
 							name="message"
@@ -148,9 +149,11 @@ const ContactForm = () => {
 						/>
 						{errors.message ? (
 							<>
-								{/* <FormErrorMessage>
-                                    {errors.message && errors?.message.type === "minLength" && "MinLength is 25 characters"}
-                                </FormErrorMessage> */}
+								<FormErrorMessage>
+									{errors.message &&
+										errors?.message.type === "minLength" &&
+										"MinLength is 25 characters"}
+								</FormErrorMessage>
 								<FormErrorMessage>
 									{errors.message &&
 										errors?.message.type === "maxLength" &&
