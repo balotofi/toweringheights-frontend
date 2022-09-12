@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import { vacantRoles } from "../../data/vacancies"
 import type { NextApiRequest, NextApiResponse } from "next"
 
