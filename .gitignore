@@ -33,3 +33,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+#sensitive info
+/components/Vacancies/fetchData.ts
+/data

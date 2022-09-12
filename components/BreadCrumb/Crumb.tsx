@@ -1,51 +1,39 @@
-import {
-    Flex,
-    HStack,
-    Icon,
-    Link as ChakraLink, 
-    Text
-} from '@chakra-ui/react'
-import Link from 'next/link'
-import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
+import { Flex, Icon, Link as ChakraLink, Text } from "@chakra-ui/react"
+import Link from "next/link"
+import { MdOutlineKeyboardArrowRight } from "react-icons/md"
+import { crumbIcon } from "../../theme/components/iconStyles"
 
-interface crumbProps {
-    text: string,
-    last: boolean,
-    href: string,
-}
+const Crumb = ({ href, last = false, newText }: ICrumbProps) => {
+	if (last) {
+		return (
+			<Text color="font.200" m={"0 !important"}>
+				{" "}
+				{newText}{" "}
+			</Text>
+		)
+	}
 
-const Crumb = ({text, href, last = false}: crumbProps) => {
-
-    if(last) {
-        return (
-            <Text color="font.200"  m={'0 !important'} >{text}</Text>
-        )
-    }
-
-    return (
-        <HStack align='center'>
-            <Link href={href} passHref>
-                <ChakraLink
-                    color='brand.300'
-                    textDecoration='none'
-                    transition='all 0.25s ease-in-out'
-                    _hover={{
-                        color: '#1768c1'
-                    }}
-                >
-                    {text}
-                </ChakraLink>
-            </Link>
-            <Icon 
-                as={MdOutlineKeyboardArrowRight} 
-                mx={'1 !important'} 
-                pt={'0.5'}
-                color='font.200' 
-                w={5} 
-                h={5} 
-            />
-        </HStack>
-    )
+	return (
+		<Flex align="center">
+			<Link href={href} passHref>
+				<ChakraLink variant="crumb"> {newText} </ChakraLink>
+			</Link>
+			<Icon as={MdOutlineKeyboardArrowRight} sx={crumbIcon} />
+		</Flex>
+	)
 }
 
 export default Crumb
+
+// const transformPath= (str: string) => {
+//     let arr: string[] = str.toLowerCase().split(' ')
+//     for (let i = 0; i < arr.length; i++) {
+//          arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
+//     }
+//     return arr.join(' ')
+// }
+
+// const transformLabel = (str: string, newText: string) => {
+//     const label = str.replace(str, newText)
+//     return transformPath(label)
+// }
