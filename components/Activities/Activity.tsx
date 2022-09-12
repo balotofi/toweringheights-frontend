@@ -1,6 +1,8 @@
 import { Flex, Heading, Text, Box } from "@chakra-ui/react"
 import Image from "next/image"
 import { boxStyle, flexStyle } from "./style"
+import { motion } from "framer-motion"
+import { textVariants } from "./transition"
 
 const Activity = ({ ...activity }) => {
 	return (
@@ -15,18 +17,24 @@ const Activity = ({ ...activity }) => {
 				/>
 			</Box>
 			<Box>
-				<Heading
-					as="h4"
-					variant="h2"
-					mt="1.8rem"
-					mb="1.5rem"
-					fontSize={{ base: "xl", md: "md" }}
+				<motion.div
+					variants={textVariants}
+					initial="hidden"
+					whileInView="show"
 				>
-					{activity.heading}
-				</Heading>
-				<Text lineHeight={7} className="paragraph">
-					{activity.summary}
-				</Text>
+					<Heading
+						as="h4"
+						variant="h2"
+						mt="1.8rem"
+						mb="1.5rem"
+						fontSize={{ base: "xl", md: "md" }}
+					>
+						{activity.heading}
+					</Heading>
+					<Text lineHeight={7} className="paragraph">
+						{activity.summary}
+					</Text>
+				</motion.div>
 			</Box>
 		</Flex>
 	)
