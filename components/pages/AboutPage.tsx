@@ -24,6 +24,7 @@ const AboutPage = () => {
 			<Stack px={2} py={4} p={{ md: "0" }}>
 				<Flex
 					justify="center"
+					position="relative"
 					w={{ base: "100%" }}
 					h={{
 						base: "239px",
@@ -31,7 +32,7 @@ const AboutPage = () => {
 						lg: "650px",
 					}}
 				>
-					<Image src={AboutImage} />
+					<Image src={AboutImage} layout="fill" priority />
 				</Flex>
 				<Flex
 					mx={{
@@ -111,52 +112,46 @@ const AboutPage = () => {
 				>
 					Our working hours are as follows:
 				</Heading>
-				<Box>
-					<TableContainer
-						mb={4}
-						w={{ md: "70%" }}
-						className="paragraph"
-					>
-						<Table variant="striped" colorScheme="blue">
-							<Thead>
-								<Tr>
-									<Th>Day</Th>
-									<Th>Time</Th>
-								</Tr>
-							</Thead>
-							<Tbody>
-								<Tr>
-									<Td>Monday</Td>
-									<Td>7:30 AM - 5:00 PM</Td>
-								</Tr>
-								<Tr>
-									<Td>Tuesday</Td>
-									<Td>7:30 AM - 5:00 PM</Td>
-								</Tr>
-								<Tr>
-									<Td>Wednesday</Td>
-									<Td>7:30 AM - 5:00 PM</Td>
-								</Tr>
-								<Tr>
-									<Td>Thursday</Td>
-									<Td>7:30 AM - 5:00 PM</Td>
-								</Tr>
-								<Tr>
-									<Td>Friday</Td>
-									<Td>7:30 AM - 5:00 PM</Td>
-								</Tr>
-								<Tr>
-									<Td>Saturday</Td>
-									<Td>CLOSED</Td>
-								</Tr>
-								<Tr>
-									<Td>Sunday</Td>
-									<Td>CLOSED</Td>
-								</Tr>
-							</Tbody>
-						</Table>
-					</TableContainer>
-				</Box>
+				<TableContainer mb={4} w={{ md: "70%" }} className="paragraph">
+					<Table variant="striped" colorScheme="blue">
+						<Thead>
+							<Tr>
+								<Th>Day</Th>
+								<Th>Time</Th>
+							</Tr>
+						</Thead>
+						<Tbody>
+							<Tr>
+								<Td>Monday</Td>
+								<Td>7:30 AM - 5:00 PM</Td>
+							</Tr>
+							<Tr>
+								<Td>Tuesday</Td>
+								<Td>7:30 AM - 5:00 PM</Td>
+							</Tr>
+							<Tr>
+								<Td>Wednesday</Td>
+								<Td>7:30 AM - 5:00 PM</Td>
+							</Tr>
+							<Tr>
+								<Td>Thursday</Td>
+								<Td>7:30 AM - 5:00 PM</Td>
+							</Tr>
+							<Tr>
+								<Td>Friday</Td>
+								<Td>7:30 AM - 5:00 PM</Td>
+							</Tr>
+							<Tr>
+								<Td>Saturday</Td>
+								<Td>CLOSED</Td>
+							</Tr>
+							<Tr>
+								<Td>Sunday</Td>
+								<Td>CLOSED</Td>
+							</Tr>
+						</Tbody>
+					</Table>
+				</TableContainer>
 				<Heading
 					as="h3"
 					color="brand.300"
@@ -165,22 +160,29 @@ const AboutPage = () => {
 				>
 					Our Values
 				</Heading>
-				<Box>
-					<Text mb={4} className="paragraph">
-						At Towering Heights School, we value with high
-						regard,high performance, independent thinking,
-						individualism ; we believe in helping each child find
-						their natural gifts and helping them to nurture and grow
-						them in a place where they feel :
-					</Text>
-					<OrderedList mb={4} ml={16} className="paragraph">
-						<ListItem>Kindness</ListItem>
-						<ListItem>Respect</ListItem>
-						<ListItem>Integrity</ListItem>
-						<ListItem>Inclusiveness</ListItem>
-						<ListItem>Excellence</ListItem>
-					</OrderedList>
-				</Box>
+				<Text mb={4} className="paragraph">
+					At Towering Heights School, we value with high regard,high
+					performance, independent thinking, individualism; we believe
+					in helping each child find their natural gifts and helping
+					them to nurture and grow them in a place where they feel :
+				</Text>
+				<OrderedList mb={4} className="paragraph">
+					<ListItem ml={16} pl={2}>
+						Kindness
+					</ListItem>
+					<ListItem ml={16} pl={2}>
+						Respect
+					</ListItem>
+					<ListItem ml={16} pl={2}>
+						Integrity
+					</ListItem>
+					<ListItem ml={16} pl={2}>
+						Inclusiveness
+					</ListItem>
+					<ListItem ml={16} pl={2}>
+						Excellence
+					</ListItem>
+				</OrderedList>
 				<Heading
 					as="h3"
 					color="brand.300"

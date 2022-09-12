@@ -8,3 +8,11 @@ export const boxStyle = {
 	boxShadow: "5px 5px 3px 3px #333333",
 	transitionTimingFunction: "ease-in-out",
 }
+
+export const flexStyle = {
+	display: "flex",
+	flexDirection: "row",
+	flexWrap: "wrap",
+	justifyContent: "center",
+	gap: 8,
+}

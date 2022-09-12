@@ -5,24 +5,34 @@ import { motion, isValidMotionProp } from "framer-motion"
 export const imageVariants = {
 	hidden: {
 		opacity: 0,
-		right: "100%",
 	},
 	show: {
 		opacity: 1,
-		right: 0,
-		transition: { type: "spring", delay: 1 },
+		transition: { type: "spring", delay: 0.3 },
+	},
+}
+
+export const headingVariants = {
+	hidden: {
+		scale: 0,
+	},
+	show: {
+		scale: 1,
+		opacity: 1,
+		transition: {
+			type: "tween",
+			duration: 0.5,
+		},
 	},
 }
 
 export const containerVariants = {
 	hidden: {
-		opacity: 0,
-		x: 100,
+		opacity: 1,
 	},
 	show: {
 		opacity: 1,
-		x: 0,
-		transition: { type: "spring", delay: 0.5, when: "beforeChildren" },
+		transition: { type: "spring", delay: 0.2 },
 	},
 }
 

@@ -4,20 +4,16 @@ import { motion, isValidMotionProp } from "framer-motion"
 
 export const blogPreviewVariant = {
 	hidden: {
-		scale: 0.7,
-		transition: {
-			duration: 2,
-		},
+		scale: 0.5,
 	},
 	show: {
-		scale: 1,
+		scale: 0.9,
 		transition: {
-			delay: 0.3,
-			duration: 1,
+			duration: 0.8,
 		},
 	},
 	hover: {
-		scale: 1.1,
+		scale: 1,
 		transition: {
 			ease: "linear",
 		},
@@ -32,7 +28,12 @@ export const headingVariants = {
 	show: {
 		opacity: 1,
 		x: 0,
-		transition: { type: "spring", delay: 0.5 },
+		transition: {
+			type: "spring",
+			delay: 0.3,
+			stiffness: 200,
+			damping: 5,
+		},
 	},
 }
 

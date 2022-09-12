@@ -16,3 +16,12 @@ export const navbarInnerBoxStyle = {
 	bg: "brand.300",
 	boxShadow: "0 5px 5px rgb(8 33 68 / 54%)",
 }
+
+export const logoNavContainer = {
+	maxH: "14.625rem",
+	display: "flex",
+	alignItems: "center",
+	my: 4,
+	justifyContent: "space-around",
+	mx: 3,
+}

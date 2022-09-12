@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useRef, useState } from "react"
 import { useForm } from "react-hook-form"
 import {
@@ -84,7 +86,7 @@ const ContactForm = () => {
 							type="text"
 						/>
 
-						{!!errors.name ? (
+						{errors.name ? (
 							<>
 								<FormErrorMessage>
 									{errors.name &&
@@ -120,7 +122,7 @@ const ContactForm = () => {
 							sx={inputStyle}
 							placeholder="Email Address"
 						/>
-						{!!errors.email ? (
+						{errors.email ? (
 							<FormErrorMessage>
 								{errors.email && errors?.email.message}
 							</FormErrorMessage>
@@ -135,7 +137,7 @@ const ContactForm = () => {
 						<Textarea
 							{...register("message", {
 								required: "Message is Required",
-								//minLength: 20,
+								// minLength: 20,
 								maxLength: 200,
 							})}
 							name="message"
@@ -144,7 +146,7 @@ const ContactForm = () => {
 							size="lg"
 							placeholder="Type your message here ..."
 						/>
-						{!!errors.message ? (
+						{errors.message ? (
 							<>
 								{/* <FormErrorMessage>
                                     {errors.message && errors?.message.type === "minLength" && "MinLength is 25 characters"}

@@ -1,9 +1,13 @@
 import { Flex, Heading, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { useRouter } from "next/router"
-import { boxStyle } from "./style"
-import { headingVariant, latestUpdateVariants } from "./transition"
-import { AnimatedLatestUpdate } from "./AnimatedLatestUpdate"
+import { boxStyle, flexStyle } from "./style"
+import {
+	headingVariant,
+	latestUpdateVariants,
+	AnimatedLatestUpdate,
+	containerVariants,
+} from "./transition"
 
 const LatestUpdates = () => {
 	const router = useRouter()
@@ -25,12 +29,14 @@ const LatestUpdates = () => {
 					Latest Updates
 				</Heading>
 			</motion.div>
-			<Flex direction="row" flexWrap={"wrap"} justify="center" gap={8}>
+			<AnimatedLatestUpdate
+				variants={containerVariants}
+				initial="hidden"
+				animate="show"
+				sx={flexStyle}
+			>
 				<AnimatedLatestUpdate
 					variants={latestUpdateVariants}
-					initial="hidden"
-					animate="show"
-					whileHover="hover"
 					sx={boxStyle}
 					onClick={() => {
 						router.push("/join_us/admissions")
@@ -45,9 +51,6 @@ const LatestUpdates = () => {
 				</AnimatedLatestUpdate>
 				<AnimatedLatestUpdate
 					variants={latestUpdateVariants}
-					initial="hidden"
-					animate="show"
-					whileHover="hover"
 					sx={boxStyle}
 				>
 					<Heading variant="h4">Calendar</Heading>
@@ -58,9 +61,6 @@ const LatestUpdates = () => {
 				</AnimatedLatestUpdate>
 				<AnimatedLatestUpdate
 					variants={latestUpdateVariants}
-					initial="hidden"
-					animate="show"
-					whileHover="hover"
 					sx={boxStyle}
 				>
 					<Heading variant="h4">Latest News</Heading>
@@ -69,7 +69,7 @@ const LatestUpdates = () => {
 						events and information.
 					</Text>
 				</AnimatedLatestUpdate>
-			</Flex>
+			</AnimatedLatestUpdate>
 		</Flex>
 	)
 }

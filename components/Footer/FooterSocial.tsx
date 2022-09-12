@@ -1,26 +1,23 @@
 import { Flex, Icon, Link } from "@chakra-ui/react"
 import { whiteIcon } from "../../theme/components/iconStyles"
-import { flexStyle } from "./style"
+import { flexStyle, footerSocialStyle } from "./style"
+import { motion } from "framer-motion"
+import { footerLinkVariants } from "./Animation"
 
 const FooterSocial = ({ href, text, icon }: IFooterSocial) => {
 	return (
-		<Flex sx={flexStyle}>
-			<Icon as={icon} sx={whiteIcon} />
-			<Link
-				href={href}
-				isExternal
-				sx={{
-					fontSize: "sm",
-					mb: "1rem",
-					_hover: {
-						textDecoration: "none",
-						color: "font.200",
-					},
-				}}
-			>
-				{text}
-			</Link>
-		</Flex>
+		<motion.div
+			variants={footerLinkVariants}
+			initial="hidden"
+			whileInView="show"
+		>
+			<Flex sx={flexStyle}>
+				<Icon as={icon} sx={whiteIcon} />
+				<Link href={href} isExternal sx={footerSocialStyle}>
+					{text}
+				</Link>
+			</Flex>
+		</motion.div>
 	)
 }
 

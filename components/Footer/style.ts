@@ -15,7 +15,7 @@ export const footerImageBox = {
 
 export const flexStyle = {
 	color: "white",
-	mb: 4,
+	mb: 5,
 	gap: 2.5,
 	transition: "all 0.15s ease-in-out",
 	_hover: {
@@ -40,4 +40,12 @@ export const newsLetterInputStyle = {
 export const footerLinkStyle: CSSProperties = {
 	marginBottom: "1rem",
 	fontSize: "0.875rem",
+}
+
+export const footerSocialStyle = {
+	fontSize: "sm",
+	_hover: {
+		textDecoration: "none",
+		color: "font.200",
+	},
 }

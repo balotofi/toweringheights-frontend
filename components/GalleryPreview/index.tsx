@@ -10,6 +10,7 @@ import { smallHeadingBorder } from "../../theme/components/boxStyles"
 import {
 	AnimatedContainer,
 	containerVariants,
+	headingVariants,
 	imageVariants,
 } from "./Animation"
 
@@ -30,24 +31,24 @@ const galleryPreviews: ISlideShow[] = [
 
 const GalleryPreview = () => {
 	return (
-		<Flex direction="column" p={8} gap={6}>
+		<AnimatedContainer
+			variants={containerVariants}
+			initial="hidden"
+			whileInView="show"
+			display="flex"
+			flexDirection="column"
+			p={8}
+			gap={6}
+		>
 			<Flex direction="column" align="center" mx={6}>
-				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="show"
-				>
+				<motion.div variants={headingVariants}>
 					<Heading as="h3" variant="h3">
 						Our Gallery
 					</Heading>
 				</motion.div>
 				<Box sx={smallHeadingBorder} bg="font.400" />
 			</Flex>
-			<AnimatedContainer
-				variants={imageVariants}
-				initial="hidden"
-				whileInView="show"
-			>
+			<AnimatedContainer variants={imageVariants}>
 				<Flex
 					m={4}
 					direction="row"
@@ -66,12 +67,15 @@ const GalleryPreview = () => {
 			</AnimatedContainer>
 			<Flex justify="center">
 				<Link href="/gallery" passHref>
-					<ChakraLink variant="viewMore">
+					<ChakraLink
+						variant="viewMore"
+						_hover={{ textDecoration: "none" }}
+					>
 						Click here to see more
 					</ChakraLink>
 				</Link>
 			</Flex>
-		</Flex>
+		</AnimatedContainer>
 	)
 }
 
