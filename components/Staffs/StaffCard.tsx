@@ -21,7 +21,9 @@ const StaffCard = ({ sName, img, role }: IStaffProps) => {
 				<Heading as="h5" sx={staffName}>
 					{sName}
 				</Heading>
-				<Text variant="staffLabel">{role}</Text>
+				<Text variant="staffLabel" px={2}>
+					{role}
+				</Text>
 				<Flex mb={4} justify="center" gap={2} px={2}>
 					<Button size="md" variant={"staffCardBtn"}>
 						<Icon

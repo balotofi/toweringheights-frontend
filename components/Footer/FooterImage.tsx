@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {
 	Box,
@@ -70,10 +71,7 @@ const FooterImage = () => {
 	})
 
 	return (
-		<Box
-			bg="url(/assets/group_img/footer.jpg) no-repeat"
-			sx={footerImageBox}
-		>
+		<Box sx={footerImageBox}>
 			<Flex
 				bgColor="rgba(0, 0, 0, 0.6)"
 				overflow="hidden"

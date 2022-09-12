@@ -1,3 +1,6 @@
+import smallBlob from "../../assets/blob_shape.svg"
+import bigBlob from "../../assets/big_blob_shape.svg"
+
 export const btnSliderIcon = {
 	w: { base: "4", md: "6" },
 	h: { base: "4", md: "6" },
@@ -36,7 +39,7 @@ export const staffName = {
 }
 
 export const flexHeading = {
-	bgImage: "/assets/blob_shape.svg",
+	bgImage: `url(${smallBlob.src})`,
 	bgRepeat: "no-repeat",
 	bgPosition: "center",
 	height: "105px",
@@ -44,7 +47,7 @@ export const flexHeading = {
 }
 
 export const sliderFlex = {
-	bgImage: "/assets/big_blob_shape.svg",
+	bgImage: `url(${bigBlob.src})`,
 	bgRepeat: "no-repeat",
 	bgPosition: "bottom right",
 	my: 4,

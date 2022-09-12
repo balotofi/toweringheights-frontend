@@ -1,6 +1,9 @@
 import { CSSProperties } from "react"
+import bgFooter from "../../assets/group_img/footer.jpg"
 
 export const footerImageBox = {
+	backgroundImage: `url(${bgFooter.src})`,
+	backgroundRepeat: "no-repeat",
 	backgroundSize: "cover",
 	backgroundPosition: "center",
 	h: {
