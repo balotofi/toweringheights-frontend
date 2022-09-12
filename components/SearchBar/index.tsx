@@ -57,7 +57,7 @@ const SearchBar = () => {
 						onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
 							setSearch(trimText(e.target.value))
 						}
-						placeholder="Search or Crtl + F"
+						placeholder="Search or Ctrl + F"
 						sx={searchInputStyle}
 					/>
 				</InputGroup>
