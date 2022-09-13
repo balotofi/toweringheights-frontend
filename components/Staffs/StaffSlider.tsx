@@ -58,6 +58,7 @@ const StaffSlider = () => {
 						sName={staff.sName}
 						role={staff.role}
 						img={staff.img}
+						whatsapp={staff.whatsapp}
 					/>
 				))}
 			</Slider>

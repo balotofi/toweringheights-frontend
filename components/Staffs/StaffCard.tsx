@@ -1,11 +1,11 @@
-import { Box, Heading, Text, Button, Icon, Flex } from "@chakra-ui/react"
+import { Box, Heading, Text, Icon, Flex, Link } from "@chakra-ui/react"
 import Image from "next/image"
 import { RiWhatsappLine } from "react-icons/ri"
 import { MdMailOutline } from "react-icons/md"
 import { imageBox, contentBox, staffName } from "./style"
 import { IStaffProps } from "../../types/imageTypes"
 
-const StaffCard = ({ sName, img, role }: IStaffProps) => {
+const StaffCard = ({ sName, img, role, whatsapp }: IStaffProps) => {
 	return (
 		<Flex justify="center">
 			<Box sx={imageBox}>
@@ -24,21 +24,21 @@ const StaffCard = ({ sName, img, role }: IStaffProps) => {
 				<Text variant="staffLabel" px={2}>
 					{role}
 				</Text>
-				<Flex mb={4} justify="center" gap={2} px={2}>
-					<Button size="md" variant={"staffCardBtn"}>
+				<Flex mb={4} justify="center" gap={6} px={2}>
+					<Link variant={"staffCardLink"} href={whatsapp} isExternal>
 						<Icon
 							as={RiWhatsappLine}
 							w={{ base: 5, lg: 6 }}
 							h={{ base: 5, lg: 6 }}
 						/>
-					</Button>
-					<Button size="md" variant={"staffCardBtn"}>
+					</Link>
+					<Link variant={"staffCardLink"} href={whatsapp} isExternal>
 						<Icon
 							as={MdMailOutline}
 							w={{ base: 5, lg: 6 }}
 							h={{ base: 5, lg: 6 }}
 						/>
-					</Button>
+					</Link>
 				</Flex>
 			</Box>
 		</Flex>
