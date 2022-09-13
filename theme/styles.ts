@@ -3,7 +3,7 @@ const styles = {
 		body: {
 			bg: "white",
 			color: "#333333",
-			fontFamily: `'Lato', sans-serif`,
+			fontFamily: "'Lato', sans-serif",
 			fontSize: "md",
 		},
 	}),
