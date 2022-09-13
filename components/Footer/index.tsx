@@ -31,12 +31,7 @@ const Footer = () => {
 							},
 						}}
 					>
-						<Image
-							width={100}
-							height={85}
-							src={SchoolLogo}
-							priority
-						/>
+						<Image width={100} height={85} src={SchoolLogo} />
 						<motion.div
 							variants={footerTextVariants}
 							initial="hidden"

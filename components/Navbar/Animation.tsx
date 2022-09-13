@@ -8,21 +8,20 @@ export const AnimatedLogoNavBox = chakra(motion.div, {
 
 export const logoNavVariant = {
 	hidden: {
-		opacity: 1,
+		opacity: 0,
 	},
 	show: {
 		opacity: 1,
 		transition: {
-			duration: 0,
-			delay: 0,
-			staggerChildren: 1,
+			staggerChildren: 0.01,
+			staggerDirection: -1,
 		},
 	},
 }
 
 export const logoNavItemsVariant = {
 	hidden: {
-		y: -100,
+		y: -120,
 	},
 	show: {
 		y: 0,
