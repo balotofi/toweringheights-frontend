@@ -16,7 +16,7 @@ export const containerVariants = {
 		opacity: 1,
 		scale: 1,
 		when: "beforeChildren",
-		staggerChildren: 0.01,
+		staggerChildren: 0.1,
 	},
 }
 
@@ -29,7 +29,7 @@ export const latestUpdateVariants = {
 		},
 	},
 	show: {
-		scale3d: 1,
+		scale: 1,
 		transition: {
 			repeatDelay: 3,
 			ease: "easeInOut",
