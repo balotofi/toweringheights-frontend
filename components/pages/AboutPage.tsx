@@ -17,6 +17,8 @@ import {
 import Image from "next/image"
 import BreadCrumbNav from "../BreadCrumb"
 import AboutImage from "../../assets/class_img/InShot_20220728_100338428.jpg"
+import Footer from "../Footer"
+import ScrollTopBtn from "../Navbar/ScrollTopBtn"
 
 const AboutPage = () => {
 	return (
@@ -239,6 +241,8 @@ const AboutPage = () => {
 					</Text>
 				</Box>
 			</Stack>
+			<Footer />
+			<ScrollTopBtn />
 		</>
 	)
 }

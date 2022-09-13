@@ -7,6 +7,8 @@ import ImageSlideShow from "../ImageSlideShow"
 import GalleryPreview from "../GalleryPreview"
 import LatestUpdates from "../LatestUpdates"
 import { headingBorder } from "../../theme/components/boxStyles"
+import Footer from "../Footer"
+import ScrollTopBtn from "../Navbar/ScrollTopBtn"
 
 const HomePage = () => {
 	const router = useRouter()
@@ -71,6 +73,8 @@ const HomePage = () => {
 				<Staffs />
 				<GalleryPreview />
 			</Box>
+			<Footer />
+			<ScrollTopBtn />
 		</>
 	)
 }
