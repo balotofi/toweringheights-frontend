@@ -10,6 +10,8 @@ import {
 import { FcInfo } from "react-icons/fc"
 import BreadCrumbNav from "../BreadCrumb"
 import VacancyForm from "../Vacancies/VacancyForm"
+import Footer from "../Footer"
+import ScrollTopBtn from "../Navbar/ScrollTopBtn"
 
 const JobApplyPage = ({ details }: IVacancyPage) => {
 	return (
@@ -61,6 +63,8 @@ const JobApplyPage = ({ details }: IVacancyPage) => {
 					<VacancyForm details={details} />
 				</VStack>
 			</Stack>
+			<Footer />
+			<ScrollTopBtn />
 		</>
 	)
 }

@@ -10,12 +10,9 @@ const settings = {
 	dots: false,
 	infinite: true,
 	slidesToShow: 3,
-	slidesToScroll: 1,
-	pauseOnHover: true,
+	slidesToScroll: 3,
 	initialSlide: 0,
-	autoplay: true,
 	speed: 1000,
-	autoplaySpeed: 2000,
 	nextArrow: <BtnSlider direction="right" />,
 	prevArrow: <BtnSlider direction="left" />,
 	responsive: [
@@ -61,6 +58,7 @@ const StaffSlider = () => {
 						sName={staff.sName}
 						role={staff.role}
 						img={staff.img}
+						whatsapp={staff.whatsapp}
 					/>
 				))}
 			</Slider>

@@ -13,7 +13,7 @@ export const boxStyle = {
 	boxShadow: "2px 2px 3px 3px #333333",
 	transition: "0.25s all ease-in-out",
 	_hover: {
-		transform: "translate3d(15px, 10px, 20px)",
+		transform: "scale(1.1)",
 	},
 	img: {
 		borderRadius: "2xl",

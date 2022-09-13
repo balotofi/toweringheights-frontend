@@ -2,6 +2,8 @@ import { Stack, Flex, VStack, Heading, Box, Text } from "@chakra-ui/react"
 import BreadCrumbNav from "../BreadCrumb"
 import VacancyDetails from "../Vacancies/VacancyDetails"
 import { smallHeadingBorder } from "../../theme/components/boxStyles"
+import Footer from "../Footer"
+import ScrollTopBtn from "../Navbar/ScrollTopBtn"
 
 const VacancyPage = ({ details }: IVacancyPage) => {
 	return (
@@ -69,6 +71,8 @@ const VacancyPage = ({ details }: IVacancyPage) => {
 					</>
 				</VStack>
 			</Stack>
+			<Footer />
+			<ScrollTopBtn />
 		</>
 	)
 }

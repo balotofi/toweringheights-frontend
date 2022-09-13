@@ -3,6 +3,8 @@ import BreadCrumbNav from "../BreadCrumb"
 import ClassSectionBtns from "../Admissions/ClassSectionBtns"
 import { headingBorder } from "../../theme/components/boxStyles"
 import AdmissionActions from "../Admissions/AdmissionActions"
+import Footer from "../Footer"
+import ScrollTopBtn from "../Navbar/ScrollTopBtn"
 
 const AdmissionsPage = () => {
 	return (
@@ -65,6 +67,8 @@ const AdmissionsPage = () => {
 				<ClassSectionBtns />
 				<AdmissionActions />
 			</Stack>
+			<Footer />
+			<ScrollTopBtn />
 		</>
 	)
 }

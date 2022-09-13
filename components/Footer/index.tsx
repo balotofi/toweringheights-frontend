@@ -1,4 +1,5 @@
 import { Box, Text, Flex, Heading } from "@chakra-ui/react"
+import { motion } from "framer-motion"
 import Image from "next/image"
 import SchoolLogo from "../../assets/logo_ths.jpg"
 import FooterImage from "./FooterImage"
@@ -6,6 +7,7 @@ import FooterLink from "./FooterLink"
 import FooterSocial from "./FooterSocial"
 import FooterContactDetails from "./FooterContactDetails"
 import { footerLinks, footerSocials } from "../../data/footerData"
+import { footerTextVariants } from "./Animation"
 
 const Footer = () => {
 	return (
@@ -29,23 +31,24 @@ const Footer = () => {
 							},
 						}}
 					>
-						<Image
-							width={100}
-							height={85}
-							src={SchoolLogo}
-							loading="eager"
-						/>
-						<Text
-							variant="footer"
-							fontSize="md"
-							mt="1.5rem"
-							className="paragraph"
+						<Image width={100} height={85} src={SchoolLogo} />
+						<motion.div
+							variants={footerTextVariants}
+							initial="hidden"
+							whileInView="show"
 						>
-							Towering Heights Schools is a centre of education
-							that prides itself on creating leaders of tomorrow.
-							We pride ourselves in the quality of children we
-							raise.
-						</Text>
+							<Text
+								variant="footer"
+								fontSize="md"
+								mt="1.5rem"
+								className="paragraph"
+							>
+								Towering Heights Schools is a centre of
+								education that prides itself on creating leaders
+								of tomorrow. We pride ourselves in the quality
+								of children we raise.
+							</Text>
+						</motion.div>
 					</Box>
 					<Flex direction="column" w={{ md: "15%" }}>
 						<Heading as="h4" variant="footerHeading">

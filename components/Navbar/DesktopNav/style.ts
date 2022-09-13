@@ -14,13 +14,13 @@ export const subLinkStyle: CSSProperties = {
 }
 
 export const linkStyle: CSSProperties = {
-	padding: "1.5rem 2rem",
+	padding: "1.55rem 2rem",
 	textDecoration: "none",
 	textTransform: "uppercase",
 }
 
 export const activeLinkStyle: CSSProperties = {
-	padding: "1.5rem 2rem",
+	padding: "1.55rem 2rem",
 	textDecoration: "none",
 	textTransform: "uppercase",
 	backgroundColor: "rgba(217, 217, 217, 0.5)",

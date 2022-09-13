@@ -4,31 +4,37 @@ import ContactDetails from "../Contact/ContactDetails"
 import ContactForm from "../Contact/ContactForm"
 import { contactFormWrapper } from "../../theme/components/stackStyles"
 import MapDetails from "../Contact/MapDetails"
+import Footer from "../Footer"
+import ScrollTopBtn from "../Navbar/ScrollTopBtn"
 
 const ContactPage = () => {
 	return (
-		<Stack
-			px={{ base: "4", md: "8", lg: "16" }}
-			my={{ base: "8" }}
-			gap={{ base: "5", md: "10" }}
-		>
-			<Flex justify="start" mt={{ base: "0", md: "2" }}>
-				<BreadCrumbNav />
-			</Flex>
-			<Flex
-				w={"100%"}
-				justify={"center"}
-				direction="column"
-				align="center"
-				gap={6}
+		<>
+			<Stack
+				px={{ base: "4", md: "8", lg: "16" }}
+				my={{ base: "8" }}
+				gap={{ base: "5", md: "10" }}
 			>
-				<Stack sx={contactFormWrapper}>
-					<ContactDetails />
-					<ContactForm />
-				</Stack>
-				<MapDetails />
-			</Flex>
-		</Stack>
+				<Flex justify="start" mt={{ base: "0", md: "2" }}>
+					<BreadCrumbNav />
+				</Flex>
+				<Flex
+					w={"100%"}
+					justify={"center"}
+					direction="column"
+					align="center"
+					gap={6}
+				>
+					<Stack sx={contactFormWrapper}>
+						<ContactDetails />
+						<ContactForm />
+					</Stack>
+					<MapDetails />
+				</Flex>
+			</Stack>
+			<Footer />
+			<ScrollTopBtn />
+		</>
 	)
 }
 
