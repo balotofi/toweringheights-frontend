@@ -23,8 +23,6 @@ export interface IStaffProps {
 	sName: string
 	role: string
 	img: StaticImageData
-}
-
-export interface IStaffsArray {
-	child: IStaffProps[]
+	whatsapp?: string
+	email?: string
 }

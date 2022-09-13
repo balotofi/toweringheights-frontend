@@ -26,6 +26,11 @@ const Link: ComponentStyleConfig = {
 			pb: "0.2rem",
 			borderBottom: "1px",
 		},
+		staffCardLink: {
+			color: "font.300",
+			display: "flex",
+			alignItems: "center",
+		},
 	},
 }
 

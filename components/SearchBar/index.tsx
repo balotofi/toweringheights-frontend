@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useCallback, useEffect, useState } from "react"
 import {
 	InputGroup,
@@ -7,6 +8,7 @@ import {
 } from "@chakra-ui/react"
 import { BiSearchAlt } from "react-icons/bi"
 import { searchInputStyle } from "./style"
+import { AnimatedLogoNavBox, logoNavItemsVariant } from "../Navbar/Animation"
 
 const SPECIAL_CHARS = /[.*+?^${}() | [\]\\]/g
 
@@ -22,7 +24,7 @@ const SearchBar = () => {
 		if (SPECIAL_CHARS.test(search)) {
 			setSearch(search.replace(SPECIAL_CHARS, "$&"))
 		}
-		let regExp = new RegExp(search, "gi")
+		const regExp = new RegExp(search, "gi")
 		for (let i = 0; i < paragraphs.length; i++) {
 			if (paragraphs[i].innerHTML !== undefined) {
 				paragraphs[i].innerHTML = paragraphs[i].textContent!.replace(
@@ -34,8 +36,14 @@ const SearchBar = () => {
 	}, [search])
 
 	return (
-		<>
-			<FormControl display={{ base: "none", md: "flex" }} width={"35%"}>
+		<AnimatedLogoNavBox
+			variants={logoNavItemsVariant}
+			initial="hidden"
+			animate="show"
+			width="35%"
+			display={{ base: "none", md: "flex" }}
+		>
+			<FormControl>
 				<InputGroup width={"100%"}>
 					<InputLeftElement
 						color="brand.400"
@@ -49,12 +57,12 @@ const SearchBar = () => {
 						onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
 							setSearch(trimText(e.target.value))
 						}
-						placeholder="Search or Crtl + F"
+						placeholder="Search or Ctrl + F"
 						sx={searchInputStyle}
 					/>
 				</InputGroup>
 			</FormControl>
-		</>
+		</AnimatedLogoNavBox>
 	)
 }
 

@@ -31,13 +31,14 @@ const ImageSlideShow = () => {
 					key={item.alt}
 					sx={imageBox}
 					display={slideId === id + 1 ? "block" : "none"}
+					position="relative"
 				>
 					<Image
 						src={item.img}
 						alt={item.alt}
 						layout="fill"
 						quality="100"
-						loading="eager"
+						priority
 					/>
 				</Box>
 			))}

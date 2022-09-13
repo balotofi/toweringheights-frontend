@@ -6,10 +6,10 @@ const EachImage = ({ img, alt }: ISlideShow) => {
 	return (
 		<Box
 			borderRadius="xl"
-			boxShadow="2px 2px 3px 3px #333333"
+			boxShadow="2px 2px 10px 3px #333333"
 			transition="0.25s ease-in-out all"
 			_hover={{
-				transform: "translate3d(-5px, -15px, 10px)",
+				transform: "scale(1.1)",
 			}}
 			sx={{
 				img: {

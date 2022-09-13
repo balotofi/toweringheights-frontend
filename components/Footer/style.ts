@@ -1,6 +1,9 @@
 import { CSSProperties } from "react"
+import bgFooter from "../../assets/group_img/footer.jpg"
 
 export const footerImageBox = {
+	backgroundImage: `url(${bgFooter.src})`,
+	backgroundRepeat: "no-repeat",
 	backgroundSize: "cover",
 	backgroundPosition: "center",
 	h: {
@@ -12,7 +15,7 @@ export const footerImageBox = {
 
 export const flexStyle = {
 	color: "white",
-	mb: 4,
+	mb: 5,
 	gap: 2.5,
 	transition: "all 0.15s ease-in-out",
 	_hover: {
@@ -37,4 +40,12 @@ export const newsLetterInputStyle = {
 export const footerLinkStyle: CSSProperties = {
 	marginBottom: "1rem",
 	fontSize: "0.875rem",
+}
+
+export const footerSocialStyle = {
+	fontSize: "sm",
+	_hover: {
+		textDecoration: "none",
+		color: "font.200",
+	},
 }

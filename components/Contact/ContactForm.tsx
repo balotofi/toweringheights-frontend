@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useRef, useState } from "react"
 import { useForm } from "react-hook-form"
 import {
@@ -14,7 +16,7 @@ import {
 } from "@chakra-ui/react"
 import emailjs from "@emailjs/browser"
 import { formStyle, inputStyle, vStackStyle } from "./style"
-import { EMAIL_REGEX } from "../../data/regex"
+import { EMAIL_REGEX, NAME_REGEX } from "../../data/regex"
 
 const ContactForm = () => {
 	const toast = useToast()
@@ -74,7 +76,10 @@ const ContactForm = () => {
 							{...register("name", {
 								required: "Your Name is Required",
 								minLength: 5,
-								maxLength: 35,
+								pattern: {
+									value: NAME_REGEX,
+									message: "Invalid Email",
+								},
 							})}
 							name="name"
 							size="lg"
@@ -84,7 +89,7 @@ const ContactForm = () => {
 							type="text"
 						/>
 
-						{!!errors.name ? (
+						{errors.name ? (
 							<>
 								<FormErrorMessage>
 									{errors.name &&
@@ -92,9 +97,7 @@ const ContactForm = () => {
 										"MinLength is 5 characters"}
 								</FormErrorMessage>
 								<FormErrorMessage>
-									{errors.name &&
-										errors?.name.type === "maxLength" &&
-										"MaxLength is 35 characters"}
+									{errors.email && errors?.email.message}
 								</FormErrorMessage>
 							</>
 						) : (
@@ -120,7 +123,7 @@ const ContactForm = () => {
 							sx={inputStyle}
 							placeholder="Email Address"
 						/>
-						{!!errors.email ? (
+						{errors.email ? (
 							<FormErrorMessage>
 								{errors.email && errors?.email.message}
 							</FormErrorMessage>
@@ -135,7 +138,7 @@ const ContactForm = () => {
 						<Textarea
 							{...register("message", {
 								required: "Message is Required",
-								//minLength: 20,
+								minLength: 20,
 								maxLength: 200,
 							})}
 							name="message"
@@ -144,11 +147,13 @@ const ContactForm = () => {
 							size="lg"
 							placeholder="Type your message here ..."
 						/>
-						{!!errors.message ? (
+						{errors.message ? (
 							<>
-								{/* <FormErrorMessage>
-                                    {errors.message && errors?.message.type === "minLength" && "MinLength is 25 characters"}
-                                </FormErrorMessage> */}
+								<FormErrorMessage>
+									{errors.message &&
+										errors?.message.type === "minLength" &&
+										"MinLength is 25 characters"}
+								</FormErrorMessage>
 								<FormErrorMessage>
 									{errors.message &&
 										errors?.message.type === "maxLength" &&

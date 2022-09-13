@@ -1,4 +1,5 @@
 export const flexStyle = {
+	display: "flex",
 	bg: "white",
 	borderRadius: "lg",
 	boxShadow: "0px 10px 20px rgba(0, 122, 255, 0.1)",
