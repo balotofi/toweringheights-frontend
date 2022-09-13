@@ -1,5 +1,4 @@
 /* eslint-disable require-jsdoc */
-import "@fontsource/lato"
 import Head from "next/head"
 import { ChakraProvider } from "@chakra-ui/react"
 import type { AppProps } from "next/app"
