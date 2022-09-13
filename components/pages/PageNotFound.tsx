@@ -11,10 +11,10 @@ const PageNotFound = () => {
 		<Flex w="100%" justify="center" mb={12} px={3}>
 			<Flex direction="column" align="center" gap={3} textAlign="center">
 				<Box display={{ base: "none", md: "block" }}>
-					<Image src={pageNotFoundBig} quality={100} />
+					<Image src={pageNotFoundBig} quality={100} priority />
 				</Box>
 				<Box display={{ base: "block", md: "none" }}>
-					<Image src={pageNotFoundSmall} quality={100} />
+					<Image src={pageNotFoundSmall} quality={100} priority />
 				</Box>
 				<Heading as="h2" textTransform="uppercase">
 					Oops! Page{" "}
