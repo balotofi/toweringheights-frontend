@@ -1,32 +1,30 @@
+/* eslint-disable require-jsdoc */
 import type { NextPage } from "next"
-import { useState, useEffect } from "react"
-import axios, { AxiosResponse } from "axios"
 import JobApplyPage from "../../../components/pages/JobApplyPage"
 
-const Apply: NextPage = () => {
-	const [details, setDetails] = useState<IVacantRole[]>([])
+interface IApplyPage {
+	states: IStateResData[]
+}
 
-	useEffect(() => {
-		const fetchDetails = async () => {
-			await axios
-				.get("/api/vacantRoles")
-				.then((res: AxiosResponse<IVacantRole[]>) => {
-					setDetails(res.data)
-				})
-				.catch((error) => {
-					return error
-				})
-		}
-		return () => {
-			fetchDetails()
-		}
-	}, [])
-
+const Apply: NextPage<IApplyPage> = ({ states }) => {
 	return (
 		<>
-			<JobApplyPage details={details} />
+			<JobApplyPage states={states} />
 		</>
 	)
+}
+
+export async function getStaticProps() {
+	const stateRes = await fetch(
+		"http://locationsng-api.herokuapp.com/api/v1/states"
+	)
+	const states = await stateRes.json()
+
+	return {
+		props: {
+			states,
+		},
+	}
 }
 
 export default Apply
