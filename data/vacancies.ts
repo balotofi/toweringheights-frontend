@@ -1,0 +1,41 @@
+export const vacantRoles: IVacantRole[] = [
+	{
+		id: 1,
+		title: "Classroom Teacher",
+		grade: "PRIMARY 2",
+		date: "September 2022",
+		summary:
+			"To plan, organize and implement an appropriate instructional program in an elementary or secondary learning environment that guides and encourages students to develop and fulfil their academic potential. Work is performed under the supervision of the principal.",
+		descriptions: [
+			"Plan, prepare and deliver lesson plans and instructional materials that facilitate active learning.",
+			"Develop schemes of work, lesson plans and tests that are in accordance with established procedures.",
+			"Instruct and monitor students in the use of learning materials and equipment.",
+			"Use relevant technology to support and differentiate instruction.",
+			"Manage student behaviour in the classroom by establishing and enforcing rules and procedures.",
+			"Maintain discipline in accordance with the rules and disciplinary systems of the school.",
+			"Provide appropriate feedback on work.",
+			"Encourage and monitor the progress of individual students and use information to adjust teaching strategies.",
+			"Maintain accurate and complete records of students' progress and development.",
+			"Update all necessary records accurately and completely as required by laws, area policies and school regulations.",
+			"Prepare required reports on students and activities.",
+			"Participate in department, school, district and parent meetings.",
+			"Communicate necessary information regularly to students, colleagues and parents regarding student progress and student needs.",
+			"Establish and communicate clear objectives for all learning activities.",
+			"Prepare classroom for class activities.",
+			"Provide a variety of learning materials and resources for use in educational activities.",
+			"Observe and evaluate student's performance and development.",
+			"Assign and grade class work, homework, tests and assignments.",
+		],
+		requirements: [
+			"B.A/B.S degree in teaching from an accredited institution or related field teaching",
+			"Ability to establish and maintain cooperative and effective working relationships with others.",
+			"Ability to communicate effectively orally and in writing.",
+			"Must have the ability and proven ability to report to work on a regular and punctual basis.",
+			"Perform all other related work delegated or required to accomplish the objectives of the total school program.",
+			"Knowledge and implementation of relevant technology.",
+			"Meet professional teacher education requirements of school, area and state.",
+		],
+		physicalRequirements:
+			"Regularly required to sit, stand, walk, talk, hear, operate a computer, hand-held learning devices and other office equipment, reach with hands and arms, and must occasionally lift and/or move up to 10 kilograms.",
+	},
+]

@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import Link, { LinkProps } from "next/link"
 import {
 	Link as ChakraLink,
