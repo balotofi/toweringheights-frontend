@@ -10,7 +10,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
-		"@chakra-ui/react": "^2.3.1",
+		"@chakra-ui/react": "^2.3.2",
 		"@emailjs/browser": "^3.7.0",
 		"@emotion/react": "^11",
 		"@emotion/styled": "^11",
@@ -44,6 +44,6 @@
 		"eslint-plugin-react": "^7.31.8",
 		"husky": "^8.0.1",
 		"prettier": "2.7.1",
-		"typescript": "*"
+		"typescript": "^4.8.3"
 	}
 }
