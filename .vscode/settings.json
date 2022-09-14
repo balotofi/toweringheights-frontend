@@ -7,6 +7,6 @@
 		"source.fixAll.eslint": true,
 		"source.fixAll.format": true
 	},
-	"files.eol": "auto",
+	"files.eol": "\n",
 	"prettier.tabWidth": 4
 }
