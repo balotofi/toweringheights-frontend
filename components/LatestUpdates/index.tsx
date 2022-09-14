@@ -58,8 +58,8 @@ const LatestUpdates = () => {
 				>
 					<Heading variant="h4">Calendar</Heading>
 					<Text className="paragraph">
-						Terms, exams, holidays, keep up to date on what's
-						hapenning when so you don't fall behind.{" "}
+						Terms, exams, holidays, keep up to date on what&apos;s
+						hapenning when so you don&apos;t fall behind.
 					</Text>
 					<Text color="font.200" fontWeight="semibold" mt={3}>
 						Click To Continue
