@@ -72,7 +72,7 @@ interface IVacantRole {
 }
 
 interface IVacancyPage {
-	details: IVacantRole[]
+	states: IStateResData[]
 }
 
 interface IBreadCrumb {
