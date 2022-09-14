@@ -48,6 +48,9 @@ const LatestUpdates = () => {
 						life of your child. Contact us as early as possible to
 						have your child assessed and ready for school.
 					</Text>
+					<Text color="font.200" fontWeight="semibold" mt={3}>
+						Click To Continue
+					</Text>
 				</AnimatedLatestUpdate>
 				<AnimatedLatestUpdate
 					variants={latestUpdateVariants}
@@ -56,7 +59,10 @@ const LatestUpdates = () => {
 					<Heading variant="h4">Calendar</Heading>
 					<Text className="paragraph">
 						Terms, exams, holidays, keep up to date on what's
-						hapenning when so you don't fall behind.
+						hapenning when so you don't fall behind.{" "}
+					</Text>
+					<Text color="font.200" fontWeight="semibold" mt={3}>
+						Click To Continue
 					</Text>
 				</AnimatedLatestUpdate>
 				<AnimatedLatestUpdate
@@ -67,6 +73,9 @@ const LatestUpdates = () => {
 					<Text className="paragraph">
 						See firsthand news,updates and details about upcoming
 						events and information.
+					</Text>
+					<Text color="font.200" fontWeight="semibold" mt={3}>
+						Click To Continue
 					</Text>
 				</AnimatedLatestUpdate>
 			</AnimatedLatestUpdate>
