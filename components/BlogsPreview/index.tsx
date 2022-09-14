@@ -36,7 +36,7 @@ const BlogsPreview = () => {
 			</Flex>
 			<Flex justify="center">
 				<Button
-					onClick={() => router.push("/blog")}
+					onClick={() => router.push("/coming_soon")}
 					variant="solid"
 					size="lg"
 					sx={{ borderRadius: "2xl" }}

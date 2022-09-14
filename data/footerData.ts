@@ -15,11 +15,11 @@ export const footerLinks: IFooterLink[] = [
 		text: "Gallery",
 	},
 	{
-		href: "/teachers",
+		href: "/coming_soon",
 		text: "Teachers",
 	},
 	{
-		href: "/parents",
+		href: "/coming_soon",
 		text: "Parents",
 	},
 	{
