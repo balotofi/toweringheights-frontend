@@ -1,12 +1,19 @@
 import { Flex, Text, Box } from "@chakra-ui/react"
 import CrecheImage from "../../assets/class_activities/IMG_20200204_114106_8.jpg"
 import Image from "next/image"
+import { useRouter } from "next/router"
 import { admissionsBoxBtn } from "./style"
 
 const ClassSectionBtns = () => {
+	const router = useRouter()
+
 	return (
 		<Flex justify="center" flexWrap="wrap" gap={10} my={"6 !important"}>
-			<Box as="button" sx={admissionsBoxBtn}>
+			<Box
+				as="button"
+				sx={admissionsBoxBtn}
+				onClick={() => router.push("/coming_soon")}
+			>
 				<Image
 					src={CrecheImage}
 					alt="Creche Student"
@@ -29,7 +36,11 @@ const ClassSectionBtns = () => {
 					</Text>
 				</Flex>
 			</Box>
-			<Box as="button" sx={admissionsBoxBtn}>
+			<Box
+				as="button"
+				sx={admissionsBoxBtn}
+				onClick={() => router.push("/coming_soon")}
+			>
 				<Image
 					src={CrecheImage}
 					alt="Creche Student"
@@ -51,7 +62,11 @@ const ClassSectionBtns = () => {
 					</Text>
 				</Flex>
 			</Box>
-			<Box as="button" sx={admissionsBoxBtn}>
+			<Box
+				as="button"
+				sx={admissionsBoxBtn}
+				onClick={() => router.push("/coming_soon")}
+			>
 				<Image
 					src={CrecheImage}
 					alt="Creche Student"
@@ -73,7 +88,11 @@ const ClassSectionBtns = () => {
 					</Text>
 				</Flex>
 			</Box>
-			<Box as="button" sx={admissionsBoxBtn}>
+			<Box
+				as="button"
+				sx={admissionsBoxBtn}
+				onClick={() => router.push("/coming_soon")}
+			>
 				<Image
 					src={CrecheImage}
 					alt="Creche Student"
