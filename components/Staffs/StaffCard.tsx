@@ -12,6 +12,7 @@ const StaffCard = ({ sName, img, role, whatsapp }: IStaffProps) => {
 				<Image
 					width={130}
 					height={130}
+					layout="fill"
 					src={img}
 					alt={sName}
 					priority={true}
