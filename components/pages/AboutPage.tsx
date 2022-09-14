@@ -34,7 +34,12 @@ const AboutPage = () => {
 						lg: "650px",
 					}}
 				>
-					<Image src={AboutImage} layout="fill" priority />
+					<Image
+						src={AboutImage}
+						layout="fill"
+						priority
+						alt="Students in Uniform"
+					/>
 				</Flex>
 				<Flex
 					mx={{

@@ -45,10 +45,9 @@ const SearchBar = () => {
 		>
 			<FormControl>
 				<InputGroup width={"100%"}>
-					<InputLeftElement
-						color="brand.400"
-						children={<BiSearchAlt />}
-					/>
+					<InputLeftElement color="brand.400">
+						<BiSearchAlt />
+					</InputLeftElement>
 					<Input
 						variant="filled"
 						size="md"

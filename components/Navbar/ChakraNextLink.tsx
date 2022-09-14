@@ -26,4 +26,4 @@ const ChakraNextLink = React.forwardRef(
 	}
 )
 
-export default ChakraNextLink
+export default ChakraNextLink.displayName = "ChakraNextLink"
