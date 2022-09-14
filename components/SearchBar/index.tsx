@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useCallback, useEffect, useState } from "react"
 import {
