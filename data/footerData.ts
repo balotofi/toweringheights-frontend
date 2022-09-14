@@ -34,17 +34,17 @@ export const footerLinks: IFooterLink[] = [
 
 export const footerSocials: IFooterSocial[] = [
 	{
-		href: "www.github.com/Meekunn/",
+		href: "mailto:toweringheightsschools@gmail.com",
 		icon: MdEmail,
 		text: "Gmail",
 	},
 	{
-		href: "www.github.com/Meekunn/",
+		href: "https://m.facebook.com/toweringheightsng/",
 		icon: MdFacebook,
 		text: "Facebook",
 	},
 	{
-		href: "www.github.com/Meekunn/",
+		href: "https://wa.link/wgvjla",
 		icon: IoLogoWhatsapp,
 		text: "WhatsApp",
 	},
