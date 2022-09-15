@@ -1,5 +1,6 @@
-import { Link, Text } from "@chakra-ui/react"
+import { Link as ChakraLink, Text } from "@chakra-ui/react"
 import Image from "next/image"
+import Link from "next/link"
 import { AnimatedBlogPreview, blogPreviewVariant } from "./AnimatedBlogPreview"
 import { flexStyle } from "./style"
 
@@ -21,7 +22,9 @@ const Preview = ({ ...blog }) => {
 			/>
 			<Text fontSize="sm" pt="1rem" className="paragraph">
 				{blog.summary}
-				<Link color="brand.300">Read More</Link>
+				<Link href="/coming_soon" passHref>
+					<ChakraLink color="brand.300">Read More</ChakraLink>
+				</Link>
 			</Text>
 		</AnimatedBlogPreview>
 	)

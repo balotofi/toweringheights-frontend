@@ -1,7 +1,6 @@
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
-import pageNotFoundBig from "../../assets/404.png"
-import pageNotFoundSmall from "../../assets/page-not-found.png"
+import pageNotFound from "../../assets/404.png"
 import Image from "next/image"
 
 const PageNotFound = () => {
@@ -10,17 +9,9 @@ const PageNotFound = () => {
 	return (
 		<Flex w="100%" justify="center" mb={12} px={3}>
 			<Flex direction="column" align="center" gap={3} textAlign="center">
-				<Box display={{ base: "none", md: "block" }}>
+				<Box>
 					<Image
-						src={pageNotFoundBig}
-						quality={100}
-						priority
-						alt="404 Image"
-					/>
-				</Box>
-				<Box display={{ base: "block", md: "none" }}>
-					<Image
-						src={pageNotFoundSmall}
+						src={pageNotFound}
 						quality={100}
 						priority
 						alt="404 Image"

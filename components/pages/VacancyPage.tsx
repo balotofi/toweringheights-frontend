@@ -4,8 +4,9 @@ import VacancyDetails from "../Vacancies/VacancyDetails"
 import { smallHeadingBorder } from "../../theme/components/boxStyles"
 import Footer from "../Footer"
 import ScrollTopBtn from "../Navbar/ScrollTopBtn"
+import { vacantRoles } from "../../data/vacancies"
 
-const VacancyPage = ({ details }: IVacancyPage) => {
+const VacancyPage = () => {
 	return (
 		<>
 			<Stack
@@ -54,7 +55,7 @@ const VacancyPage = ({ details }: IVacancyPage) => {
 						<Box bg="brand.300" sx={smallHeadingBorder} />
 					</Flex>
 					<>
-						{details.map((detail) => (
+						{vacantRoles.map((detail: IVacantRole) => (
 							<VacancyDetails
 								key={detail.id}
 								title={detail.title}

@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useForm } from "react-hook-form"
-import { useEffect, useState, useRef } from "react"
+import { useState, useRef } from "react"
 import {
 	FormControl,
 	FormLabel,
@@ -16,7 +16,6 @@ import {
 	useToast,
 	Flex,
 } from "@chakra-ui/react"
-import axios, { AxiosResponse } from "axios"
 import FileUpload from "../FileUpload"
 import {
 	fileInputStyle,
@@ -26,12 +25,12 @@ import {
 	vStackStyle,
 } from "./style"
 import { NAME_REGEX, PHONE_REGEX, EMAIL_REGEX } from "../../data/regex"
+import { vacantRoles } from "../../data/vacancies"
 
-const VacancyForm = ({ details }: IVacancyPage) => {
+const VacancyForm = ({ states }: IVacancyPage) => {
 	const [loading, setLoading] = useState(false)
 	const [changePlaceholder, setChangePlaceholder] =
 		useState("no file selected")
-	const [states, setStates] = useState<IStateResData[]>([])
 	const toast = useToast()
 	const form = useRef<HTMLFormElement>(null)
 	const {
@@ -40,20 +39,6 @@ const VacancyForm = ({ details }: IVacancyPage) => {
 		formState: { errors },
 		reset,
 	} = useForm<IVacancyFormVal>()
-
-	useEffect(() => {
-		const fetcher = async () => {
-			await axios
-				.get("http://locationsng-api.herokuapp.com/api/v1/states")
-				.then((response: AxiosResponse<IStateResData[]>) => {
-					setStates(response.data)
-				})
-				.catch((error) => {
-					return error
-				})
-		}
-		fetcher()
-	}, [])
 
 	const onSubmit = handleSubmit(() => {
 		setLoading(true)
@@ -125,7 +110,7 @@ const VacancyForm = ({ details }: IVacancyPage) => {
 							fontSize="sm"
 							name="role"
 						>
-							{details.map((detail) => (
+							{vacantRoles.map((detail: IVacantRole) => (
 								<option value={detail.title} key={detail.id}>
 									{detail.title}
 								</option>
