@@ -6,8 +6,6 @@ import Image5 from "../assets/non_uniform/POP_2024.jpg"
 import Image6 from "../assets/non_uniform/POP_1932.jpg"
 import Image7 from "../assets/milo/IMG-20220606-WA00051.jpg"
 import Image8 from "../assets/milo/IMG-20220606-WA0006.jpg"
-import Image9 from "../assets/milo/IMG-20220606-WA0004.jpg"
-import Image10 from "../assets/teachers/staff3.jpg"
 import Image11 from "../assets/teachers/POP_21561.jpg"
 import Image12 from "../assets/teachers/POP_21431.jpg"
 import Image13 from "../assets/playground/playground1.jpg"
@@ -55,14 +53,6 @@ const gallery: ISlideShow[] = [
 	},
 	{
 		img: Image8,
-		alt: "Gallery",
-	},
-	{
-		img: Image9,
-		alt: "Gallery",
-	},
-	{
-		img: Image10,
 		alt: "Gallery",
 	},
 	{
