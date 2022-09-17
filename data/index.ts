@@ -55,6 +55,7 @@ export const navItems: NavProps[] = [
 	},
 	{
 		label: "About Us",
+		href: "/about_us",
 		children: [
 			{
 				label: "About Us",
@@ -76,7 +77,7 @@ export const navItems: NavProps[] = [
 	},
 	{
 		label: "Join Us",
-		href: "join_us",
+		href: "/join_us",
 		children: [
 			{
 				label: "Admissions",
