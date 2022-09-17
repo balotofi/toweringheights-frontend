@@ -5,19 +5,19 @@ import { ISlideShow } from "../../types/imageTypes"
 const EachImage = ({ img, alt }: ISlideShow) => {
 	return (
 		<Box
-			borderRadius="xl"
-			boxShadow="2px 2px 10px 3px #333333"
+			borderRadius="md"
+			boxShadow="0px 0px 15px #33333369"
 			transition="0.25s ease-in-out all"
-			_hover={{
-				transform: "scale(1.1)",
-			}}
+			width="250px"
+			height="180px"
+			position="relative"
 			sx={{
 				img: {
-					borderRadius: "xl",
+					borderRadius: "md",
 				},
 			}}
 		>
-			<Image src={img} alt={alt} width={250} height={180} />
+			<Image src={img} alt={alt} layout="fill" placeholder="blur" />
 		</Box>
 	)
 }
