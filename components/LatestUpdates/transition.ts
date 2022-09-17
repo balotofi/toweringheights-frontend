@@ -49,8 +49,8 @@ export const headingVariant = {
 	show: {
 		opacity: 1,
 		transition: {
-			delay: 0.3,
-			duration: 1.5,
+			delay: 0.2,
+			duration: 1,
 		},
 	},
 }
