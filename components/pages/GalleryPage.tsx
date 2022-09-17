@@ -70,8 +70,7 @@ const GalleryPage = () => {
 							<Image
 								src={img.img}
 								alt={img.alt}
-								width={300}
-								height={250}
+								layout="fill"
 								placeholder="blur"
 							/>
 						</Box>

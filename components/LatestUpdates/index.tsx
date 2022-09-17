@@ -1,13 +1,9 @@
-import { Flex, Heading, Text } from "@chakra-ui/react"
+import { Flex, Heading, Text, Box, Icon } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { useRouter } from "next/router"
-import { boxStyle, flexStyle } from "./style"
-import {
-	headingVariant,
-	latestUpdateVariants,
-	AnimatedLatestUpdate,
-	containerVariants,
-} from "./transition"
+import { boxStyle, textIconStyle } from "./style"
+import { IoIosArrowForward } from "react-icons/io"
+import { headingVariant } from "./transition"
 
 const LatestUpdates = () => {
 	const router = useRouter()
@@ -29,56 +25,69 @@ const LatestUpdates = () => {
 					Latest Updates
 				</Heading>
 			</motion.div>
-			<AnimatedLatestUpdate
-				variants={containerVariants}
-				initial="hidden"
-				animate="show"
-				sx={flexStyle}
-			>
-				<AnimatedLatestUpdate
-					variants={latestUpdateVariants}
-					sx={boxStyle}
-					onClick={() => {
-						router.push("/join_us/admissions")
-					}}
-				>
-					<Heading variant="h4">Admissions</Heading>
+			<Flex flexWrap={"wrap"} justify="center" gap={8}>
+				<Box sx={boxStyle}>
+					<Heading variant="h4" mb={0}>
+						Admissions
+					</Heading>
 					<Text className="paragraph">
 						Choosing the right school marks a new beginning in the
 						life of your child. Contact us as early as possible to
 						have your child assessed and ready for school.
 					</Text>
-					<Text color="font.200" fontWeight="semibold" mt={3}>
-						Click To Continue
-					</Text>
-				</AnimatedLatestUpdate>
-				<AnimatedLatestUpdate
-					variants={latestUpdateVariants}
-					sx={boxStyle}
-				>
-					<Heading variant="h4">Calendar</Heading>
+					<Flex
+						sx={textIconStyle}
+						align="center"
+						justify="flex-start"
+						onClick={() => {
+							router.push("/join_us/admissions")
+						}}
+					>
+						Explore More
+						<Icon as={IoIosArrowForward} w={5} h={5} />
+					</Flex>
+				</Box>
+				<Box sx={boxStyle}>
+					<Heading variant="h4" mb={0}>
+						Calendar
+					</Heading>
 					<Text className="paragraph">
 						Terms, exams, holidays, keep up to date on what&apos;s
 						hapenning when so you don&apos;t fall behind.
 					</Text>
-					<Text color="font.200" fontWeight="semibold" mt={3}>
-						Click To Continue
-					</Text>
-				</AnimatedLatestUpdate>
-				<AnimatedLatestUpdate
-					variants={latestUpdateVariants}
-					sx={boxStyle}
-				>
-					<Heading variant="h4">Latest News</Heading>
+					<Flex
+						sx={textIconStyle}
+						align="center"
+						justify="flex-start"
+						onClick={() => {
+							router.push("/coming_soon")
+						}}
+					>
+						Explore More
+						<Icon as={IoIosArrowForward} w={5} h={5} />
+					</Flex>
+				</Box>
+				<Box sx={boxStyle}>
+					<Heading variant="h4" mb={0}>
+						Latest News
+					</Heading>
 					<Text className="paragraph">
 						See firsthand news,updates and details about upcoming
 						events and information.
 					</Text>
-					<Text color="font.200" fontWeight="semibold" mt={3}>
-						Click To Continue
-					</Text>
-				</AnimatedLatestUpdate>
-			</AnimatedLatestUpdate>
+					<Flex
+						sx={textIconStyle}
+						align="center"
+						justify="flex-start"
+						onClick={() => {
+							router.push("/coming_soon")
+						}}
+					>
+						Explore More
+						<Icon as={IoIosArrowForward} w={5} h={5} />
+					</Flex>
+				</Box>
+			</Flex>
 		</Flex>
 	)
 }

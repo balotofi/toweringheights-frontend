@@ -6,17 +6,11 @@ import { textVariants } from "./transition"
 
 const Activity = ({ ...activity }) => {
 	return (
-		<Flex id={activity.id} sx={flexStyle}>
+		<Flex id={activity.id} sx={flexStyle} gap={8}>
 			<Box sx={boxStyle}>
-				<Image
-					width={900}
-					height={600}
-					src={activity.img}
-					alt={activity.alt}
-					priority={true}
-				/>
+				<Image src={activity.img} alt={activity.alt} layout="fill" />
 			</Box>
-			<Box>
+			<Box w={{ base: "100%", md: "50%" }}>
 				<motion.div
 					variants={textVariants}
 					initial="hidden"

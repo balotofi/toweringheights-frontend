@@ -7,7 +7,8 @@ export const headingBorder = {
 export const galleryBox = {
 	h: "250px",
 	w: "300px",
-	boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
+	position: "relative",
+	boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
 	borderRadius: "lg",
 	img: {
 		borderRadius: "lg",
