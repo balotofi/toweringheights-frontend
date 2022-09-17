@@ -1,14 +1,8 @@
 import type { NextPage } from "next"
-import { Stack, Heading } from "@chakra-ui/react"
-import BreadCrumbNav from "../../components/BreadCrumb"
+import JoinUsPage from "../../components/pages/JoinUsPage"
 
 const JoinUs: NextPage = () => {
-	return (
-		<Stack>
-			<BreadCrumbNav />
-			<Heading variant="h2">Join Us</Heading>
-		</Stack>
-	)
+	return <JoinUsPage />
 }
 
 export default JoinUs
