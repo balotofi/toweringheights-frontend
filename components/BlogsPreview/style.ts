@@ -1,5 +1,4 @@
 export const flexStyle = {
-	display: "flex",
 	bg: "white",
 	borderRadius: "lg",
 	boxShadow: "0px 10px 20px rgba(0, 122, 255, 0.1)",
@@ -7,8 +6,12 @@ export const flexStyle = {
 	p: 8,
 	maxH: "320px",
 	maxW: "300px",
-	flexDirection: "column",
-	alignItems: "center",
+}
+
+export const boxImageStyle = {
+	position: "relative",
+	w: "250px",
+	h: "155px",
 	img: {
 		borderRadius: "lg",
 	},

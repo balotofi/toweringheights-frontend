@@ -1,8 +1,8 @@
-import { Link as ChakraLink, Text } from "@chakra-ui/react"
+import { Link as ChakraLink, Text, Box } from "@chakra-ui/react"
 import Image from "next/image"
 import Link from "next/link"
 import { AnimatedBlogPreview, blogPreviewVariant } from "./AnimatedBlogPreview"
-import { flexStyle } from "./style"
+import { boxImageStyle, flexStyle } from "./style"
 
 const Preview = ({ ...blog }) => {
 	return (
@@ -10,16 +10,13 @@ const Preview = ({ ...blog }) => {
 			variants={blogPreviewVariant}
 			initial="hidden"
 			whileInView="show"
-			whileHover="hover"
+			direction="column"
+			align="center"
 			sx={flexStyle}
 		>
-			<Image
-				width="250"
-				height="155"
-				src={blog.img}
-				alt={blog.alt}
-				priority={true}
-			/>
+			<Box sx={boxImageStyle}>
+				<Image src={blog.img} alt={blog.alt} layout="fill" priority />
+			</Box>
 			<Text fontSize="sm" pt="1rem" className="paragraph">
 				{blog.summary}
 				<Link href="/coming_soon" passHref>
