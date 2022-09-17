@@ -4,7 +4,7 @@ import mrsBose from "../assets/teachers/Mrs_Bose3.jpg"
 import missTaiwo from "../assets/teachers/Miss_Taiwo_2.jpg"
 import missKehinde from "../assets/teachers/Miss_Kehinde_2.jpg"
 import missYinka from "../assets/teachers/Miss_Yinka_2.jpg"
-import Staffs from "../assets/teachers/staff3.jpg"
+import missTaiye from "../assets/teachers/Miss_Taiye_Balogun.jpg"
 
 export const staffs: IStaffProps[] = [
 	{
@@ -12,6 +12,13 @@ export const staffs: IStaffProps[] = [
 		role: "Headmistress/ Proprietress",
 		img: mrsBalogun,
 		whatsapp: "https://wa.link/a1tplz",
+	},
+	{
+		sName: "Miss Taiye Balogun",
+		role: "Teacher",
+		img: missTaiye,
+		whatsapp: "https://wa.link/lx3ww9",
+		email: "mailto:ettibal04@gmail.com",
 	},
 	{
 		sName: "Mrs Bose",
@@ -24,23 +31,20 @@ export const staffs: IStaffProps[] = [
 		role: "Teacher",
 		img: missTaiwo,
 		whatsapp: "https://wa.link/lx3ww9",
+		email: "mailto:opeyemit156@gmail.com",
 	},
 	{
 		sName: "Miss Kehinde",
 		role: "Teacher",
 		img: missKehinde,
 		whatsapp: "https://wa.link/1k4ynv",
+		email: "mailto:bunmikehinde766@gmail.com",
 	},
 	{
 		sName: "Miss Yinka",
 		role: "Teacher",
 		img: missYinka,
 		whatsapp: "https://wa.link/p05sq2",
-	},
-	{
-		sName: "Others",
-		role: "Teacher",
-		img: Staffs,
-		whatsapp: "https://wa.link/lx3ww9",
+		email: "mailto:famulegun123@gmail.com",
 	},
 ]

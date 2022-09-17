@@ -5,18 +5,11 @@ import { MdMailOutline } from "react-icons/md"
 import { imageBox, contentBox, staffName } from "./style"
 import { IStaffProps } from "../../types/imageTypes"
 
-const StaffCard = ({ sName, img, role, whatsapp }: IStaffProps) => {
+const StaffCard = ({ sName, img, role, whatsapp, email }: IStaffProps) => {
 	return (
 		<Flex justify="center">
 			<Box sx={imageBox}>
-				<Image
-					width={130}
-					height={130}
-					layout="fill"
-					src={img}
-					alt={sName}
-					priority={true}
-				/>
+				<Image layout="fill" src={img} alt={sName} priority />
 			</Box>
 			<Box sx={contentBox}>
 				<Heading as="h5" sx={staffName}>
@@ -33,7 +26,7 @@ const StaffCard = ({ sName, img, role, whatsapp }: IStaffProps) => {
 							h={{ base: 5, lg: 6 }}
 						/>
 					</Link>
-					<Link variant={"staffCardLink"} href={whatsapp} isExternal>
+					<Link variant={"staffCardLink"} href={email} isExternal>
 						<Icon
 							as={MdMailOutline}
 							w={{ base: 5, lg: 6 }}

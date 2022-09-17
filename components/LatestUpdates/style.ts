@@ -3,20 +3,21 @@ export const boxStyle = {
 	w: "305px",
 	h: "301px",
 	bg: "white",
-	borderRadius: "2xl",
 	display: "flex",
 	flexDirection: "column",
 	alignItems: "center",
 	justifyContent: "space-around",
 	p: "2rem",
-	boxShadow: "5px 5px 3px 3px #333333",
-	transitionTimingFunction: "ease-in-out",
+	boxShadow: "-10px 10px #333333",
 }
 
-export const flexStyle = {
-	display: "flex",
-	flexDirection: "row",
-	flexWrap: "wrap",
-	justifyContent: "center",
-	gap: 8,
+export const textIconStyle = {
+	w: "100%",
+	fontWeight: "semibold",
+	color: "brand.200",
+	transition: "0.25 all ease-in-out",
+	_hover: {
+		transform: "scale(1.09)",
+		color: "brand.300",
+	},
 }

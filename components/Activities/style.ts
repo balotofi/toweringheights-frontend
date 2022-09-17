@@ -1,21 +1,16 @@
 export const flexStyle = {
 	flexDirection: { base: "column", md: "row" },
-	alignItems: { base: "start", md: "center" },
-	mx: 6,
-	gap: {
-		md: 2.5,
-		lg: 4,
-	},
+	px: { base: 2, md: 6 },
 }
 
 export const boxStyle = {
-	borderRadius: "2xl",
-	boxShadow: "2px 2px 3px 3px #333333",
+	borderRadius: "xl",
+	boxShadow: "0px 0px 15px rgb(0 0 0 / 20%)",
 	transition: "0.25s all ease-in-out",
-	_hover: {
-		transform: "scale(1.1)",
-	},
+	w: "280px",
+	h: "250px",
+	position: "relative",
 	img: {
-		borderRadius: "2xl",
+		borderRadius: "xl",
 	},
 }
