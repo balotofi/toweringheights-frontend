@@ -2,6 +2,8 @@
 
 Towering Heights Schools is a top educational institution that aims to provide a warm,safe and caring learning environment for all our pupils. A place where each boy and girl can feel empowered to explore ,grow and realise their full potential, nurtured and helped by expert practitioners who are passionate about their craft and committed to meeting the needs of the children in their care.
 
+<img src="./assets/ezgif.com-gif-maker.gif" alt="My Project GIF"  width="100%" height="600">
+
 ## About Project 🚀
 
 THS website was mainly developed with the following libaries and frameworks
