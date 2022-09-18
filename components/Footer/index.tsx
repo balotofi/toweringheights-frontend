@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Heading } from "@chakra-ui/react"
+import { Box, Text, Flex, Heading, Link } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import SchoolLogo from "../../assets/logo_ths.jpg"
@@ -82,16 +82,35 @@ const Footer = () => {
 						))}
 					</Flex>
 				</Flex>
-				<Text
-					color="white"
-					opacity="0.5"
-					lineHeight="21px"
-					fontSize="xs"
-					fontWeight="medium"
-					textAlign="center"
-				>
-					Copyright © 2017. All Right Reserved.
-				</Text>
+				<Flex align="center" justify="space-between">
+					<Text
+						color="white"
+						opacity="0.5"
+						lineHeight="21px"
+						fontSize="xs"
+						fontWeight="medium"
+						textAlign="left"
+					>
+						Copyright © 2022 THS. All Right Reserved.
+					</Text>
+					<Text
+						color="white"
+						opacity="0.5"
+						lineHeight="21px"
+						fontSize="xs"
+						fontWeight="medium"
+						textAlign="right"
+					>
+						Developed By{" "}
+						<Link
+							color="brand.200"
+							isExternal
+							href="https://github.com/Meekunn"
+						>
+							Meekunn
+						</Link>
+					</Text>
+				</Flex>
 			</Flex>
 		</Box>
 	)
