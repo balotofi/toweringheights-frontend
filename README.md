@@ -4,7 +4,7 @@ Towering Heights Schools is a top educational institution that aims to provide a
 
 ## About Project 🚀
 
-THS website was developed with the following libaries and frameworks
+THS website was mainly developed with the following libaries and frameworks
 
 <ul>
   <li>Next.js</li>
@@ -41,6 +41,13 @@ Here are some of the links you should look out for easy navigation.
   <li>Parent</li>
   <li>Teacher</li>
 </ul>
+
+## Contributors 🧠
+<ol>
+  <li>Designer- https://github.com/celestinaa</li>
+  <li>Designer- https://github.com/Ennyhie</li>
+  <li>Developer- https://github.com/Meekunn</li>
+</ol>
 
 ## Contributing 👨‍💻
 
