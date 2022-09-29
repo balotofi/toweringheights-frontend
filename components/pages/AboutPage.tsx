@@ -50,7 +50,7 @@ const AboutPage = () => {
 					<BreadCrumbNav />
 				</Flex>
 			</Stack>
-			<Stack p={{ base: 4, md: "1.5rem 3rem" }} mx={{ md: "5" }}>
+			<Stack p={{ base: 4, md: "1.5rem 3rem" }} mx={{ md: "5" }} gap={4}>
 				<Heading
 					as="h2"
 					variant="h2"
@@ -69,7 +69,7 @@ const AboutPage = () => {
 					Welcome to the Towering Heights Schools website
 				</Heading>
 				<Box>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						Towering Heights Schools is a top educational
 						institution that aims to provide a warm,safe and caring
 						learning environment for all our pupils. A place where
@@ -79,12 +79,12 @@ const AboutPage = () => {
 						craft and committed to meeting the needs of the children
 						in their care.
 					</Text>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						We hope that the information and content on this site
 						will give you an overview into the life and work of our
 						school.
 					</Text>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						The school’s curriculum is carefully developed,with a
 						focus on fostering excellent standards of literacy and
 						numeracy. A sufficient amount of resources and
@@ -94,7 +94,7 @@ const AboutPage = () => {
 						the study skills needed to advance to the next level of
 						education.
 					</Text>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						A positive partnership with parents is vital in
 						achieving our aims - indeed our mission statement is
 						“Building a Brighter Future”. Home and school must work
@@ -105,7 +105,7 @@ const AboutPage = () => {
 						willing to listen and respond to your questions,concerns
 						or suggestions.
 					</Text>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						We hope you all enjoy visiting our school as much as our
 						love working here and as much as our children love
 						coming here.
@@ -167,7 +167,7 @@ const AboutPage = () => {
 				>
 					Our Values
 				</Heading>
-				<Text mb={4} className="paragraph">
+				<Text mb={4} className="paragraph" lineHeight={7}>
 					At Towering Heights School, we value with high regard,high
 					performance, independent thinking, individualism; we believe
 					in helping each child find their natural gifts and helping
@@ -199,11 +199,11 @@ const AboutPage = () => {
 					Our Mission & Vision
 				</Heading>
 				<Box>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						<strong>Our Mission Statement</strong> at Towering
 						Heights Schools is building a brighter future.
 					</Text>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						<strong>Our Vision</strong>- Picture a school where
 						children use their creativity and problem solving to
 						steer their future,where knowledge is a foundation of
@@ -217,7 +217,7 @@ const AboutPage = () => {
 						a world that is constantly changing as well as engage in
 						continuous lifelong learning.
 					</Text>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						That’s Towering Heights School!
 					</Text>
 				</Box>
@@ -230,7 +230,7 @@ const AboutPage = () => {
 					Background
 				</Heading>
 				<Box>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						Towering Heights Schools started as solace for office
 						workers in the Alagbaka area with newborns to take care
 						of. Our creche became a day home for the children we
@@ -240,7 +240,7 @@ const AboutPage = () => {
 						a brand new computer room for the children to engage
 						with.
 					</Text>
-					<Text mb={4} className="paragraph">
+					<Text mb={4} className="paragraph" lineHeight={7}>
 						All these would not be possible without our parents that
 						choose to bring their wards into our care.
 					</Text>
