@@ -6,25 +6,33 @@ interface IApplyPage {
 	states: IStateResData[]
 }
 
-const Apply: NextPage<IApplyPage> = ({ states }) => {
+const Apply: NextPage<IApplyPage> = () => {
 	return (
 		<>
-			<JobApplyPage states={states} />
+			<JobApplyPage />
 		</>
 	)
 }
 
-export async function getStaticProps() {
-	const stateRes = await fetch(
-		"http://locationsng-api.herokuapp.com/api/v1/states"
-	)
-	const states = await stateRes.json()
-
-	return {
-		props: {
-			states,
-		},
-	}
-}
-
 export default Apply
+
+// const Apply: NextPage<IApplyPage> = ({ states }) => {
+// 	return (
+// 		<>
+// 			<JobApplyPage />
+// 		</>
+// 	)
+// }
+
+// export async function getStaticProps() {
+// 	const stateRes = await fetch(
+// 		"http://locationsng-api.herokuapp.com/api/v1/states"
+// 	)
+// 	const states = await stateRes.json()
+
+// 	return {
+// 		props: {
+// 			states,
+// 		},
+// 	}
+// }
