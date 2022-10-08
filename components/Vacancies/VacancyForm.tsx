@@ -26,8 +26,9 @@ import {
 } from "./style"
 import { NAME_REGEX, PHONE_REGEX, EMAIL_REGEX } from "../../data/regex"
 import { vacantRoles } from "../../data/vacancies"
+import { states } from "../../data/states"
 
-const VacancyForm = ({ states }: IVacancyPage) => {
+const VacancyForm = () => {
 	const [loading, setLoading] = useState(false)
 	const [changePlaceholder, setChangePlaceholder] =
 		useState("no file selected")
@@ -222,8 +223,8 @@ const VacancyForm = ({ states }: IVacancyPage) => {
 							name="location"
 						>
 							{states.map((state, idx) => (
-								<option key={idx} value={state.name}>
-									{state.name}
+								<option key={idx} value={state}>
+									{state}
 								</option>
 							))}
 						</Select>
