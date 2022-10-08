@@ -13,7 +13,7 @@ import VacancyForm from "../Vacancies/VacancyForm"
 import Footer from "../Footer"
 import ScrollTopBtn from "../Navbar/ScrollTopBtn"
 
-const JobApplyPage = ({ states }: IVacancyPage) => {
+const JobApplyPage = () => {
 	return (
 		<>
 			<Stack px={{ base: "6", md: "8", lg: "16" }} py={2} mb={8} gap={6}>
@@ -60,7 +60,7 @@ const JobApplyPage = ({ states }: IVacancyPage) => {
 							</Text>
 						</Flex>
 					</Flex>
-					<VacancyForm states={states} />
+					<VacancyForm />
 				</VStack>
 			</Stack>
 			<Footer />
