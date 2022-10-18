@@ -16,7 +16,7 @@ const BlogsPreview = () => {
 				</Heading>
 				<Box sx={smallHeadingBorder} bg="font.400" />
 			</Flex>
-			<Flex  direction="row" flexWrap="wrap" justify="center">
+			<Flex direction="row" flexWrap="wrap" justify="center">
 				{blogsPreview.map((blog) => (
 					<Preview
 						key={blog.id}

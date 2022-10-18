@@ -24,9 +24,7 @@ const DesktopNav = () => {
 							<ChakraNextLink
 								href={navItem.href ?? "#"}
 								style={
-									router.pathname == navItem.href
-										? activeLinkStyle
-										: linkStyle
+									router.pathname == navItem.href ? activeLinkStyle : linkStyle
 								}
 							>
 								{navItem.label}
@@ -37,10 +35,7 @@ const DesktopNav = () => {
 								<PopoverArrow bg={"brand.300"} />
 								<Stack>
 									{navItem.children.map((child) => (
-										<DesktopSubNav
-											key={child.label}
-											{...child}
-										/>
+										<DesktopSubNav key={child.label} {...child} />
 									))}
 								</Stack>
 							</PopoverContent>

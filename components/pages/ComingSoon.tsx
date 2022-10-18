@@ -19,8 +19,7 @@ const ComingSoonPage = () => {
 					/>
 				</Box>
 				<Text w={"75%"}>
-					Sorry, this page is getting a tune-up and almost ready for
-					use.
+					Sorry, this page is getting a tune-up and almost ready for use.
 				</Text>
 				<Text my={4} w={"75%"}>
 					You may check back in a little while.

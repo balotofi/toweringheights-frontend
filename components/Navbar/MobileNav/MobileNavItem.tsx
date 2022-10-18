@@ -33,11 +33,7 @@ const MobileNavItem = ({ label, children, href }: NavProps) => {
 					/>
 				)}
 			</Flex>
-			<Collapse
-				in={isOpen}
-				animateOpacity
-				style={{ marginTop: "0!important" }}
-			>
+			<Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
 				<Stack mt={2} pl={4} align={"start"}>
 					{children &&
 						children.map((child) => (

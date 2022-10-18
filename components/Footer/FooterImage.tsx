@@ -102,10 +102,7 @@ const FooterImage = () => {
 					</Text>
 					<form onSubmit={onSubmit} ref={form}>
 						<FormControl isInvalid={!!errors.email}>
-							<InputGroup
-								bg="rgba(0, 0, 0, 0.2)"
-								borderRadius="md"
-							>
+							<InputGroup bg="rgba(0, 0, 0, 0.2)" borderRadius="md">
 								<Input
 									{...register("email", {
 										required: "Email is Required",
@@ -122,12 +119,7 @@ const FooterImage = () => {
 									placeholder="Enter e-mail to recieve news letter"
 									sx={newsLetterInputStyle}
 								/>
-								<InputRightElement
-									w="42px"
-									h={"90%"}
-									top="2px"
-									right="2px"
-								>
+								<InputRightElement w="42px" h={"90%"} top="2px" right="2px">
 									<IconButton
 										aria-label="Subscribe to Newsletter"
 										icon={<SendPlaneIcon />}
@@ -142,9 +134,7 @@ const FooterImage = () => {
 									{errors.email && errors?.email.message}
 								</FormErrorMessage>
 							) : (
-								<FormHelperText visibility={"hidden"}>
-									Email
-								</FormHelperText>
+								<FormHelperText visibility={"hidden"}>Email</FormHelperText>
 							)}
 						</FormControl>
 					</form>

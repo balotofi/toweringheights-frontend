@@ -59,9 +59,9 @@ const GalleryPage = () => {
 						w={{ base: "100%", md: "40%" }}
 						className="paragraph"
 					>
-						Making memories and documenting them is a vital part of
-						life and we appreciate great moments. See some of our
-						favourite and memorable moments in photos.
+						Making memories and documenting them is a vital part of life and we
+						appreciate great moments. See some of our favourite and memorable
+						moments in photos.
 					</Text>
 				</Stack>
 				<Flex flexWrap="wrap" justify="space-around" gap={6}>

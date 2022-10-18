@@ -9,11 +9,7 @@ import { vacantRoles } from "../../data/vacancies"
 const VacancyPage = () => {
 	return (
 		<>
-			<Stack
-				px={{ base: "6", md: "8", lg: "16" }}
-				py={{ base: "2" }}
-				gap={6}
-			>
+			<Stack px={{ base: "6", md: "8", lg: "16" }} py={{ base: "2" }} gap={6}>
 				<Flex justify="start">
 					<BreadCrumbNav />
 				</Flex>
@@ -36,14 +32,12 @@ const VacancyPage = () => {
 							Join our team and help build the Leaders of Tomorrow
 						</Heading>
 						<Text mb={4} mt={2} className="paragraph">
-							We encourage applicants from diverse backgrounds to
-							apply for any open position for which they are
-							qualified. Our students must be exposed on a daily
-							basis to a diverse group of powerful role models.
-							Therefore, we have a responsibility to recruit,
-							retain, develop, and reward a diverse and talented
-							staff from a wide range of backgrounds to join our
-							creative, mission-driven team.
+							We encourage applicants from diverse backgrounds to apply for any
+							open position for which they are qualified. Our students must be
+							exposed on a daily basis to a diverse group of powerful role
+							models. Therefore, we have a responsibility to recruit, retain,
+							develop, and reward a diverse and talented staff from a wide range
+							of backgrounds to join our creative, mission-driven team.
 						</Text>
 					</Flex>
 				</VStack>
@@ -64,9 +58,7 @@ const VacancyPage = () => {
 								summary={detail.summary}
 								descriptions={detail.descriptions}
 								requirements={detail.requirements}
-								physicalRequirements={
-									detail.physicalRequirements
-								}
+								physicalRequirements={detail.physicalRequirements}
 							/>
 						))}
 					</>

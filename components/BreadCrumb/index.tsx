@@ -28,8 +28,7 @@ const BreadCrumbNav = () => {
 			const crumbList = asPathNestedRoutes.map(
 				(subpath: string, idx: number) => {
 					const text = subpath
-					const href =
-						"/" + asPathNestedRoutes.slice(0, idx + 1).join("/")
+					const href = "/" + asPathNestedRoutes.slice(0, idx + 1).join("/")
 					const newText: string = navObj[`${text}`]
 					return { href, text, newText }
 				}
@@ -48,11 +47,7 @@ const BreadCrumbNav = () => {
 			flexWrap={"wrap"}
 		>
 			{breadcrumbs.map((crumb, id: number) => (
-				<Crumb
-					{...crumb}
-					key={id}
-					last={id === breadcrumbs.length - 1}
-				/>
+				<Crumb {...crumb} key={id} last={id === breadcrumbs.length - 1} />
 			))}
 		</HStack>
 	)

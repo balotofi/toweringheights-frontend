@@ -17,11 +17,7 @@ const Activities = () => {
 				</Heading>
 				<Box bg="font.400" sx={smallHeadingBorder} />
 			</Flex>
-			<Flex
-				direction={{ base: "column", lg: "row" }}
-				gap={10}
-				width={"100%"}
-			>
+			<Flex direction={{ base: "column", lg: "row" }} gap={10} width={"100%"}>
 				{activities.map((activity) => (
 					<Activity
 						key={activity.id}

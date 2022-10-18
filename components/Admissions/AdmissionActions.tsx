@@ -16,12 +16,7 @@ const AdmissionActions = () => {
 				<Box sx={smallHeadingBorder} bg="brand.200" />
 			</Flex>
 
-			<Flex
-				flexWrap="wrap"
-				justify="center"
-				gap={{ base: 6, lg: 10 }}
-				my={4}
-			>
+			<Flex flexWrap="wrap" justify="center" gap={{ base: 6, lg: 10 }} my={4}>
 				<Box
 					as="button"
 					sx={roundBtn}

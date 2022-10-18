@@ -20,13 +20,9 @@ const FooterContactDetails = () => {
 			>
 				<Flex sx={flexStyle}>
 					<Icon as={MdLocationOn} sx={whiteIcon} />
-					<Text
-						variant="footer"
-						className="paragraph"
-						cursor="pointer"
-					>
-						Afrostuff Estate,Alagbaka Extension, off Igbatoro road.
-						Adjacent NIMC, Alagbaka, Akure.
+					<Text variant="footer" className="paragraph" cursor="pointer">
+						Afrostuff Estate,Alagbaka Extension, off Igbatoro road. Adjacent
+						NIMC, Alagbaka, Akure.
 					</Text>
 				</Flex>
 			</motion.div>
@@ -39,18 +35,10 @@ const FooterContactDetails = () => {
 				<Flex sx={flexStyle}>
 					<Icon as={ImPhone} sx={whiteIcon} />
 					<Flex direction="column">
-						<Text
-							variant="footer"
-							className="paragraph"
-							cursor="pointer"
-						>
+						<Text variant="footer" className="paragraph" cursor="pointer">
 							0814 266 5965
 						</Text>
-						<Text
-							variant="footer"
-							className="paragraph"
-							cursor="pointer"
-						>
+						<Text variant="footer" className="paragraph" cursor="pointer">
 							0810 531 3377
 						</Text>
 					</Flex>

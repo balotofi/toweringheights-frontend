@@ -11,11 +11,7 @@ const Activity = ({ ...activity }) => {
 				<Image src={activity.img} alt={activity.alt} layout="fill" />
 			</Box>
 			<Box w={{ base: "100%", md: "50%" }}>
-				<motion.div
-					variants={textVariants}
-					initial="hidden"
-					whileInView="show"
-				>
+				<motion.div variants={textVariants} initial="hidden" whileInView="show">
 					<Heading
 						as="h4"
 						variant="h2"

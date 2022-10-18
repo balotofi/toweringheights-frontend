@@ -71,8 +71,8 @@ const VacancyDetails = (props: IVacantRole) => {
 						Job Description
 					</Heading>
 					<Text variant="vacancyDetail" className="paragraph">
-						Essential functions of the job may include but are not
-						limited to the following:
+						Essential functions of the job may include but are not limited to
+						the following:
 					</Text>
 					<UnorderedList>
 						{descriptions.map((description, idx) => (
@@ -102,9 +102,7 @@ const VacancyDetails = (props: IVacantRole) => {
 					<Text variant="vacancyDetail" className="paragraph">
 						{physicalRequirements}
 					</Text>
-					<Button
-						onClick={() => router.push("/join_us/vacancies/apply")}
-					>
+					<Button onClick={() => router.push("/join_us/vacancies/apply")}>
 						Apply
 					</Button>
 				</Flex>

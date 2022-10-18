@@ -11,20 +11,16 @@ const ContactDetails = () => {
 				Contact Details
 			</Heading>
 			<Text className="paragraph">
-				You can always reach us via following contact details. We will
-				give our best to reach you as possible.
+				You can always reach us via following contact details. We will give our
+				best to reach you as possible.
 			</Text>
 			<Flex sx={flexStyle}>
 				<Icon as={ImPhone} sx={blueIcon} />
-				<Text className="paragraph">
-					+234 805 029 1265 , +234 907 228 0656
-				</Text>
+				<Text className="paragraph">+234 805 029 1265 , +234 907 228 0656</Text>
 			</Flex>
 			<Flex sx={flexStyle}>
 				<Icon as={MdEmail} sx={blueIcon} />
-				<Text className="paragraph">
-					toweringheightsschools@gmail.com
-				</Text>
+				<Text className="paragraph">toweringheightsschools@gmail.com</Text>
 			</Flex>
 			<Flex sx={flexStyle}>
 				<Icon as={MdLocationOn} sx={blueIcon} />
