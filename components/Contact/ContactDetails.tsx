@@ -23,7 +23,11 @@ const ContactDetails = () => {
 			</Flex>
 			<Flex sx={flexStyle}>
 				<Icon as={MdEmail} sx={blueIcon} />
-				<Text className="paragraph">toweringheightsschools@gmail.com</Text>
+				<Text className="paragraph">
+					<a href="mailto:toweringheightsschools@gmail.com">
+						toweringheightsschools@gmail.com
+					</a>
+				</Text>
 			</Flex>
 			<Flex sx={flexStyle}>
 				<Icon as={MdLocationOn} sx={blueIcon} />
