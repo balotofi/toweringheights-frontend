@@ -16,7 +16,10 @@ const ContactDetails = () => {
 			</Text>
 			<Flex sx={flexStyle}>
 				<Icon as={ImPhone} sx={blueIcon} />
-				<Text className="paragraph">+234 805 029 1265 , +234 907 228 0656</Text>
+				<Text className="paragraph">
+					<a href="tel:+234 814 266 5965">0814 266 5965</a>,
+					<a href="tel:++234 810 531 3377"> 0810 531 3377</a>
+				</Text>
 			</Flex>
 			<Flex sx={flexStyle}>
 				<Icon as={MdEmail} sx={blueIcon} />

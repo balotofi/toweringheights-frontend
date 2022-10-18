@@ -36,10 +36,10 @@ const FooterContactDetails = () => {
 					<Icon as={ImPhone} sx={whiteIcon} />
 					<Flex direction="column">
 						<Text variant="footer" className="paragraph" cursor="pointer">
-							0814 266 5965
+							<a href="tel:+234 814 266 5965">0814 266 5965</a>
 						</Text>
 						<Text variant="footer" className="paragraph" cursor="pointer">
-							0810 531 3377
+							<a href="tel:+234 810 531 3377"> 0810 531 3377</a>
 						</Text>
 					</Flex>
 				</Flex>
