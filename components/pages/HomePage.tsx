@@ -34,9 +34,9 @@ const HomePage = () => {
 					</Heading>
 					<Box bg="brand.100" w={"75%"} sx={headingBorder} />
 					<Text pt={4} pb={2} className="paragraph">
-						Towering Heights Schools is a centre of education that
-						prides itself on creating leaders of tomorrow. We
-						provide not only educated, but morally sound students.
+						Towering Heights Schools is a centre of education that prides itself
+						on creating leaders of tomorrow. We provide not only educated, but
+						morally sound students.
 					</Text>
 					<Text pt={4} pb={8} className="paragraph">
 						Our{" "}
@@ -47,11 +47,11 @@ const HomePage = () => {
 						>
 							mission statement
 						</span>{" "}
-						is building iduals and empowering them with skills and
-						confidence to challenge themselves in every aspect of
-						their lives and also enrichment of character and sense
-						of identity. We are determined to build them into
-						becoming well-balanced, productive, and happy iduals.
+						is building iduals and empowering them with skills and confidence to
+						challenge themselves in every aspect of their lives and also
+						enrichment of character and sense of identity. We are determined to
+						build them into becoming well-balanced, productive, and happy
+						iduals.
 					</Text>
 					<Button
 						onClick={() => router.push("/about_us")}

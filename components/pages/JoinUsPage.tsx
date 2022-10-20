@@ -47,14 +47,12 @@ const JoinUsPage = () => {
 			<Stack align="center" sx={containerStyle}>
 				<Stack align="center" w={{ base: "100%", md: "80%" }} gap={10}>
 					<Text>
-						We encourage applicants from diverse backgrounds to
-						apply for any open position for which they are
-						qualified. Our students must be exposed on a daily basis
-						to a diverse group of powerful role models. Therefore,
-						we have a responsibility to recruit, retain, develop,
-						and reward a diverse and talented staff from a wide
-						range of backgrounds to join our creative,
-						mission-driven team.
+						We encourage applicants from diverse backgrounds to apply for any
+						open position for which they are qualified. Our students must be
+						exposed on a daily basis to a diverse group of powerful role models.
+						Therefore, we have a responsibility to recruit, retain, develop, and
+						reward a diverse and talented staff from a wide range of backgrounds
+						to join our creative, mission-driven team.
 					</Text>
 					<Flex
 						sx={joinUsBtns}

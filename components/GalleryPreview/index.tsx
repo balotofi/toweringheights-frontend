@@ -49,28 +49,15 @@ const GalleryPreview = () => {
 				<Box sx={smallHeadingBorder} bg="font.400" />
 			</Flex>
 			<AnimatedContainer variants={imageVariants}>
-				<Flex
-					m={4}
-					direction="row"
-					flexWrap="wrap"
-					gap={6}
-					justify="center"
-				>
+				<Flex m={4} direction="row" flexWrap="wrap" gap={6} justify="center">
 					{galleryPreviews.map((preview, idx) => (
-						<EachImage
-							key={idx}
-							alt={preview.alt}
-							img={preview.img}
-						/>
+						<EachImage key={idx} alt={preview.alt} img={preview.img} />
 					))}
 				</Flex>
 			</AnimatedContainer>
 			<Flex justify="center">
 				<Link href="/gallery" passHref>
-					<ChakraLink
-						variant="viewMore"
-						_hover={{ textDecoration: "none" }}
-					>
+					<ChakraLink variant="viewMore" _hover={{ textDecoration: "none" }}>
 						Click here to see more
 					</ChakraLink>
 				</Link>

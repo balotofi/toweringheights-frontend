@@ -11,30 +11,35 @@ const ContactDetails = () => {
 				Contact Details
 			</Heading>
 			<Text className="paragraph">
-				You can always reach us via following contact details. We will
-				give our best to reach you as possible.
+				You can always reach us via following contact details. We will give our
+				best to reach you as possible.
 			</Text>
 			<Flex sx={flexStyle}>
 				<Icon as={ImPhone} sx={blueIcon} />
 				<Text className="paragraph">
-					+234 805 029 1265 , +234 907 228 0656
+					<a href="tel:+234 814 266 5965">0814 266 5965</a>,
+					<a href="tel:++234 810 531 3377"> 0810 531 3377</a>
 				</Text>
 			</Flex>
 			<Flex sx={flexStyle}>
 				<Icon as={MdEmail} sx={blueIcon} />
 				<Text className="paragraph">
-					toweringheightsschools@gmail.com
+					<a href="mailto:toweringheightsschools@gmail.com">
+						toweringheightsschools@gmail.com
+					</a>
 				</Text>
 			</Flex>
 			<Flex sx={flexStyle}>
 				<Icon as={MdLocationOn} sx={blueIcon} />
 				<Text className="paragraph">
-					Afro stuff estate Alagbaka extension,
-					<br />
-					Off Igbatoro Road, <br />
-					Adjacent National Identity Management Commission,
-					<br />
-					South, Akure.
+					<a
+						href="https://www.google.com/maps/place/Towering+Heights+schools+Akure/@7.2356892,5.2367228,17z/data=!3m1!4b1!4m5!3m4!1s0x1047911e388d428b:0x4d0f13c5bcef0489!8m2!3d7.2356892!4d5.2389115"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Afrostuff Estate,Alagbaka Extension, off Igbatoro road. Adjacent
+						NIMC, Alagbaka, Akure.
+					</a>
 				</Text>
 			</Flex>
 		</VStack>

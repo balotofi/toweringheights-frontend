@@ -31,12 +31,7 @@ const Footer = () => {
 							},
 						}}
 					>
-						<Image
-							width={100}
-							height={85}
-							src={SchoolLogo}
-							alt="School Logo"
-						/>
+						<Image width={100} height={85} src={SchoolLogo} alt="School Logo" />
 						<motion.div
 							variants={footerTextVariants}
 							initial="hidden"
@@ -48,10 +43,9 @@ const Footer = () => {
 								mt="1.5rem"
 								className="paragraph"
 							>
-								Towering Heights Schools is a centre of
-								education that prides itself on creating leaders
-								of tomorrow. We pride ourselves in the quality
-								of children we raise.
+								Towering Heights Schools is a centre of education that prides
+								itself on creating leaders of tomorrow. We pride ourselves in
+								the quality of children we raise.
 							</Text>
 						</motion.div>
 					</Box>
@@ -60,11 +54,7 @@ const Footer = () => {
 							Links
 						</Heading>
 						{footerLinks.map((link, idx) => (
-							<FooterLink
-								key={idx}
-								href={link.href}
-								text={link.text}
-							/>
+							<FooterLink key={idx} href={link.href} text={link.text} />
 						))}
 					</Flex>
 					<FooterContactDetails />

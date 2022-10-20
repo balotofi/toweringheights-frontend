@@ -17,11 +17,7 @@ const Pagination = ({
 	}
 
 	return (
-		<Flex
-			m={"1rem 0.5rem !important"}
-			justify="space-between"
-			align="center"
-		>
+		<Flex m={"1rem 0.5rem !important"} justify="space-between" align="center">
 			<Flex justify="space-around" gap={3}>
 				{pageNumbers.map((number: number) => (
 					<Flex
@@ -31,9 +27,7 @@ const Pagination = ({
 					>
 						<Link
 							onClick={() => changePage(number)}
-							color={
-								currentPage === number ? "white" : "brand.300"
-							}
+							color={currentPage === number ? "white" : "brand.300"}
 						>
 							{number}
 						</Link>
@@ -58,9 +52,7 @@ const Pagination = ({
 					variant="solid"
 					_hover={{ border: "1px solid" }}
 					rightIcon={<BiCaretRight />}
-					isDisabled={
-						currentPage === pageNumbers.length ? true : false
-					}
+					isDisabled={currentPage === pageNumbers.length ? true : false}
 				>
 					Next
 				</Button>

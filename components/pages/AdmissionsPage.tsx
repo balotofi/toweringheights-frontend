@@ -9,11 +9,7 @@ import ScrollTopBtn from "../Navbar/ScrollTopBtn"
 const AdmissionsPage = () => {
 	return (
 		<>
-			<Stack
-				px={{ base: "6", md: "8", lg: "16" }}
-				py={{ base: "2" }}
-				gap={5}
-			>
+			<Stack px={{ base: "6", md: "8", lg: "16" }} py={{ base: "2" }} gap={5}>
 				<Flex justify="start">
 					<BreadCrumbNav />
 				</Flex>
@@ -44,10 +40,9 @@ const AdmissionsPage = () => {
 							}}
 							className="paragraph"
 						>
-							Welcome to Towering Heights school admissions page.
-							This page has all that is required details if you’re
-							looking for a place to apply for our Nursery or
-							other reception classes for the session.
+							Welcome to Towering Heights school admissions page. This page has
+							all that is required details if you’re looking for a place to
+							apply for our Nursery or other reception classes for the session.
 						</Text>
 						<Text
 							mb={4}
@@ -57,10 +52,9 @@ const AdmissionsPage = () => {
 							}}
 							className="paragraph"
 						>
-							THS seeks to enroll students who are prepared to be
-							successful academically and contribute positively to
-							our community as leaders of tomorrow. Admission
-							guidelines vary by sections and categories.
+							THS seeks to enroll students who are prepared to be successful
+							academically and contribute positively to our community as leaders
+							of tomorrow. Admission guidelines vary by sections and categories.
 						</Text>
 					</Flex>
 				</VStack>

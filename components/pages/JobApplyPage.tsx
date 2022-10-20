@@ -47,8 +47,7 @@ const JobApplyPage = () => {
 									md: "md",
 								}}
 							>
-								Form is currently unavailable. Kindly Send Your
-								Application to
+								Form is currently unavailable. Kindly Send Your Application to
 								<Link
 									href="mailto:toweringheightsschools@gmail.com"
 									color="brand.200"

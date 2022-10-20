@@ -45,6 +45,7 @@ Here are some of the links you should look out for easy navigation.
 </ul>
 
 ## Contributors 🧠
+
 <ol>
   <li>Designer- https://github.com/celestinaa</li>
   <li>Designer- https://github.com/Ennyhie</li>

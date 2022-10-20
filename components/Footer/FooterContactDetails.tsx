@@ -20,13 +20,15 @@ const FooterContactDetails = () => {
 			>
 				<Flex sx={flexStyle}>
 					<Icon as={MdLocationOn} sx={whiteIcon} />
-					<Text
-						variant="footer"
-						className="paragraph"
-						cursor="pointer"
-					>
-						Afrostuff Estate,Alagbaka Extension, off Igbatoro road.
-						Adjacent NIMC, Alagbaka, Akure.
+					<Text variant="footer" className="paragraph" cursor="pointer">
+						<a
+							href="https://www.google.com/maps/place/Towering+Heights+schools+Akure/@7.2356892,5.2367228,17z/data=!3m1!4b1!4m5!3m4!1s0x1047911e388d428b:0x4d0f13c5bcef0489!8m2!3d7.2356892!4d5.2389115"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Afrostuff Estate,Alagbaka Extension, off Igbatoro road. Adjacent
+							NIMC, Alagbaka, Akure.
+						</a>
 					</Text>
 				</Flex>
 			</motion.div>
@@ -39,19 +41,11 @@ const FooterContactDetails = () => {
 				<Flex sx={flexStyle}>
 					<Icon as={ImPhone} sx={whiteIcon} />
 					<Flex direction="column">
-						<Text
-							variant="footer"
-							className="paragraph"
-							cursor="pointer"
-						>
-							0814 266 5965
+						<Text variant="footer" className="paragraph" cursor="pointer">
+							<a href="tel:+234 814 266 5965">0814 266 5965</a>
 						</Text>
-						<Text
-							variant="footer"
-							className="paragraph"
-							cursor="pointer"
-						>
-							0810 531 3377
+						<Text variant="footer" className="paragraph" cursor="pointer">
+							<a href="tel:+234 810 531 3377"> 0810 531 3377</a>
 						</Text>
 					</Flex>
 				</Flex>

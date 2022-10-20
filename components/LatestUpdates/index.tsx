@@ -10,11 +10,7 @@ const LatestUpdates = () => {
 
 	return (
 		<Flex bg="brand.200" direction="column" align="center" py={10} gap={8}>
-			<motion.div
-				variants={headingVariant}
-				whileInView="show"
-				initial="hidden"
-			>
+			<motion.div variants={headingVariant} whileInView="show" initial="hidden">
 				<Heading
 					as="h3"
 					color="white"
@@ -31,9 +27,9 @@ const LatestUpdates = () => {
 						Admissions
 					</Heading>
 					<Text className="paragraph">
-						Choosing the right school marks a new beginning in the
-						life of your child. Contact us as early as possible to
-						have your child assessed and ready for school.
+						Choosing the right school marks a new beginning in the life of your
+						child. Contact us as early as possible to have your child assessed
+						and ready for school.
 					</Text>
 					<Flex
 						sx={textIconStyle}
@@ -52,8 +48,8 @@ const LatestUpdates = () => {
 						Calendar
 					</Heading>
 					<Text className="paragraph">
-						Terms, exams, holidays, keep up to date on what&apos;s
-						hapenning when so you don&apos;t fall behind.
+						Terms, exams, holidays, keep up to date on what&apos;s hapenning
+						when so you don&apos;t fall behind.
 					</Text>
 					<Flex
 						sx={textIconStyle}
@@ -72,8 +68,8 @@ const LatestUpdates = () => {
 						Latest News
 					</Heading>
 					<Text className="paragraph">
-						See firsthand news,updates and details about upcoming
-						events and information.
+						See firsthand news,updates and details about upcoming events and
+						information.
 					</Text>
 					<Flex
 						sx={textIconStyle}

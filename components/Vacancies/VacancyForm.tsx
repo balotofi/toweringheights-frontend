@@ -30,8 +30,7 @@ import { states } from "../../data/states"
 
 const VacancyForm = () => {
 	const [loading, setLoading] = useState(false)
-	const [changePlaceholder, setChangePlaceholder] =
-		useState("no file selected")
+	const [changePlaceholder, setChangePlaceholder] = useState("no file selected")
 	const toast = useToast()
 	const form = useRef<HTMLFormElement>(null)
 	const {
@@ -122,9 +121,7 @@ const VacancyForm = () => {
 								{errors.role && errors?.role.message}
 							</FormErrorMessage>
 						) : (
-							<FormHelperText visibility={"hidden"}>
-								Hi
-							</FormHelperText>
+							<FormHelperText visibility={"hidden"}>Hi</FormHelperText>
 						)}
 					</FormControl>
 					<FormControl isInvalid={!!errors.fullName}>
@@ -134,8 +131,7 @@ const VacancyForm = () => {
 								required: "Full Name is Required",
 								pattern: {
 									value: NAME_REGEX,
-									message:
-										"Invalid Format! Try this Format: Towering Heights",
+									message: "Invalid Format! Try this Format: Towering Heights",
 								},
 							})}
 							name="fullName"
@@ -272,9 +268,7 @@ const VacancyForm = () => {
 								{errors.file_ && errors?.file_.message}
 							</FormErrorMessage>
 						) : (
-							<FormHelperText visibility={"hidden"}>
-								Upload CV
-							</FormHelperText>
+							<FormHelperText visibility={"hidden"}>Upload CV</FormHelperText>
 						)}
 					</FormControl>
 					<Button
