@@ -51,7 +51,7 @@ const HomePage = () => {
 						confidence to challenge themselves in every aspect of their lives
 						and also enrichment of character and sense of identity. We are
 						determined to build them into becoming well-balanced, productive,
-						and happy iduals.
+						and happy individuals.
 					</Text>
 					<Button
 						onClick={() => router.push("/about_us")}
