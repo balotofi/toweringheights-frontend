@@ -47,7 +47,7 @@ const HomePage = () => {
 						>
 							mission statement
 						</span>{" "}
-						is building iduals and empowering them with skills and confidence to
+						is building individuals and empowering them with skills and confidence to
 						challenge themselves in every aspect of their lives and also
 						enrichment of character and sense of identity. We are determined to
 						build them into becoming well-balanced, productive, and happy
