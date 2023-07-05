@@ -97,3 +97,9 @@ interface INavObj {
 	contact_us: string
 	gallery: string
 }
+
+interface IBlogProps {
+	text: string
+	date: string
+	image: StaticImageData
+}

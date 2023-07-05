@@ -63,7 +63,7 @@ export const navItems: NavProps[] = [
 			},
 			{
 				label: "Our Blog",
-				href: "/coming_soon",
+				href: "/blog",
 			},
 			{
 				label: "School Calendar",
