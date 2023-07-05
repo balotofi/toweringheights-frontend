@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import {
 	Box,
+	Button,
 	Card,
 	CardBody,
 	Flex,
@@ -17,6 +18,9 @@ import { blogs } from "../../data/Blogs"
 import Comment from "../../assets/comments.svg"
 import Eye from "../../assets/eye.svg"
 import Footer from "../Footer"
+import TieIcon from "../../assets/user-tie.svg"
+import Clock from "../../assets/clock.svg"
+import Arrow from "../../assets/arrow.svg"
 
 const Blog = () => {
 	// const router = useRouter()
@@ -57,14 +61,51 @@ const Blog = () => {
 							</Text>
 						</Box>
 					</Box>
-
-					<Text>Top Event</Text>
-					<Text>
-						Lorem ipsum dolor sit amet, consectetur adiping elit, sed do eiusmod
-						temp incit ut labore dolore magnaaliqua. computer science students
-						Ut enim ad minimveniam. Lorem ipsum.
-					</Text>
-					<Text>Read more </Text>
+					<Box w="70%">
+						<Text color="brand.300" fontSize="sm" fontWeight="semibold">
+							Top Event
+						</Text>
+						<Flex mb={4}>
+							<Box
+								display="flex"
+								alignItems="center"
+								mr={10}
+								gap={2}
+								fontWeight="semibold"
+							>
+								<Image src={TieIcon} alt="admin" width={19} />
+								Admin
+							</Box>
+							<Box
+								display="flex"
+								alignItems="center"
+								mr={10}
+								gap={2}
+								fontWeight="semibold"
+							>
+								<Image src={Clock} alt="clock" width={19} />
+								September 10, 2021
+							</Box>
+							<Box
+								display="flex"
+								alignItems="center"
+								mr={10}
+								gap={2}
+								fontWeight="semibold"
+							>
+								<Image src={Comment} alt="clock" width={19} />
+								No Comment
+							</Box>
+						</Flex>
+						<Text>
+							Lorem ipsum dolor sit amet, consectetur adiping elit, sed do
+							eiusmod temp incit ut labore dolore magnaaliqua. computer science
+							students Ut enim ad minimveniam. Lorem ipsum.
+						</Text>
+						<Text mt={4} color="brand.300" fontSize="sm" cursor="pointer">
+							Read more <Image src={Arrow} alt="arrow" />
+						</Text>
+					</Box>
 					<Box bg="gray.200" p={12} boxSize="95%" mt="10%">
 						<SimpleGrid spacing={10} minChildWidth="300px">
 							<Box
@@ -108,6 +149,73 @@ const Blog = () => {
 									</Card>
 								))}
 						</SimpleGrid>
+						<Flex gap={3} justifyContent="space-between" mt={9} px={5}>
+							<Box display="flex" gap={2}>
+								<Box
+									as="button"
+									textColor="brand.300"
+									fontWeight="normal"
+									border="1px"
+									px={4}
+									py={2}
+									borderRadius="md"
+									_hover={{ bgColor: "brand.300", textColor: "white" }}
+								>
+									1
+								</Box>
+								<Box
+									as="button"
+									textColor="brand.300"
+									fontWeight="normal"
+									border="1px"
+									px={4}
+									py={2}
+									_hover={{ bgColor: "brand.300", textColor: "white" }}
+									borderRadius="md"
+								>
+									2
+								</Box>
+								<Box
+									as="button"
+									textColor="brand.300"
+									fontWeight="normal"
+									border="1px"
+									px={4}
+									py={2}
+									_hover={{ bgColor: "brand.300", textColor: "white" }}
+									borderRadius="md"
+								>
+									3
+								</Box>
+							</Box>
+							<Box>
+								<Box
+									as="button"
+									bgColor="brand.300"
+									textColor="white"
+									fontWeight="normal"
+									borderRadius="md"
+									px={4}
+									py={2}
+									_hover={{ textColor: "brand.300", bgColor: "white" }}
+									mr={4}
+								>
+									Prev
+								</Box>
+								<Box
+									as="button"
+									bgColor="brand.300"
+									textColor="white"
+									fontWeight="normal"
+									borderRadius="md"
+									px={4}
+									_hover={{ textColor: "brand.300", bgColor: "white" }}
+									py={2}
+								>
+									Next
+								</Box>
+							</Box>
+						</Flex>
 					</Box>
 				</Box>
 			</Stack>
