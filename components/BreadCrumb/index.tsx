@@ -11,6 +11,8 @@ const navObj: any = {
 	apply: "Apply Now",
 	about_us: "About Us",
 	admissions: "Admissions",
+	admissionPolicy: "Admission Policies",
+	admissionApply: "Apply",
 	contact_us: "Contact Us",
 	gallery: "Gallery",
 }

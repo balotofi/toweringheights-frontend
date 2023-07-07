@@ -20,7 +20,7 @@ const AdmissionActions = () => {
 				<Box
 					as="button"
 					sx={roundBtn}
-					onClick={() => router.push("/coming_soon")}
+					onClick={() => router.push("/join_us/admissions/admissionPolicy")}
 				>
 					Admission policies
 					<FaArrowRight />
@@ -28,17 +28,9 @@ const AdmissionActions = () => {
 				<Box
 					as="button"
 					sx={roundBtn}
-					onClick={() => router.push("/coming_soon")}
+					onClick={() => router.push("/join_us/admissions/admissionApply")}
 				>
 					Apply now
-					<FaArrowRight />
-				</Box>
-				<Box
-					as="button"
-					sx={roundBtn}
-					onClick={() => router.push("/contact_us")}
-				>
-					Visit THS
 					<FaArrowRight />
 				</Box>
 			</Flex>
