@@ -33,14 +33,14 @@ const AdmissionActions = () => {
 					Apply now
 					<FaArrowRight />
 				</Box>
-				<Box
+				{/* <Box
 					as="button"
 					sx={roundBtn}
 					onClick={() => router.push("/contact_us")}
 				>
 					Visit THS
 					<FaArrowRight />
-				</Box>
+				</Box> */}
 			</Flex>
 		</Flex>
 	)
